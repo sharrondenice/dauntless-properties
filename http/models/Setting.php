@@ -142,6 +142,7 @@ class Setting extends BaseModel {
                         'address1'  => $data[$index]['address1'],
                         'address2'  => $data[$index]['address2'],
                         'city'      => $data[$index]['city'],
+                        'state_id'  => $data[$index]['state_id'],
                         'state'     => is_array($this_state) ? array_map('utf8_encode', $this_state) : array(),
                         'country'   => is_array($this_country) ? array_map('utf8_encode', $this_country) : array(),
                     )
@@ -216,6 +217,7 @@ class Setting extends BaseModel {
                         'address1'  => $data[$index]['address1'],
                         'address2'  => $data[$index]['address2'],
                         'city'      => $data[$index]['city'],
+                        'state_id'  => $data[$index]['state_id'],
                         'state'     => is_array($this_state) ? array_map('utf8_encode', $this_state) : array(),
                         'country'   => is_array($this_country) ? array_map('utf8_encode', $this_country) : array(),
                     )
@@ -291,6 +293,7 @@ class Setting extends BaseModel {
                         'address1'  => $data[$index]['address1'],
                         'address2'  => $data[$index]['address2'],
                         'city'      => $data[$index]['city'],
+                        'state_id'  => $data[$index]['state_id'],
                         'state'     => is_array($this_state) ? array_map('utf8_encode', $this_state) : array(),
                         'country'   => is_array($this_country) ? array_map('utf8_encode', $this_country) : array(),
                     )

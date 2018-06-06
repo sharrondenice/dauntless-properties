@@ -140,12 +140,17 @@ class Property extends BaseModel {
                 $datetime2 = new DateTime($data[$index]['end_time']);
                 $interval = $datetime1->diff($datetime2);
 
-                $data[$index]['interval'] = $interval->format('%R%a days');
+                if ($interval->d > 0)
+                    $data[$index]['interval'] = $interval->format('%R%a days');
+                else
+                    $data[$index]['interval'] = 'No Availability';
+
                 $data[$index]['metadata'] = array(
                     'location' => array(
                         'address1'  => $data[$index]['address1'],
                         'address2'  => $data[$index]['address2'],
                         'city'      => $data[$index]['city'],
+                        'state_id'  => $data[$index]['state_id'],
                         'state'     => is_array($this_state) ? array_map('utf8_encode', $this_state) : array(),
                         'country'   => is_array($this_country) ? array_map('utf8_encode', $this_country) : array(),
                     )
