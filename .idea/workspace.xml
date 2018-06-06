@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed installation check&#10;- Removed footer from primary pages">
-      <change afterPath="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/models/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/Property.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/sql/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/http/sql/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/assets/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/assets/env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort.jpg" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,11 +40,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Property.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Property.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http/models/Property.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1556">
               <caret line="145" column="26" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="330">
+                <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -108,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/nav.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.directive.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.js" />
@@ -159,6 +166,7 @@
         <option value="$PROJECT_DIR$/www_stage/src/assets/env.js" />
         <option value="&lt;2fb0ca51-bade-48c9-8974-4596c8bdee09&gt;/_hosted_domains/app.letaprodoit.com/dauntless/assets/env.js" />
         <option value="$PROJECT_DIR$/http/sql/database.sql" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -323,93 +331,7 @@
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="backgrounds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="backgrounds" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -469,7 +391,7 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="54925000" />
+      <workItem from="1528258151063" duration="56147000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -485,11 +407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528311545912</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Changed default theme&#10;- Changed default background image&#10;- Set API to LAPDI&#10;- Changed default theme in database&#10;- Fixed availability bug">
+      <created>1528313555528</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528313555528</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79365000" />
+    <option name="totallyTimeSpent" value="80587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -507,12 +436,12 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" weight="0.32892805" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.27753305" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.27753305" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32892805" />
-      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.19662058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -538,7 +467,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout" />
     <MESSAGE value="- Fixed state bug&#10;- Fixed issue with property intervals to add no availability&#10;- Added blank favicon to stop annoying errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed state bug&#10;- Fixed issue with property intervals to add no availability&#10;- Added blank favicon to stop annoying errors" />
+    <MESSAGE value="- Changed default theme&#10;- Changed default background image&#10;- Set API to LAPDI&#10;- Changed default theme in database&#10;- Fixed availability bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Changed default theme&#10;- Changed default background image&#10;- Set API to LAPDI&#10;- Changed default theme in database&#10;- Fixed availability bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -546,18 +476,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/http/models/Profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="317" column="38" selection-start-line="317" selection-start-column="20" selection-end-line="317" selection-end-column="38" />
-          <folding>
-            <element signature="e#956#1853#0#PHP" expanded="true" />
-            <element signature="e#3823#4273#0#PHP" expanded="true" />
-            <element signature="e#7279#8046#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/install/templates/install.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1009,6 +927,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1556">
           <caret line="145" column="26" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="330">
+            <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
