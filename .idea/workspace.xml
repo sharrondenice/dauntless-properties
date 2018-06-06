@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed installation check&#10;- Removed footer from primary pages">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
@@ -53,8 +52,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="330">
-                <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+              <first_editor relative-caret-position="294">
+                <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               </first_editor>
               <second_editor />
             </state>
@@ -391,7 +390,7 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="56147000" />
+      <workItem from="1528258151063" duration="56269000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -414,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528313555528</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Added README placeholder">
+      <created>1528314737084</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528314737084</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80587000" />
+    <option name="totallyTimeSpent" value="80709000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,6 +437,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1344" height="778" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -468,7 +475,8 @@
     <MESSAGE value="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout" />
     <MESSAGE value="- Fixed state bug&#10;- Fixed issue with property intervals to add no availability&#10;- Added blank favicon to stop annoying errors" />
     <MESSAGE value="- Changed default theme&#10;- Changed default background image&#10;- Set API to LAPDI&#10;- Changed default theme in database&#10;- Fixed availability bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Changed default theme&#10;- Changed default background image&#10;- Set API to LAPDI&#10;- Changed default theme in database&#10;- Fixed availability bug" />
+    <MESSAGE value="- Added README placeholder" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added README placeholder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,8 +941,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <first_editor relative-caret-position="294">
+            <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           </first_editor>
           <second_editor />
         </state>

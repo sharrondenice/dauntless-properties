@@ -20,6 +20,7 @@ Dauntless Properties is a demo LAMP stack project with AngularJS UI front-end to
 * Navigate to [http://localhost:2000](http://localhost:2000)
 * The current API currently has data however you may also run the installation wizard at [http://localhost:2000/install](http://localhost:2000/install)
 * To Get Started Immediately use the username `sharrondenice` and password `dauntless` to see sample data
+* LIVE demo can be found at [https://app.letaprodoit.com/dauntless](https://app.letaprodoit.com/dauntless)
 * API Code documentation can be found at [https://api.letaprodoit.com/dauntless/docs](https://api.letaprodoit.com/dauntless/docs)
 
 
