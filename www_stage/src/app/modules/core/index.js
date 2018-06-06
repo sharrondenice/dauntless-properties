@@ -77,7 +77,7 @@
             var $state = $injector.get('$state');
 
             // if installed attempt to display the dashboard
-            if (installed == "true" || __env.installed)
+            if (installed == "true" || installed == true)
             {
                 $state.go('app.properties');
             }

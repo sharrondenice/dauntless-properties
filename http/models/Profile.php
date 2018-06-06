@@ -119,8 +119,8 @@ class Profile extends BaseModel {
 		}
 		if (isset($data['owner_id']))
 		    $this->setOwnerID($data['owner_id']);
-		if (isset($data['default']))
-		    $this->setDefault($data['default']);
+		if (isset($data['is_default']))
+		    $this->setDefault($data['is_default']);
 		if (isset($data['email']))
 		    $this->setEmail($data['email']);
 		if (isset($data['address1']))

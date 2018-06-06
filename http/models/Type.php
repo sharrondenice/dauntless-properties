@@ -104,11 +104,20 @@ class Type extends BaseModel {
 		if (!empty($exclude))
 		{
 		    $exclude_str = implode(",", $exclude);
-		    $sql = "SELECT * FROM `shared_types` WHERE `owner` = '{$owner}' AND `_id` NOT IN ($exclude_str)  ORDER BY `title`";
+
+            if (!empty($owner))
+		        $sql = "SELECT * FROM `shared_types` WHERE `owner` = '{$owner}' AND `_id` NOT IN ($exclude_str)  ORDER BY `title`";
+            else
+                $sql = "SELECT * FROM `shared_types` WHERE `_id` NOT IN ($exclude_str)  ORDER BY `title`";
 		}
 		else
-		    $sql = "SELECT * FROM `shared_types` WHERE `owner` = '{$owner}'  ORDER BY `title`";
-		
+        {
+            if (!empty($owner))
+                $sql = "SELECT * FROM `shared_types` WHERE `owner` = '{$owner}'  ORDER BY `title`";
+            else
+                $sql = "SELECT * FROM `shared_types` ORDER BY `title`";
+        }
+
 		if (TSP_Config::get('app.debug'))
 		    $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
 		

@@ -4,7 +4,7 @@
             <div class="pull-left mt5 ml15" ng-class="{'hide': isModal}">
                 <button ng-click="listView()" class="btn btn-sm btn-primary right"><i class="fa fa-arrow-left"></i></button>
             </div>
-            <h4 class="text-uppercase title text-normal pull-right mr15"><strong><span tsp-i18n="words.edit"></span> {{object}}</strong></h4>
+            <h4 class="text-uppercase title text-normal pull-right mr15"><strong><span tsp-i18n="words.create"></span> {{object}}</strong></h4>
         </div>
     </div>
 </div>
@@ -55,7 +55,6 @@
                                         field-key="title"
                                         is-required="true">
                                 </tsp-field-widget>
-                                <!-- Image //-->
                                 <tsp-field-widget
                                         type="text"
                                         label="{{lang.words.image}}"
@@ -102,8 +101,8 @@
                                                   type="select"
                                                   label="{{lang.words.country}}"
                                                   place-val="{{lang.words.select_country}}"
-                                                  field-data="postdata.metadata.location.country"
-                                                  field-key="_id"
+                                                  field-data="postdata.metadata.location.state"
+                                                  field-key="country_code"
                                                   option-data="app.shared.countries"
                                                   order-by="'title'"
                                                   is-required="true">
@@ -112,8 +111,8 @@
                                         type="select"
                                         label="{{lang.words.state}}"
                                         place-val="{{lang.words.select_state}}"
-                                        field-data="postdata.metadata.location.state"
-                                        field-key="_id"
+                                        field-data="postdata.metadata.location"
+                                        field-key="state_id"
                                         option-data="app.shared.states"
                                         filter-by="{country_code:postdata.metadata.state.country_code}" order-by="'title'"
                                         is-required="true">

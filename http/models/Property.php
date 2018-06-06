@@ -136,13 +136,18 @@ class Property extends BaseModel {
                 $this_state = $state->getStateByID($data[$index]['state_id']);
                 $this_country = $country->getCountryByID($this_state['country_code']);
 
+                $datetime1 = new DateTime($data[$index]['start_time']);
+                $datetime2 = new DateTime($data[$index]['end_time']);
+                $interval = $datetime1->diff($datetime2);
+
+                $data[$index]['interval'] = $interval->format('%R%a days');
                 $data[$index]['metadata'] = array(
                     'location' => array(
                         'address1'  => $data[$index]['address1'],
                         'address2'  => $data[$index]['address2'],
                         'city'      => $data[$index]['city'],
-                        'state'     => array_map('utf8_encode', $this_state),
-                        'country'   => array_map('utf8_encode', $this_country),
+                        'state'     => is_array($this_state) ? array_map('utf8_encode', $this_state) : array(),
+                        'country'   => is_array($this_country) ? array_map('utf8_encode', $this_country) : array(),
                     )
                 );
 

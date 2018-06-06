@@ -221,7 +221,7 @@ final class CProperty extends BaseController {
 	public function updateRecord(array $params = array()) {
 		session_start();
 
-        $meta_data         = TSP_Helper::arrGetVal($_POST, null, $params);
+        $meta_data         = TSP_Helper::arrGetVal($_POST, 'metadata', $params['metadata']);
 		$ID                = TSP_Helper::arrGetVal($_POST, '_id', $params['_id']);
 		$title             = TSP_Helper::arrGetVal($_POST, 'title', $params['title']);
 		$description       = TSP_Helper::arrGetVal($_POST, 'description', $params['description']);
@@ -267,9 +267,10 @@ final class CProperty extends BaseController {
             if (!empty($profile_data['state']))
                 $profile_data['state_id'] = $profile_data['state']->ID;
 
+
             if (empty($existing_profile))
             {
-                $profile_data['default'] = 1;
+                $profile_data['is_default'] = 1;
                 $profile->add($profile_data);
             }
             else

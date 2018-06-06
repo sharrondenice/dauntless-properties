@@ -87,6 +87,8 @@
                     {
                         $rootScope.loadingDataText = $scope.lang.sentences.update_property;
                         $rootScope.loadingData = tspDataPreloader.show();
+                        $rootScope.loadingData = tspDataPreloader.hide(true);
+                        location.reload();
                     }
                     else
                     {
@@ -122,11 +124,13 @@
                     {
                         $rootScope.loadingDataText = $scope.lang.sentences.register_property;
                         $rootScope.loadingData = tspDataPreloader.show();
+                        $rootScope.loadingData = tspDataPreloader.hide(true);
                         location.reload();
                     }
                     else
                     {
                     }
+
                 },
                 function(){
                     $scope.submitButtonText = $scope.lang.labels.buttons.validate_create;

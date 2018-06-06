@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed installation check&#10;- Removed footer from primary pages">
+      <change afterPath="$PROJECT_DIR$/http/controllers/CDemo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dauntless-properties.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dauntless-properties.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/classes/System.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/classes/System.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/http/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/controllers/CProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/controllers/CProperty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/controllers/CUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/controllers/CUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/models/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/Property.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/Setting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/models/Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/views/email/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/views/email/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,32 +41,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="302" selection-start-line="302" selection-end-line="302" />
-              <folding>
-                <element signature="e#7291#7656#0" expanded="true" />
-                <element signature="e#8260#8379#0" expanded="true" />
-                <element signature="e#8424#8538#0" expanded="true" />
-                <element signature="e#8579#9949#0" expanded="true" />
-                <element signature="e#9077#9145#0" expanded="true" />
-                <element signature="e#9994#10845#0" expanded="true" />
-                <element signature="e#10202#10729#0" expanded="true" />
-                <element signature="e#10757#10820#0" expanded="true" />
-                <element signature="e#10892#11752#0" expanded="true" />
-                <element signature="e#11111#11636#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="199" column="33" lean-forward="true" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.db.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/http/config.db.php">
+      <file leaf-file-name="table-widget.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/table-widget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="-1815">
+              <caret line="14" column="94" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -50,12 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>agree</find>
-      <find>$object_type</find>
-      <find>.default_bkg</find>
-      <find>site-logo</find>
-      <find>.page-auth</find>
-      <find>The email entered exists.</find>
       <find>class=&quot;brand&quot;</find>
       <find>events</find>
       <find>Events</find>
@@ -76,6 +83,16 @@
       <find>createUserAccount</find>
       <find>favicon.ico</find>
       <find>dauntless_properties</find>
+      <find>app.properties</find>
+      <find>ini_set</find>
+      <find>ActivityHelper</find>
+      <find>'preferences'</find>
+      <find>['preferences']</find>
+      <find>localStorage.getItem</find>
+      <find>'state'</find>
+      <find>localStorage.setItem(__env</find>
+      <find>'state'</find>
+      <find>'default'</find>
     </findStrings>
     <replaceStrings>
       <replace>properties</replace>
@@ -86,9 +103,9 @@
       <dir>$PROJECT_DIR$/www_stage/src/app/modules/properties</dir>
       <dir>$PROJECT_DIR$/www_stage/src</dir>
       <dir>$PROJECT_DIR$/www_stage/src/app/modules</dir>
-      <dir>$PROJECT_DIR$/http</dir>
       <dir>$PROJECT_DIR$/www_stage/src/app/theme</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/http</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -99,47 +116,55 @@
       <list>
         <option value="$PROJECT_DIR$/www_stage/src/assets/env.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/header.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/nav.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/new.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.directive.js" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/property-wizard-viewer.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/view.html" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/table-widget.html" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" />
         <option value="$PROJECT_DIR$/http/models/base/BaseModel.php" />
-        <option value="$PROJECT_DIR$/http/models/Property.php" />
         <option value="$PROJECT_DIR$/http/models/Profile.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.lang.js" />
-        <option value="$PROJECT_DIR$/http/controllers/CProperty.php" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/install/install.module.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/install/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/theme/custom.less" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" />
         <option value="$PROJECT_DIR$/http/models/EOwnerType.php" />
-        <option value="$PROJECT_DIR$/http/models/Type.php" />
         <option value="$PROJECT_DIR$/http/models/Setting.php" />
-        <option value="$PROJECT_DIR$/http/config.php" />
         <option value="$PROJECT_DIR$/http/models/Country.php" />
         <option value="$PROJECT_DIR$/http/models/State.php" />
-        <option value="$PROJECT_DIR$/http/classes/System.php" />
         <option value="$PROJECT_DIR$/www_stage/src/index.html" />
         <option value="$PROJECT_DIR$/http/index.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/register.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/install.html" />
         <option value="$PROJECT_DIR$/http/routes.php" />
         <option value="$PROJECT_DIR$/http/sql/database.sql" />
-        <option value="$PROJECT_DIR$/http/controllers/CUser.php" />
         <option value="$PROJECT_DIR$/http/models/ESharedType.php" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" />
+        <option value="$PROJECT_DIR$/http/models/base/User.php" />
+        <option value="$PROJECT_DIR$/http/config.php" />
         <option value="$PROJECT_DIR$/http/config.db.php" />
+        <option value="$PROJECT_DIR$/http/vendor/thesoftwarepeople/helpers/src/TSP/Database.php" />
+        <option value="$PROJECT_DIR$/http/views/email/register.blade.php" />
+        <option value="$PROJECT_DIR$/http/controllers/CUser.php" />
+        <option value="$PROJECT_DIR$/http/models/Type.php" />
+        <option value="$PROJECT_DIR$/http/classes/System.php" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" />
+        <option value="$PROJECT_DIR$/www/assets/env.js" />
+        <option value="&lt;2fb0ca51-bade-48c9-8974-4596c8bdee09&gt;/_hosted_domains/app.letaprodoit.com/dauntless/assets/env.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html" />
+        <option value="$PROJECT_DIR$/http/controllers/CProperty.php" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" />
+        <option value="$PROJECT_DIR$/http/models/Property.php" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js" />
+        <option value="$PROJECT_DIR$/www_stage/package.json" />
+        <option value="$PROJECT_DIR$/http/composer.json" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/header.html" />
       </list>
     </option>
   </component>
@@ -224,14 +249,62 @@
       <path value="$PROJECT_DIR$/http/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/http/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/http/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/http/vendor/thesoftwarepeople/helpers" />
-      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/http/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/http/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/http/vendor/tecnickcom/tcpdf" />
-      <path value="$PROJECT_DIR$/http/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/http/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/http/vendor/zetacomponents/base" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-i18n" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-hydrator" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/http/vendor/zetacomponents/document" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-serializer" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-servicemanager" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-cache" />
+      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/fileset" />
+      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/graphviz" />
+      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/reflection" />
+      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-json" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-config" />
+      <path value="$PROJECT_DIR$/http/vendor/zendframework/zend-filter" />
+      <path value="$PROJECT_DIR$/http/vendor/phpdocumentor/phpdocumentor" />
+      <path value="$PROJECT_DIR$/http/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/http/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/http/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/http/vendor/kherge/version" />
+      <path value="$PROJECT_DIR$/http/vendor/phpcollection/phpcollection" />
+      <path value="$PROJECT_DIR$/http/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/http/vendor/herrera-io/phar-update" />
+      <path value="$PROJECT_DIR$/http/vendor/herrera-io/json" />
+      <path value="$PROJECT_DIR$/http/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/http/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/http/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/http/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/http/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/http/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/http/vendor/cilex/cilex" />
+      <path value="$PROJECT_DIR$/http/vendor/cilex/console-service-provider" />
+      <path value="$PROJECT_DIR$/http/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/http/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/http/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/http/vendor/jms/parser-lib" />
+      <path value="$PROJECT_DIR$/http/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/http/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/http/vendor/symfony/finder" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -261,7 +334,52 @@
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,6 +395,9 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -287,10 +408,10 @@
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules/install/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/http/controllers" />
       <recent name="$PROJECT_DIR$/http/models" />
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules" />
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules/core/templates" />
-      <recent name="$PROJECT_DIR$/http/controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -317,27 +438,36 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="29126000" />
+      <workItem from="1528258151063" duration="51177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53566000" />
+    <option name="totallyTimeSpent" value="75617000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1344" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" weight="0.32892805" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.27753305" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32892805" />
-      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.32949308" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25729647" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32892805" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -360,81 +490,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="685" column="9" selection-start-line="685" selection-start-column="9" selection-end-line="685" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/driver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="31" />
-          <folding>
-            <element signature="e#823#3719#0#PHP" />
-            <element signature="n#convertDateToSeconds#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
-          <folding>
-            <element signature="e#11291#12177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="311" column="13" selection-start-line="311" selection-start-column="13" selection-end-line="311" selection-end-column="13" />
-          <folding>
-            <element signature="e#12387#13572#0" expanded="true" />
-            <element signature="e#13480#13558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/events/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="114" column="60" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/form-widget.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/data-wizard-viewer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="87" column="66" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="66" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/property-wizard-viewer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -443,20 +502,6 @@
             <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="77" column="129" selection-start-line="77" selection-start-column="129" selection-end-line="77" selection-end-column="129" />
         </state>
       </provider>
     </entry>
@@ -472,71 +517,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.lang.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="447" column="32" selection-start-line="447" selection-start-column="17" selection-end-line="447" selection-end-column="32" />
-          <folding>
-            <element signature="e#72#256#0" />
-            <element signature="e#353#817#0" />
-            <element signature="e#841#1475#0" />
-            <element signature="e#870#1461#0" />
-            <element signature="e#1496#4156#0" />
-            <element signature="e#1567#1798#0" />
-            <element signature="e#1827#2032#0" />
-            <element signature="e#2061#2947#0" />
-            <element signature="e#2324#2482#0" />
-            <element signature="e#2566#2877#0" />
-            <element signature="e#2972#3334#0" />
-            <element signature="e#3364#3534#0" />
-            <element signature="e#3562#4057#0" />
-            <element signature="e#3635#3805#0" />
-            <element signature="e#4085#4142#0" />
-            <element signature="e#4179#17679#0" />
-            <element signature="e#17704#17979#0" />
-            <element signature="e#15#21#1" expanded="true" />
-            <element signature="e#5#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/table-widget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="94" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/controllers/CProperty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1043">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-          <folding>
-            <element signature="n#getMetadata#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#getEmptydata#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#createRecord#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#updateRecord#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#deleteRecord#0;n#CProperty#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/install/templates/install.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/install/index.module.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -561,15 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229">
-          <folding>
-            <element signature="e#395#1503#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -584,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/sql/database-wPfNfYdv.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -598,40 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/controllers/CDemo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="992" lean-forward="true" selection-start-line="981" selection-start-column="1" selection-end-line="992" />
-          <folding>
-            <element signature="e#10520#95918#0#PHP" />
-            <element signature="e#14681#95918#0#PHP" />
-            <element signature="e#19945#95918#0#PHP" />
-            <element signature="e#21126#95918#0#PHP" />
-            <element signature="e#32554#95918#0#PHP" />
-            <element signature="e#43556#95918#0#PHP" />
-            <element signature="e#46162#95918#0#PHP" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#getTypeTitle#0;n#CDemo#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/models/EOwnerType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="89" column="7" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/models/Type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-520">
-          <caret line="151" column="21" lean-forward="true" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
-          <folding>
-            <element signature="n#__construct#0;n#Type#0;n#!!top" expanded="true" />
-            <element signature="n#getOwner#1;n#Type#0;n#!!top" expanded="true" />
-            <element signature="n#setTitle#1;n#Type#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,57 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/models/Property.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="158" lean-forward="true" selection-start-line="153" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/models/Setting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="320" lean-forward="true" selection-start-line="308" selection-end-line="320" />
-          <folding>
-            <element signature="n#getAllByCompany#0;n#Setting#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/classes/System.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="225" selection-start-line="225" selection-end-line="225" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="110" column="34" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="34" />
-          <folding>
-            <element signature="e#4559#8017#0" expanded="true" />
-            <element signature="e#8045#8065#0" expanded="true" />
-            <element signature="e#21275#21381#0" expanded="true" />
-            <element signature="e#22969#23189#0" expanded="true" />
-            <element signature="e#26604#27833#0" expanded="true" />
-            <element signature="e#26871#27808#0" expanded="true" />
-            <element signature="e#27588#27670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -766,31 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/models/base/BaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
-          <folding>
-            <element signature="e#4683#5477#0#PHP" expanded="true" />
-            <element signature="e#5624#6540#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/models/ESharedType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/models/base/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="114" column="54" lean-forward="true" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/models/ESharedStatus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -798,56 +662,302 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/controllers/CUser.php">
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="343" column="53" lean-forward="true" selection-start-line="343" selection-start-column="53" selection-end-line="343" selection-end-column="53" />
-          <folding>
-            <element signature="e#15002#17174#0#PHP" />
-            <element signature="e#17197#19015#0#PHP" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/sql/database.sql">
+    <entry file="file://$PROJECT_DIR$/http/models/ESharedType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17168">
-          <caret line="2764" column="42" lean-forward="true" selection-start-line="2764" selection-start-column="42" selection-end-line="2764" selection-end-column="42" />
+        <state relative-caret-position="294">
+          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/assets/env.js">
+    <entry file="file://$PROJECT_DIR$/http/models/base/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#19#1116#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="181">
+          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
+    <entry file="file://$PROJECT_DIR$/http/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="302" selection-start-line="302" selection-end-line="302" />
+        <state relative-caret-position="174">
+          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
           <folding>
-            <element signature="e#7291#7656#0" expanded="true" />
-            <element signature="e#8260#8379#0" expanded="true" />
-            <element signature="e#8424#8538#0" expanded="true" />
-            <element signature="e#8579#9949#0" expanded="true" />
-            <element signature="e#9077#9145#0" expanded="true" />
-            <element signature="e#9994#10845#0" expanded="true" />
-            <element signature="e#10202#10729#0" expanded="true" />
-            <element signature="e#10757#10820#0" expanded="true" />
-            <element signature="e#10892#11752#0" expanded="true" />
-            <element signature="e#11111#11636#0" expanded="true" />
+            <element signature="n#defineINI#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http/config.db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="105">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/sql/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4988">
+          <caret line="2764" column="42" selection-start-line="2764" selection-start-column="42" selection-end-line="2764" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/vendor/thesoftwarepeople/helpers/src/TSP/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1017">
+          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+          <folding>
+            <element signature="n#__construct#0;n#TSP_Database#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/views/email/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/controllers/CDemo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="992" lean-forward="true" selection-start-line="981" selection-start-column="1" selection-end-line="992" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <folding>
+            <element signature="e#395#1503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#1321#1364#0" expanded="true" />
+            <element signature="e#4522#6611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/controllers/CUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="1144" column="56" selection-start-line="1144" selection-start-column="41" selection-end-line="1144" selection-end-column="56" />
+          <folding>
+            <element signature="n#addRecord#0;n#CUser#0;n#!!top" expanded="true" />
+            <element signature="n#createRecord#0;n#CUser#0;n#!!top" expanded="true" />
+            <element signature="n#register#0;n#CUser#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/models/Type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
+          <folding>
+            <element signature="n#__construct#0;n#Type#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/classes/System.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="277" selection-start-line="277" selection-end-line="277" />
+          <folding>
+            <element signature="n#__construct#0;n#System#0;n#!!top" expanded="true" />
+            <element signature="n#importSQL#0;n#System#0;n#!!top" expanded="true" />
+            <element signature="n#installDatabase#0;n#System#0;n#!!top" expanded="true" />
+            <element signature="n#notifyCustomer#0;n#System#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/assets/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1831">
+          <caret line="545" column="21" selection-start-line="545" selection-start-column="21" selection-end-line="545" selection-end-column="21" />
+          <folding>
+            <element signature="e#3556#3743#0" expanded="true" />
+            <element signature="e#3603#3678#0" expanded="true" />
+            <element signature="e#7673#11231#0" expanded="true" />
+            <element signature="e#7749#9240#0" expanded="true" />
+            <element signature="e#11291#12177#0" expanded="true" />
+            <element signature="e#20805#22275#0" expanded="true" />
+            <element signature="e#21142#21256#0" expanded="true" />
+            <element signature="e#21428#21542#0" expanded="true" />
+            <element signature="e#21601#21715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/models/Setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="258" column="44" selection-start-line="258" selection-start-column="44" selection-end-line="258" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1155">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1230">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="77" column="129" selection-start-line="77" selection-start-column="129" selection-end-line="77" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/models/base/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="731" column="20" selection-start-line="731" selection-start-column="20" selection-end-line="731" selection-end-column="20" />
+          <folding>
+            <element signature="e#870#1434#0#PHP" expanded="true" />
+            <element signature="e#4683#5477#0#PHP" expanded="true" />
+            <element signature="e#5624#6540#0#PHP" expanded="true" />
+            <element signature="e#18513#18575#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/controllers/CProperty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
+          <folding>
+            <element signature="n#getMetadata#0;n#CProperty#0;n#!!top" expanded="true" />
+            <element signature="n#getEmptydata#0;n#CProperty#0;n#!!top" expanded="true" />
+            <element signature="n#createRecord#0;n#CProperty#0;n#!!top" expanded="true" />
+            <element signature="n#updateRecord#0;n#CProperty#0;n#!!top" expanded="true" />
+            <element signature="n#deleteRecord#0;n#CProperty#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.lang.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4498">
+          <caret line="425" column="25" selection-start-line="425" selection-start-column="25" selection-end-line="425" selection-end-column="25" />
+          <folding>
+            <element signature="e#72#256#0" />
+            <element signature="e#353#817#0" />
+            <element signature="e#841#1475#0" />
+            <element signature="e#870#1461#0" />
+            <element signature="e#1496#4156#0" />
+            <element signature="e#1567#1798#0" />
+            <element signature="e#1827#2032#0" />
+            <element signature="e#2061#2947#0" />
+            <element signature="e#2324#2482#0" />
+            <element signature="e#2566#2877#0" />
+            <element signature="e#2972#3334#0" />
+            <element signature="e#3364#3534#0" />
+            <element signature="e#3562#4057#0" />
+            <element signature="e#3635#3805#0" />
+            <element signature="e#4085#4142#0" />
+            <element signature="e#17704#17979#0" />
+            <element signature="e#18006#19468#0" />
+            <element signature="e#19491#39046#0" />
+            <element signature="e#39071#98389#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/models/Property.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="142" column="65" selection-start-line="142" selection-start-column="65" selection-end-line="142" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="55" column="82" selection-start-line="55" selection-start-column="82" selection-end-line="55" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+          <folding>
+            <element signature="e#3815#4528#0" expanded="true" />
+            <element signature="e#5183#5899#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/table-widget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1815">
+          <caret line="14" column="94" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="199" column="33" lean-forward="true" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
         </state>
       </provider>
     </entry>

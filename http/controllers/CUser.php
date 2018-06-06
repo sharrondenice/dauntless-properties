@@ -442,7 +442,7 @@ class CUser extends BaseController {
 		                $data = array(
 		                    'email'     => $email,
 		                    'type_id'   => $profile_type,
-		                    'default'   => 1,
+		                    'is_default'   => 1,
 		                    'owner'     => $user->getOwnerType(),
 		                    'owner_id'  => $user_id,
 		                );
@@ -472,7 +472,7 @@ class CUser extends BaseController {
 		                if ($object_type != ESharedType::Employee)
 		                {
 		                    $params['template'] = 'register';
-		                    $params['subject'] = 'Welcome to Enroll 123';
+		                    $params['subject'] = 'Welcome to Dauntless Properites';
 		    
 		                    System::notifyCustomer($params);
 		                }
@@ -705,14 +705,14 @@ class CUser extends BaseController {
 		            {
 		                // Make no profiles default
 		                $profile_data = array(
-		                    'default'             => 0,
+		                    'is_default'             => 0,
 		                );
 		
 		                $profile->updateProfileByOwner($user->getOwnerType(), $user->getID(), $profile_data);
 		
 		                // Make a profile default given the profile type
 		                $profile_data = array(
-		                    'default'             => 1,
+		                    'is_default'             => 1,
 		                );
 		
 		                $profile->updateProfileByType($user->getOwnerType(), $user->getID(), $default_profile, $profile_data);
@@ -726,7 +726,7 @@ class CUser extends BaseController {
 		                if (empty($existing_profile))
 		                {
 		                    $params = array(
-		                        'default'           => 1,
+		                        'is_default'           => 1,
 		                    );
 		                    $this->updateProfile($default_profile, $params);
 		                }
@@ -1144,6 +1144,7 @@ class CUser extends BaseController {
                     // @TODO: Get User preferences when finished with UI
                     $data['current_user']['preferences'] = array(
                         'current_company_id'    => 1,
+                        'lang_code' => $lang
                     );
 
                     // To avoid resending the form on refreshing
@@ -1155,8 +1156,6 @@ class CUser extends BaseController {
 
                     $this->response['first_name'] = $current_user['first_name'];
                     $this->response['access_granted'] = true;
-
-                    ActvityHelper::log($current_user['_id'], "LOGIN: {$user->getName()} {$user->getUsername()} #{$current_user['_id']}", $this->response);
                 }
                 else
                     $this->response['error'] = array(
@@ -1234,7 +1233,7 @@ class CUser extends BaseController {
 		
 		if (empty($existing_profile))
 		{
-		    $profile_data['default'] = 0;
+		    $profile_data['is_default'] = 0;
 		    $ID = $profile->add($profile_data);
 		}
 		else
@@ -1276,7 +1275,7 @@ class CUser extends BaseController {
 	public function register(array $params = array()) {
 		session_start();
 
-        $data = $this->createRecord(ESharedStatus::UserActive, ESharedType::Client, ESharedType::Work, $params);
+        $data = $this->createRecord(ESharedStatus::UserActive, ESharedType::Admin, ESharedType::Work, $params);
 
 		return $data;
 	}

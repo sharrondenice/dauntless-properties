@@ -29,8 +29,10 @@ defineConstant('ONE_DAY',                           time()+60*60*24);
 
 
 // @TODO Figure out how to use timezones properly
-defineINI('date.timezone',                      'America/Chicago');
+defineINI('date.timezone',                      'America/Arizona');
 defineINI('max_execution_time',                 300); //300 seconds = 5 minutes
+defineINI('mysql.connect_timeout',              300);
+defineINI('default_socket_timeout',             300); //300 seconds = 5 minutes
 
 $global_misc = array(
     'show_countries'        => true,

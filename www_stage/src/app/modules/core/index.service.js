@@ -491,7 +491,7 @@
             // process results
             if (result === undefined || result == null)
             {
-                if ((__env.debug && __env.verbose))
+                if (!(__env.debug && __env.verbose))
                 {
                     console.log('Bad response');
                     console.log(result);
@@ -504,7 +504,7 @@
             }
             else if (result.response === undefined || result.response == null)
             {
-                if ((__env.debug && __env.verbose))
+                if (!(__env.debug && __env.verbose))
                 {
                     console.log('Bad response with no response');
                     console.log(result);
@@ -517,7 +517,7 @@
             }
             else if (result.response.success !== undefined && result.response.success != null)
             {
-                if ((__env.debug && __env.verbose))
+                if (!(__env.debug && __env.verbose))
                 {
                     console.log('Success response');
                     console.log(result);
@@ -530,7 +530,7 @@
             }
             else if (result.response.error !== undefined && result.response.error != null)
             {
-                if ((__env.debug && __env.verbose))
+                if (!(__env.debug && __env.verbose))
                 {
                     console.log('Error response');
                     console.log(result);
@@ -543,7 +543,7 @@
             }
             else
             {
-                if ((__env.debug && __env.verbose))
+                if (!(__env.debug && __env.verbose))
                 {
                     console.log('Other response');
                     console.log(result);

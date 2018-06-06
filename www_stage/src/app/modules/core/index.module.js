@@ -177,7 +177,7 @@
             var $state = $injector.get('$state');
 
             // if installed attempt to display the dashboard
-            if (installed == "true" || __env.installed)
+            if (installed == "true" || installed == true)
             {
                 var result = tspRestService.query({object: 'user', action: 'auth', id: 0}, tspSerialize.data({
                     token: tspCookies.get('token')

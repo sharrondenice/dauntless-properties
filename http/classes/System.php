@@ -52,6 +52,45 @@ class System {
     {
         $this->conn = new TSP_Database($key, $select_db);
     }
+
+    private function importSQL($dbhost, $dbname, $dbuser, $dbpass, $filename){
+
+        // Connect to MySQL server
+        $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
+        if (mysqli_connect_errno())
+            return false;
+
+        // Temporary variable, used to store current query
+        $templine = '';
+
+        // Read in entire file
+        $fp = fopen($filename, 'r');
+
+        // Loop through each line
+        while (($line = fgets($fp)) !== false) {
+            // Skip it if it's a comment
+            if (substr($line, 0, 2) == '--' || $line == '')
+                continue;
+
+            // Add this line to the current segment
+            $templine .= $line;
+
+            // If it has a semicolon at the end, it's the end of the query
+            if (substr(trim($line), -1, 1) == ';') {
+                // Perform the query
+                if(!mysqli_query($connection, $templine)){
+                    //print('Error performing query \'<strong>' . $templine . '\': ' . mysqli_error($connection) . '<br /><br />');
+                }
+                // Reset temp variable to empty
+                $templine = '';
+            }
+        }
+        mysqli_close($connection);
+        fclose($fp);
+
+        return true;
+    }
     /**
      * Method to get the mind archetype
      *
@@ -74,6 +113,13 @@ class System {
             $dbpass     = TSP_Helper::arrGetVal($_POST, 'dbpass', $params['dbpass']);
 
             // Create config file
+            $blank_config_file = "<?php
+            
+define('DB_HOST', '');
+define('DB_NAME', '');
+define('DB_USER', '');
+define('DB_PASS', '');
+";
             $config_file = "<?php
             
 define('DB_HOST', '".$dbhost."');
@@ -89,29 +135,34 @@ define('DB_PASS', '".$dbpass."');
             $code = TSP_Helper::genKey(8, false);
             file_put_contents(ABSPATH . "sql/database-{$code}.sql", $sql_stmnts);
 
-            $command='mysql -h' .$dbhost .' -u' .$dbuser .' -p' .$dbpass .' < ' .ABSPATH . "sql/database-{$code}.sql";
-            exec($command, $output, $worked);
+            //$command='mysql -h' .$dbhost .' -u' .$dbuser .' -p' .$dbpass .' < ' .ABSPATH . "sql/database-{$code}.sql";
+            //exec($command, $output, $imported);
 
-            switch($worked){
-                case 0:
-                    $this->response['success'] = array(
-                        'title' => 'Database Successfully setup.',
-                        'message' => 'Import file <b>' . ABSPATH . 'sql/database-live.sql</b> successfully imported to database <b>' . $dbname .'</b>',
-                        'type' => 'success',
-                    );
+            $imported = $this->importSQL($dbhost, $dbname, $dbuser, $dbpass, ABSPATH . "sql/database-{$code}.sql");
 
-                    file_put_contents(ROOTPATH . 'installed', "");
-                    break;
-                case 1:
-                default:
-                    $this->response['error'] = array(
-                        'title' => 'An error occurred during database setup.',
-                        'message' => 'Please check your credentials and try again or contact your system administrator for support.',
-                        'type' => 'error',
-                    );
+            if($imported)
+            {
+                $this->response['success'] = array(
+                    'title' => 'Database Successfully setup.',
+                    'message' => 'Import file <b>' . ABSPATH . 'sql/database-live.sql</b> successfully imported to database <b>' . $dbname . '</b>',
+                    'type' => 'success',
+                );
 
-                    file_put_contents(ABSPATH . 'config.db.php', "");
-                    break;
+                include_once ABSPATH . 'config.db.php';
+            }
+            else
+            {
+                $this->response['error'] = array(
+                    'title' => 'An error occurred during database setup.',
+                    'message' => 'Please check your credentials and try again or contact your system administrator for support.',
+                    'type' => 'error',
+                );
+
+                file_put_contents(ABSPATH . 'config.db.php', $blank_config_file);
+
+                include_once ABSPATH . 'config.db.php';
+
+                $this->conn = new TSP_Database('database');
             }
 
         } catch (Exception $e){
@@ -120,7 +171,10 @@ define('DB_PASS', '".$dbpass."');
                 $this->response['sql'][] = array('stmt' => $sql);
                 $this->response['admin_error'][] = $e->getMessage();
             }
-            file_put_contents(ABSPATH . 'config.db.php', "");
+
+            file_put_contents(ABSPATH . 'config.db.php', $blank_config_file);
+            include_once ABSPATH . 'config.db.php';
+
             $this->response['error'] = array(
                 'title' => 'Error Occurred',
                 'message' => 'Please contact your system administrator or try again at a later time.',
@@ -195,7 +249,12 @@ define('DB_PASS', '".$dbpass."');
             $system_settings = $setting->getAllByCompany($current_company_id);
 
             foreach ($system_settings as $preference){
-                $data['system_settings'][$preference['setting_name']] = $preference['setting_value'];
+                $value = $preference['setting_value'];
+
+                if ($value == "true") $value = true;
+                else if ($value == "false") $value = false;
+
+                $data['system_settings'][$preference['setting_name']] = $value;
             }
 
             $user = new User();
@@ -203,20 +262,22 @@ define('DB_PASS', '".$dbpass."');
             $preferences = $setting->getAllByUser($user_id);
 
             foreach ($preferences as $preference){
-                $data['current_user']['preferences'][$preference['setting_name']] = $preference['setting_value'];
+                $value = $preference['setting_value'];
+
+                if ($value == "true") $value = true;
+                else if ($value == "false") $value = false;
+
+                $data['current_user']['preferences'][$preference['setting_name']] = $value;
             }
 
             $state = new State();
-            $data['states'] = $state->getAllByCountryCode($country_code);
+            $data['states'] = $state->getAll();
 
             $type = new Type();
             $data['types'] = $type->getAll();
 
-            if ($show_countries)
-            {
-                $country = new Country();
-                $data['countries'] = $country->getAll();
-            }
+            $country = new Country();
+            $data['countries'] = $country->getAll();
 
             $this->response['success'] = array(
                 'title' => 'Success',

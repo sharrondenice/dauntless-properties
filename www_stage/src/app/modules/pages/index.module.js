@@ -53,6 +53,8 @@
                         if ((__env.debug && __env.verbose))
                             console.log('Token Valid...');
 
+                        localStorage.setItem(__env.cookie_prefix + '.installed', "true");
+
                         $rootScope.loadingAppText = $scope.lang.sentences.login;
                         $rootScope.loadingApp = tspAppPreloader.show();
                         $rootScope.first_run = true;
@@ -155,8 +157,8 @@
 
         $scope.final_page = 2;
 
-        $scope.databaseDelay = 250;
-        $scope.accountDelay = 125;
+        $scope.databaseDelay = 100;
+        $scope.accountDelay = 25;
         $scope.domain = document.location.origin;
 
         function setStatusBar(type, value)
@@ -208,6 +210,8 @@
         function completeInstall()
         {
             jQuery('.install-complete').css('display', 'block');
+            localStorage.setItem(__env.cookie_prefix + '.installed', "true");
+
             disableNavButtons(false);
         }
 
@@ -255,6 +259,8 @@
 
         $scope.installDatabase = function(){
 
+            $timeout(counter('database'), $scope.databaseDelay, false);
+
             var result = tspRestService.query({object: 'system', action: 'install'}, tspSerialize.data($scope.postdata));
             tspResourceHelper.process(result, false,
                 function(data){
@@ -268,8 +274,6 @@
                     // DO NOT SHOW ALERT ON SUCCESS
                     // Start counter instead
                     //SweetAlert.success('Credentials accepted. ' + $scope.object + ' created.', {title: "Record Updated"});
-
-                    $timeout(counter('database'), $scope.databaseDelay, false);
                 },
                 function(){
                     $scope.finished = true;
@@ -311,6 +315,9 @@
             if (previous > 0){
                 jQuery('#tab' + current).removeClass('active');
                 jQuery('#tab' + previous).addClass('active');
+
+                jQuery('.install-complete').css('display', 'none');
+                jQuery('.progress-stats').css('display', 'none');
             }
         }
 
@@ -343,6 +350,7 @@
                             jQuery('#tab' + next).addClass('active');
                         }
 
+                        jQuery('.progress-stats').css('display', 'block');
                         beginInstall();
                     }
                 }
@@ -352,6 +360,9 @@
                 {
                     jQuery('#tab' + current).removeClass('active');
                     jQuery('#tab' + next).addClass('active');
+
+                    jQuery('.install-complete').css('display', 'none');
+                    jQuery('.progress-stats').css('display', 'none');
                 }
             }
         }

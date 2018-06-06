@@ -190,8 +190,9 @@
 		<li class="dropdown" dropdown>
 			<a href class="user-profile dropdown-toggle" dropdown-toggle>
 				<tsp-table-widget
-						type="avatar"
+						type="image-url"
 						field-data="app.current_user"
+                        field-key="photo"
 						show-title="false"
                         is-featured="true">
 				</tsp-table-widget>
@@ -200,7 +201,7 @@
 			<div class="panel panel-default dropdown-menu">
 				<div class="panel-body">
 					<figure class="photo left">
-                        <img class="clickable" border="0" ng-src="{{app.current_user.metadata.avatar.location}}">
+                        <img class="clickable" border="0" ng-src="{{app.current_user.photo}}">
 					</figure>
 					<div class="profile-info right">
 						<p class="user-name">{{app.current_user.first_name}} {{app.current_user.last_name}}</p>

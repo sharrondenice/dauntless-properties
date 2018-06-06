@@ -6,8 +6,7 @@ $template = <<<END_HTML
 </style>
 Dear {$params['first_name']} {$params['last_name']},<br>
 <br>
-Thank you for registering for an Enroll 123 account. Before you can login, an admin will need to approve your account. Once approved you will be able to login with the credentials you've supplied.<br>
-<br>
+Thank you for registering for an Dauntless Properties account.<br>
 Your account information is (details case-sensitive):<br>
 <br>
 Login URL: <a href="{$params['domain']}/#/login">{$params['domain']}/#/login</a><br>
