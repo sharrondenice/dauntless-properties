@@ -48,9 +48,13 @@
                                   on-delete="deleteRecord(pos, id, title)">
                 </tsp-table-widget>
             </td>
+            <!-- Book Now //-->
+            <td ng-if="!headers[2].skipped" style="text-align: center;">
+                <button type="button" class="btn btn-primary">Book Now</button>
+            </td>
             <!-- Avatar //-->
-            <td ng-if="!headers[2].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
-                <tsp-table-widget mobile-header="headers[2].title"
+            <td ng-if="!headers[3].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
+                <tsp-table-widget mobile-header="headers[3].title"
                                   type="image-url"
                                   index="$index"
                                   record-id="{{record._id}}"
@@ -60,8 +64,8 @@
                 </tsp-table-widget>
             </td>
             <!-- Title //-->
-            <td ng-if="!headers[3].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
-                <tsp-table-widget mobile-header="headers[3].title"
+            <td ng-if="!headers[4].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
+                <tsp-table-widget mobile-header="headers[4].title"
                                   type="default"
                                   index="$index"
                                   record-id="{{record._id}}"
@@ -71,8 +75,9 @@
                                   suffix="<br><br><small>{{record.description}}</small>">
                 </tsp-table-widget>
             </td>
-            <td ng-if="!headers[4].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
-                <span class="mobile-only">{{headers[4].title}}:&nbsp;</span>
+            <!-- Date //-->
+            <td ng-if="!headers[5].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
+                <span class="mobile-only">{{headers[5].title}}:&nbsp;</span>
                 <p class="small">
                     <tsp-table-widget  type="date"
                                        prefix="<strong>{{lang.words.start}}: </strong>"

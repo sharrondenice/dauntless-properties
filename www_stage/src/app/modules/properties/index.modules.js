@@ -20,9 +20,10 @@
         $scope.headers = [
             {skipped: false, title: '',                 key: '',                        type: 'select',     sort: false, width: '1%'},
             {skipped: false, title: '',                 key: '',                        type: 'action',     sort: false, width: '1%'},
-            {skipped: false, title: 'Image',            key: 'image',                   type: 'default',    sort: true,  width: '12%'},
-            {skipped: false, title: 'Title',            key: 'title',                   type: 'default',    sort: true,  width: ''},
-            {skipped: false, title: 'Date',             key: 'start_time',              type: 'default',    sort: true,  width: '20%'},
+            {skipped: false, title: '',                 key: '',                        type: 'default',    sort: false, width: '10%'},
+            {skipped: false, title: '',                 key: 'image',                   type: 'default',    sort: false, width: '12%'},
+            {skipped: false, title: 'Description',      key: 'title',                   type: 'default',    sort: true,  width: ''},
+            {skipped: false, title: 'Availability',     key: 'start_time',              type: 'default',    sort: true,  width: '20%'},
         ];
 
         // start state params
