@@ -1,0 +1,20 @@
+<header class="site-head clearfix no-print"
+        id="site-head"
+        ng-controller="HeadCtrl"
+        ng-include=" 'app/modules/core/templates/header.html' ">
+  <!-- linked header (static) view -->
+</header>
+<div class="main-container clearfix">
+  <aside class="nav-wrap no-print"
+         id="site-nav"
+         ng-controller="NavCtrl"
+         ng-include=" 'app/modules/core/templates/nav.html' " custom-scrollbar>
+
+  </aside>
+
+  <div class="content-container" ng-class="{container: isLayoutHorizontal}"
+       id="content" ui-view>
+    <!-- content using routing -->
+  </div>
+  <div class="no-print" ng-include="'app/modules/core/templates/footer.html'"></div>
+</div>

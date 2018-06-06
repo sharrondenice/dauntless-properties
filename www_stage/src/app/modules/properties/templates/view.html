@@ -1,0 +1,98 @@
+<div class="panel-heading">
+    <div class="row form-inline">
+        <div class="col-md-3">
+            <div class="pull-left mt5">
+                        <button class="btn btn-sm btn-primary right ml5" ng-click="formView(curRec, postdata._id, 2)"><span tsp-i18n="words.edit"></span> {{object}}</button>
+                        <button ng-click="listView()" class="btn btn-sm btn-primary right"><i class="fa fa-arrow-left"></i></button>
+                    </div>
+        </div>
+        <div class="col-md-9 light_bkg">
+            <h4 class="text-uppercase title text-normal pull-right mr15"><strong>{{object}} <span tsp-i18n="words.details"></span></strong>&nbsp;</h4>
+        </div>
+    </div>
+</div>
+<div class="panel-body">
+    <div class="page page-form-details clearfix">
+        <div class="page-wrap">
+            <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel-body mb30 form-details">
+                        <div class="clearfix mb20">
+                            <div class="row mb10" class="text-light project-title">
+                                <div class="col-sm-8">
+                                    <div class="row">
+                                        <div class="col-sm-12 text-h4">
+                                            <strong><span tsp-i18n="words.property"></span></strong>: {{postdata.title}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4"></div>
+                            </div>
+                        </div>
+
+                        <!-- description -->
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="mb40">
+                                    <div class="sub-header mb20">
+                                        <h4><strong><span tsp-i18n="words.available"></span></strong></h4>
+                                    </div>
+                                    <div class="row mb20">
+                                        <div class="col-sm-6">
+                                            <span tsp-i18n="words.from"></span>:
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <tsp-table-widget
+                                                    type="date"
+                                                    format="MM/DD/YYYY"
+                                                    field-data="postdata"
+                                                    field-key="start_time">
+                                            </tsp-table-widget>
+                                        </div>
+                                    </div>
+                                    <div class="row mb20">
+                                        <div class="col-sm-6">
+                                            <span tsp-i18n="words.to"></span>:
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <tsp-table-widget
+                                                    type="date"
+                                                    format="MM/DD/YYYY"
+                                                    field-data="postdata"
+                                                    field-key="end_time">
+                                            </tsp-table-widget>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb40" ng-if="postdata.metadata.location">
+                                    <div class="sub-header mb20">
+                                        <h4><strong tsp-i18n="words.location"></strong></h4>
+                                    </div>
+                                    <div class="row mb200">
+                                        <div class="col-sm-3 text-center">
+                                            <i class="h1 glyphicons glyphicons-map-marker text-danger"></i>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            {{postdata.metadata.location.address1}} {{postdata.metadata.location.address2}}<br>
+                                            {{postdata.metadata.location.city}}, {{postdata.metadata.location.state.state_code}} {{postdata.metadata.location.country.title}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="sub-header mb20">
+                                    <h4><strong>{{postdata.type.title}} <span tsp-i18n="words.description"></span></strong></h4>
+                                </div>
+                                <div class="mb60" ng-bind-html="postdata.description"></div>
+                                <!-- #end related data -->
+                            </div>
+                        </div>
+                        <!-- #end inner row -->
+                    </div>
+                    <!-- #end panel -->
+                </div> <!-- #end col -->
+            </div> <!-- #end row -->
+        </div>    <!-- #end page-wrap -->
+    </div>
+</div>

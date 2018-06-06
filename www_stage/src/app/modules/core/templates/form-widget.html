@@ -1,0 +1,22 @@
+<form id="tspForm" role="form" class="form-horizontal mt-lg" method="POST"
+      data-ng-submit="func()" data-validate="parsley">
+    <div ng-transclude></div>
+    <div class="col-sm-12">
+        <button id="tspBtnValidator" type="submit" class="btn btn-primary btn-rounded pull-right">
+            <span ng-show="btnLabel == busyLabel"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+            {{btnLabel}}
+        </button>
+    </div>
+</form>
+<script>
+    <!--
+    jQuery('#tspBtnValidator').click(function(e){
+        var form = jQuery('#tspForm');
+
+        if ( form.parsley().validate() == false )
+            return false;
+        else
+            return true;
+    });
+    //-->
+</script>

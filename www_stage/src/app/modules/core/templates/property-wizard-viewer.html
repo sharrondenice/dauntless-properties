@@ -1,0 +1,206 @@
+<div ng-class="{'preloader': loadingData}" class="page page-list-details clearfix" ng-controller="DataWizardCtrl">
+	<div class="page-wrap">
+		<!-- row -->
+		<div class="row">
+			<div class="col-lg-12">
+                <!-- wizard -->
+                <div class="hidden list-unstyled nav nav-pills row">
+                    <div ng-class="{active: steps[0]}" class="col-lg-4 col-xs-8">
+                        <a href="#" data-toggle="tab" aria-expanded="true">
+                            <span class="icon" tsp-i18n="numbers.one"></span>
+                            <span class="main-text">
+                                <span class="h2">List View</span>
+                                <small>This step has validation</small>
+                            </span>
+                        </a>
+                    </div>
+                    <div ng-class="{active: steps[1]}" class="col-lg-4 col-xs-8">
+                        <a href="#" data-toggle="tab" aria-expanded="true">
+                            <span class="icon" tsp-i18n="numbers.two"></span>
+                            <span class="main-text">
+                                <span class="h2">Quick View</span>
+                                <small>This step has validation</small>
+                            </span>
+                        </a>
+                    </div>
+                    <div ng-class="{active: steps[2] || steps[3]}" class="col-lg-4 col-xs-8">
+                        <a href="#" data-toggle="tab" aria-expanded="true">
+                            <span class="icon" tsp-i18n="numbers.three"></span>
+                            <span class="main-text">
+                                <span class="h2">Form View</span>
+                                <small>This step has validation</small>
+                            </span>
+                        </a>
+                    </div>
+                    <div ng-class="{active: steps[4]}" class="col-lg-4 col-xs-8">
+                        <a href="#" data-toggle="tab" aria-expanded="true">
+                            <span class="icon" tsp-i18n="numbers.four"></span>
+                            <span class="main-text">
+                                <span class="h2">Icon View</span>
+                                <small>This step has validation</small>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- list view -->
+                <div name="wizard-step-1" ng-show="steps[0]" class="panel mb30 table-responsive details-panel">
+                    <div class="panel-heading">
+                        <div class="row form-inline">
+                            <div class="col-sm-7 light_bkg">
+                                <h4 class="text-uppercase title text-normal light_bkg">{{objects}}</h4>
+                            </div>
+                            <div class="col-sm-5 mt5">
+                                <div class="pull-right">
+                                    <button ng-if="route != 'resource' && route != 'media'" class="btn btn-sm btn-primary right" ng-click="createView()"><i class="glyphicons glyphicons-plus"></i>&nbsp;{{lang.labels.buttons.add}} {{object}}</button>
+                                    <button ng-if="route == 'media'" class="btn btn-sm btn-primary right" ng-click="iconView()"><i class="glyphicons glyphicons-show-thumbnails ml5"></i></button>
+                                    <span ng-if="route == 'resource'" class="dropdown" dropdown>
+                                        <button class="btn btn-sm btn-primary right dropdown-toggle" dropdown-toggle type="button">
+                                            <i class="glyphicons glyphicons-plus"></i>&nbsp;{{lang.labels.buttons.add}} {{object}}<span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu small clickable">
+                                            <li>
+                                                <a data-ng-click="createView(false)"><span tsp-i18n="pages.empty.resources.create_company"></span></a>
+                                            </li>
+                                            <li>
+                                                <a data-ng-click="createView(true)"><span tsp-i18n="pages.empty.resources.create_user"></span></a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </div>
+                                <div ng-if="records.length > 0" class="pull-right mr5">
+                                    <div class="dropdown" dropdown>
+                                        <button class="btn btn-sm btn-primary dropdown-toggle" dropdown-toggle
+                                                type="button"><i class="page_size glyphicons glyphicons-cogwheels"></i></button>
+                                        <ul class="dropdown-menu">
+                                            <li ng-repeat="num in numPerPageOpts">
+                                                <a ng-click="onNumPerPageChange(num)"><span>{{num}}</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div ng-if="postdata !== undefined && postdata !== null" class="search-bar input-group mb30 input-group-sm">
+                            <div class="row">
+                                <div class="col-md-2 mt30 mb30 highlighted small">
+                                    Search Available Properties
+                                </div>
+                                <div class="col-md-5">
+                                    <tsp-field-widget
+                                            type="date"
+                                            label="{{lang.objects.properties.all.start_time}}"
+                                            place-val="{{lang.words.enter_start_time}}"
+                                            field-data="search"
+                                            field-key="start_time"
+                                            format="MM/DD/YYYY">
+                                    </tsp-field-widget>
+                                </div>
+                                <div class="col-md-5">
+                                    <tsp-field-widget
+                                            type="date"
+                                            label="{{lang.objects.properties.all.end_time}}"
+                                            place-val="{{lang.words.enter_end_time}}"
+                                            field-data="search"
+                                            field-key="end_time"
+                                            format="MM/DD/YYYY"
+                                            is-required="true">
+                                    </tsp-field-widget>
+                                </div>
+                            </div>
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary fa fa-search" data-ng-click="searchRange()"></button>
+                            </div>
+                        </div>
+                        <div ng-if="steps[0]" data-ng-include="'app/modules/' + routes + '/templates/list.html'"></div>
+                    </div>
+                    <div class="panel-heading">
+                        <div ng-if="postdata !== undefined && postdata !== null" class="row form-inline">
+                            <div class="col-md-6 light_bkg">
+                                <p class="left mt15 small">
+                                    {{lang.fn_show_entries([records.length*(currentPage - 1) + 1, records.length*currentPage, records.length])}}
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <pagination boundary-links="true" total-items="filteredData.length" ng-model="currentPage" class="pagination-sm right"
+                                            max-size="5" ng-change="select(currentPage)" items-per-page="numPerPage" rotate="false"
+                                            previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- #end list view -->
+
+                <!-- quick view -->
+                <div name="wizard-step-2" ng-show="steps[1]" class="panel mb30 table-responsive details-panel">
+                    <div ng-if="steps[1]" data-ng-include="'app/modules/' + routes + '/templates/view.html'"></div>
+                </div>
+                <!-- #end quick view -->
+
+                <!-- form view -->
+                <div name="wizard-step-3" ng-show="steps[2]" class="panel mb30 table-responsive details-panel">
+                    <div ng-if="steps[2]" data-ng-include="'app/modules/' + routes + '/templates/form.html'"></div>
+                </div>
+                <!-- #end form view -->
+
+                <!-- new view -->
+                <div name="wizard-step-4" ng-show="steps[3]" class="panel mb30 table-responsive details-panel">
+                    <div ng-if="steps[3]" data-ng-include="'app/modules/' + routes + '/templates/new.html'"></div>
+                </div>
+                <!-- #end new view -->
+
+                <!-- icon view -->
+                <div name="wizard-step-5" ng-show="steps[4]" class="panel mb30 table-responsive details-panel">
+                    <div class="panel-heading">
+                        <div class="row form-inline">
+                            <div class="col-sm-7 light_bkg">
+                                <h4 class="text-uppercase title text-normal light_bkg">{{objects}}</h4>
+                            </div>
+                            <div class="col-sm-5 mt5">
+                                <div class="pull-right">
+                                    <button ng-if="route != 'resource' && route != 'media'" class="btn btn-sm btn-primary right" ng-click="createView()"><i class="glyphicons glyphicons-plus"></i>&nbsp;{{lang.labels.buttons.add}} {{object}}</button>
+                                    <button ng-if="route == 'media'" class="btn btn-sm btn-primary right" ng-click="listView()"><i class="glyphicons glyphicons-list ml5"></i></button>
+                                    <span ng-if="route == 'resource'" class="dropdown" dropdown>
+                                        <button class="btn btn-sm btn-primary right dropdown-toggle" dropdown-toggle type="button">
+                                            <i class="glyphicons glyphicons-plus"></i>&nbsp;{{lang.labels.buttons.add}} {{object}}<span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu small clickable">
+                                            <li>
+                                                <a data-ng-click="createView(false)"><span tsp-i18n="pages.empty.resources.create_company"></span></a>
+                                            </li>
+                                            <li>
+                                                <a data-ng-click="createView(true)"><span tsp-i18n="pages.empty.resources.create_user"></span></a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div ng-if="postdata !== undefined && postdata !== null" class="search-bar input-group mb30 input-group-sm">
+                            <input type="text" class="form-control" placeholder="{{lang.fn_search_here([objects])}}"
+                                   data-ng-model="search.keywords" data-ng-keyup="search()">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary fa fa-search"></button>
+                            </div>
+                        </div>
+                        <div ng-if="steps[4]" data-ng-include="'app/modules/' + routes + '/templates/icon.html'"></div>
+                    </div>
+
+                </div>
+                <!-- #end icon view -->
+                <!-- #end wizard -->
+			</div> <!-- end col -->
+		</div>
+		<!-- #end row -->
+	</div>	<!-- #end page-wrap -->
+</div>
+<div ng-if="loadingData" class="preloading-data-logo-container">
+    <div class="preloading-data-logo"></div>
+    <div ng-bind-html="loadingDataText || lang.sentences.loading_data_wait" class="preloading-data-text"></div>
+</div>

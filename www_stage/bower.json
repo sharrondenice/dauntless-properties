@@ -1,0 +1,73 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "description": "All-In-One Multi-Company Management System",
+  "author": "sharrondenice thesoftwarepeople.com",
+  "license": "SEE LICENSE IN license.txt",
+  "homepage": "theprofessional.tspapps.com",
+  "main": "../www/index.html",
+  "keywords": [
+    "CRM",
+    "CMS",
+    "task",
+    "manager",
+    "project",
+    "manager",
+    "time",
+    "management",
+    "social",
+    "media",
+    "manager"
+  ],
+  "private": true,
+  "dependencies": {
+    "ng-dropzone": "ngdropzone#^2.0.2",
+    "bootstrap": "~3.3.7",
+    "jquery": "~2.1.4",
+    "jquery-bridget": "~2.0.1",
+    "jquery-ui": "^1.12.1",
+    "angular": "~1.4.14",
+    "angular-route": "~1.4.14",
+    "angular-animate": "~1.4.14",
+    "matchMedia": "~0.2.0",
+    "angular-bootstrap": "~0.12.0",
+    "angular-ui-select": "^0.19.8",
+    "angular-sanitize": "~1.3.20",
+    "angular-resource": "1.3.20",
+    "ngstorage": "0.3.7",
+    "angular-ui-router": "0.2.13",
+    "modernizr": "~3.5.0",
+    "seiyria-bootstrap-slider": "~5.1.3",
+    "textAngular": "~1.5.16",
+    "perfect-scrollbar": "0.5.8",
+    "font-awesome": "~5.0.6",
+    "chartist": "~0.5.0",
+    "angular-skycons": "~1.0.0",
+    "angular-loading-bar": "~0.6.0",
+    "angular-fullscreen": "~1.0.1",
+    "angular-file-upload": "2.5.0",
+    "ng-file-upload": "^12.2.13",
+    "jasny-bootstrap": "~3.1.3",
+    "parsleyjs": "~2.1.3",
+    "sweetalert": "1.1.3",
+    "ng-sweet-alert": "v1.0.11",
+    "angular-filter": "^0.5.17",
+    "moment": "~2.16.0",
+    "angular-moment-picker": "moment-picker#^0.10.2"
+  },
+  "overrides": {
+    "angular-moment-picker": {
+      "main": [ "dist/angular-moment-picker.js", "dist/angular-moment-picker.css" ]
+    }
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "angular": "~1.4.14"
+  }
+}

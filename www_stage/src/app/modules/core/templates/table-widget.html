@@ -1,0 +1,172 @@
+<span>
+    <span ng-if="mobileHeader" class="mobile-only">{{mobileHeader}}:&nbsp;</span>
+    <span ng-if="type=='actionbox'">
+        <div class="dropdown" dropdown class="action-row">
+            <button class="btn btn-md btn-trans dropdown-toggle" dropdown-toggle
+                    type="button"><i class="fa fa-bars"></i></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a id="view-{{recordId}}" class="clickable" ng-click="edit({pos: index, id: recordId})">
+                        <i class="user-option glyphicon glyphicon glyphicon-pencil"></i>&nbsp;&nbsp;<span tsp-i18n="words.edit_record"></span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a id="delete-{{recordId}}" class="clickable" ng-click="delete({pos: index, id: recordId, title: label})">
+                        <i class="user-option glyphicon glyphicon-remove-circle"></i>&nbsp;&nbsp;<span tsp-i18n="words.delete_record"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </span>
+    <span ng-if="type=='categories'">
+        <span ng-if="prefix" ng-bind-html="prefix"></span>
+        <span class="small" ng-repeat="item in fieldData[fieldKey]">
+            <span class="category" ng-if="item.title !== undefined && item.title !== null"><i ng-if="item.icon" class="{{item.icon}}"></i> {{item.title}}</span>
+            <span class="text-danger" ng-if="item.title === undefined || item.title === null"><span tsp-i18n="words.none"></span></span>
+        </span>
+        <span class="small" ng-if="fieldData[fieldKey].length == 0 || fieldData[fieldKey] === undefined || fieldData[fieldKey] == null">
+            <span class="text-danger"><span tsp-i18n="words.none"></span></span>
+        </span>
+        <span ng-if="suffix" ng-bind-html="suffix"></span>
+    </span>
+    <span ng-if="type=='checkbox'">
+        <div class="ui-checkbox ui-checkbox-primary">
+            <label ng-required="isRequired">
+                <input ng-model="fieldData[fieldKey]" id="checkbox{{recordId}}" type="checkbox"><span></span>
+            </label>
+        </div>
+    </span>
+    <span ng-if="type=='currency'">
+        <div class="image-list">
+            <span ng-if="prefix" ng-bind-html="prefix"></span><span ng-class="{'highlighted': isHighlighted}" ng-bind-html="fieldData[fieldKey] | currency"></span>
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </div>
+    </span>
+    <span ng-if="type=='date'">
+        <span ng-if="prefix" ng-bind-html="prefix"></span>
+        <span ng-class="{'highlighted': isHighlighted}">
+            <span moment-picker="fieldData[fieldKey]"
+                  format="{{format}}"
+                  disable="true">
+                {{fieldData[fieldKey] || ""}}
+            </span>
+        </span>
+        <p ng-if="suffix" ng-bind-html="suffix"></p>
+    </span>
+    <span ng-if="type=='bool'">
+        <div class="image-list">
+            <span ng-if="prefix" ng-bind-html="prefix"></span>
+            <span ng-class="{'highlighted': isHighlighted}" ng-bind-html="fieldData[fieldKey] | tspFilterYesNo:lang.words.yes:lang.words.no"></span>
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </div>
+    </span>
+    <span ng-if="type=='default'">
+        <div class="image-list">
+            <span ng-if="prefix" ng-bind-html="prefix"></span><span ng-class="{'highlighted': isHighlighted}" ng-bind-html="fieldData[fieldKey]"></span>
+            <span ng-if="suffix" class="small" ng-bind-html="suffix"></span>
+        </div>
+    </span>
+    <span ng-if="type=='progress'">
+        {{fieldData[fieldKey]}}% Completed
+        <span ng-if="fieldData[fieldKey] <= 30">
+            <progressbar value="(fieldData[fieldKey])" class="progress-xs" type="danger"></progressbar>
+        </span>
+            <span ng-if="fieldData[fieldKey] > 30 && fieldData[fieldKey] <= 60">
+            <progressbar value="(fieldData[fieldKey])" class="progress-xs" type="warning"></progressbar>
+        </span>
+            <span ng-if="fieldData[fieldKey] > 60">
+            <progressbar value="(fieldData[fieldKey])" class="progress-xs" type="success"></progressbar>
+        </span>
+        </span>
+    <span ng-if="type=='rating'">
+        <rating ng-model="fieldData[fieldKey]" max="10" readonly="true"
+                state-on="'glyphicon-star'" state-off="'glyphicon-star-empty'"></rating>
+    </span>
+    <span ng-if="type=='releases'">
+        <span class="small" ng-repeat="item in fieldData[fieldKey]">
+            <span class="tag" ng-if="item.title !== undefined && item.title !== null"><i class="fa fa-tag mr5"></i>{{item.type.title}}/{{item.title}}</span>
+            <span class="text-danger" ng-if="item.title === undefined || item.title === null"><span tsp-i18n="words.none"></span></span>
+        </span>
+    </span>
+    <span ng-if="type=='status' || type=='priority'">
+        <div class="badge"
+             style="background-color: {{fieldData[fieldKey].background}}; color: {{fieldData[fieldKey].foreground}};">
+            {{fieldData[fieldKey].title}}
+        </div>
+    </span>
+    <span ng-if="type=='tags'">
+        <span ng-if="prefix" ng-bind-html="prefix"></span>
+        <span class="small" ng-repeat="item in fieldData[fieldKey] | orderBy:orderBy | filter:filterBy:true">
+            <span class="tag" ng-if="item.title !== undefined && item.title !== null"><i class="fa fa-tag mr5"></i>{{item.title}}</span>
+            <span class="text-danger" ng-if="item.title === undefined || item.title === null"><span tsp-i18n="words.none"></span></span>
+        </span>
+        <span class="small" ng-if="fieldData[fieldKey].length == 0 || fieldData[fieldKey] === undefined || fieldData[fieldKey] == null">
+            <span class="text-danger"><span tsp-i18n="words.none"></span></span>
+        </span>
+        <span ng-if="suffix" ng-bind-html="suffix"></span>
+    </span>
+    <span ng-if="type=='typeicon'">
+        <span class="image-list">
+            <span ng-if="prefix" ng-bind-html="prefix"></span><span ng-if="showTitle">{{fieldData[fieldKey].title}}</span> <i ng-if="fieldData[fieldKey].icon" class="{{fieldData[fieldKey].icon}}"></i>
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </span>
+    </span>
+
+    <span ng-if="type=='avatar'">
+        <span ng-if="fieldKey" ng-class="{'featured-image': isFeatured, 'img-circle circle-border m-b-md': isPhoto, 'company-logo': isLogo, 'image-list': !isFeatured && !isPhoto && !isLogo}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <img ng-if="fieldData[fieldKey].metadata.avatar" class="clickable" border="0" ng-src="{{fieldData[fieldKey].metadata.avatar.location}}">
+            <span ng-if="showTitle" class="small">{{fieldData[fieldKey].title}}</span>
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+            <p ng-if="showDesc" class="small">{{fieldData[fieldKey].description |tspFilterTruncate:100}}</p>
+        </span>
+        <span ng-if="!fieldKey" ng-class="{'featured-image': isFeatured, 'img-circle circle-border m-b-md': isPhoto, 'company-logo': isLogo, 'image-list': !isFeatured && !isPhoto && !isLogo}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <img ng-if="fieldData.metadata.avatar" class="clickable" border="0" ng-src="{{fieldData.metadata.avatar.location}}">
+            <span ng-if="showTitle" class="small">{{fieldData.title}}</span>
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+            <p ng-if="showDesc" class="small">{{fieldData.description |tspFilterTruncate:100}}</p>
+        </span>
+    </span>
+    <span ng-if="type=='image'">
+        <span ng-if="fieldKey" ng-class="{'featured-image': isFeatured, 'profile-logo': isPhoto, 'company-logo': isLogo, 'thumbnail': isThumbnail, 'image-list': !isFeatured && !isPhoto && !isLogo && !isThumbnail}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <img border="0" ng-src="{{fieldData[fieldKey].location}}">
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </span>
+        <span ng-if="!fieldKey" ng-class="{'featured-image': isFeatured, 'profile-logo': isPhoto, 'company-logo': isLogo, 'thumbnail': isThumbnail, 'image-list': !isFeatured && !isPhoto && !isLogo && !isThumbnail}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <img border="0" ng-src="{{fieldData.location}}">
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </span>
+    </span>
+    <span ng-if="type=='image-url'">
+        <span ng-if="fieldKey" ng-class="{'featured-image': isFeatured, 'profile-logo': isPhoto, 'company-logo': isLogo, 'thumbnail': isThumbnail, 'image-list': !isFeatured && !isPhoto && !isLogo && !isThumbnail}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <img border="0" ng-src="{{fieldData[fieldKey]}}">
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </span>
+        <span ng-if="!fieldKey" ng-class="{'featured-image': isFeatured, 'profile-logo': isPhoto, 'company-logo': isLogo, 'thumbnail': isThumbnail, 'image-list': !isFeatured && !isPhoto && !isLogo && !isThumbnail}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <img border="0" ng-src="{{fieldData}}">
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </span>
+    </span>
+    <span ng-if="type=='media'">
+        <span ng-if="fieldKey" ng-class="{'featured-image': isFeatured, 'profile-logo': isPhoto, 'company-logo': isLogo, 'thumbnail': isThumbnail, 'image-list': !isFeatured && !isPhoto && !isLogo && !isThumbnail}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <img ng-if="fileType.indexOf('image') <= -1" border="0" ng-src="assets/images/icons/filetypes/{{fileExt}}.png">
+            <img ng-if="fileType.indexOf('image') > -1" border="0" ng-src="{{fieldData[fieldKey].location}}">
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </span>
+        <span ng-if="!fieldKey" ng-class="{'featured-image': isFeatured, 'profile-logo': isPhoto, 'company-logo': isLogo, 'thumbnail': isThumbnail, 'image-list': !isFeatured && !isPhoto && !isLogo && !isThumbnail}">
+            <span ng-if="prefix" class="small" ng-bind-html="prefix"></span>
+            <a target="_blank" ng-if="fileType.indexOf('image') <= -1" ng-href="{{fieldData.location}}">
+                <img border="0" ng-src="assets/images/icons/filetypes/{{fileExt}}.png">
+            </a>
+            <img ng-if="fileType.indexOf('image') > -1" border="0" ng-src="{{fieldData.location}}">
+            <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+        </span>
+    </span>
+</span>

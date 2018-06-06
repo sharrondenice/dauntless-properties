@@ -1,0 +1,227 @@
+<div class="page page-install default_bkg clearfix">
+
+    <div class="install-container">
+        <div class="form-container default_box">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                <span tsp-i18n="app.title_html"></span>
+                                <small tsp-i18n="words.installation"></small>
+                            </h4>
+                        </header>
+                        <div class="widget-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 tsp-i18n="pages.install.install_wizard"></h4>
+                                    <p><span tsp-i18n="pages.install.install_for"></span><span tsp-i18n="app.title_html"></span> <span tsp-i18n="words.application"></span>.</p>
+
+                                    <div data-bootstrap-wizard data-height="720" class="form-wizard">
+                                        <ul class="nav-justified mb-sm">
+                                            <li><a href="#tab1" data-toggle="tab">
+                                                <small tsp-i18n="numbers.one"></small>.
+                                                <span tsp-i18n="pages.install.your_details"></span></a></li>
+                                            <li><a href="#tab2" data-toggle="tab">
+                                                <small tsp-i18n="numbers.two"></small>.
+                                                <span tsp-i18n="pages.install.dbase_info"></span></a></li>
+                                            <li><a href="#tab3" data-toggle="tab">
+                                                <small tsp-i18n="numbers.three"></small>.
+                                                <span tsp-i18n="words.installation"></span></a></li>
+                                            <li><a href="#tab4" data-toggle="tab">
+                                                <small tsp-i18n="numbers.four"></small>.
+                                                <span tsp-i18n="words.welcome"></span>!</a></li>
+                                        </ul>
+                                        <div id="bar" class="progress progress-xs">
+                                            <div class="progress-bar wizard-progress progress-bar-gray-light"></div>
+                                        </div>
+                                        <div class="tab-content row">
+                                            <div class="tab-pane bg-gray-lighter col-md-12 active" id="tab1">
+                                                <form role="form" action='' method="POST"
+                                                      data-parsley-priority-enabled="false"
+                                                      novalidate="novalidate">
+                                                    <fieldset>
+                                                        <div class="form-group">
+                                                            <!-- First Name -->
+                                                            <label for="first_name" tsp-i18n="words.first_name"></label>
+                                                            <input type="text" id="first_name" name="first_name" placeholder="" ng-model="postdata.first_name"
+                                                                   class="form-control"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="sentences.please_provide"></span><span tsp-i18n="words.first_name"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- First Name -->
+                                                            <label for="last_name" tsp-i18n="words.last_name"></label>
+                                                            <input type="text" id="last_name" name="last_name" placeholder="" ng-model="postdata.last_name"
+                                                                   class="form-control"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="sentences.please_provide"></span><span tsp-i18n="words.last_name"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- Email -->
+                                                            <label for="email" tsp-i18n="words.email"></label>
+                                                            <input type="email" id="email" name="email" ng-model="postdata.email"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="sentences.please_provide"></span><span tsp-i18n="words.email"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- Username -->
+                                                            <label for="username" tsp-i18n="words.username"></label>
+                                                            <input type="text" id="username" name="username" ng-model="postdata.username"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="pages.install.username_info"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- Password -->
+                                                            <label for="password" tsp-i18n="words.password"></label>
+                                                            <input type="password" id="password" name="password" ng-model="postdata.password"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="pages.install.password_info"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- Confirm Password -->
+                                                            <label for="password2" tsp-i18n="words.password_confirm"></label>
+                                                            <input type="password" id="password2" name="password2" ng-model="postdata.password2"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                   data-parsley-equalto="#password"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="pages.install.password_confirm_info"></span></span>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane bg-gray-lighter col-md-12" id="tab2">
+                                                <form role="form" action='' method="POST"
+                                                      data-parsley-priority-enabled="false"
+                                                      novalidate="novalidate">
+                                                    <fieldset>
+                                                        <div class="form-group">
+                                                            <!-- Hostname -->
+                                                            <label for="dbhost" tsp-i18n="words.dbhost"></label>
+                                                            <input type="text" id="dbhost" name="dbhost" placeholder="" ng-model="postdata.dbhost"
+                                                                   class="form-control"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="pages.install.dbhost_info"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- Database Name -->
+                                                            <label for="dbname" tsp-i18n="words.dbname"></label>
+                                                            <input type="text" id="dbname" name="dbname" ng-model="postdata.dbname"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="pages.install.dbname_info"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- Database User -->
+                                                            <label for="dbuser" tsp-i18n="words.dbuser"></label>
+                                                            <input type="text" id="dbuser" name="dbuser" ng-model="postdata.dbuser"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="pages.install.dbuser_info"></span></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- Password -->
+                                                            <label for="dbpass" tsp-i18n="words.dbpass"></label>
+                                                            <input type="password" id="dbpass" name="dbpass" ng-model="postdata.dbpass"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                   required="required">
+                                                            <span class="help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="pages.install.dbpass_info"></span></span>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane bg-gray-lighter col-md-12" id="tab3">
+                                                <div class="widget-body">
+                                                    <div class="row progress-stats">
+                                                        <div class="col-sm-9">
+                                                            <h5 class="name" tsp-i18n="pages.install.dbase_install"></h5>
+                                                            <p class="description deemphasize" tsp-i18n="pages.install.dbase_wait"></p>
+                                                            <div id="progress-database" class="progress progress-sm bg-white">
+                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 text-align-center">
+                                                        <span class="status rounded rounded-lg bg-body-light">
+                                                            <small><span id="progress-database-number" ng-bind="postdata.progress.database">0</span>%</small>
+                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row progress-stats">
+                                                        <div class="col-sm-9">
+                                                            <h5 class="name" tsp-i18n="pages.install.account_create"></h5>
+                                                            <p class="description deemphasize" tsp-i18n="pages.install.account_create_admin"></p>
+                                                            <div id="progress-account" class="progress progress-sm bg-white">
+                                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 text-align-center">
+                                                        <span class="status rounded rounded-lg bg-body-light">
+                                                            <small><span id="progress-account-number" ng-bind="postdata.progress.account">0</span>%</small>
+                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row install-complete">
+                                                        <div class="col-sm-12">
+                                                            <h2 tsp-i18n="pages.install.complete"></h2>
+                                                            <p tsp-i18n="pages.install.complete_info"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane bg-gray-lighter col-md-12" id="tab4">
+                                                <h2><span tsp-i18n="words.welcome"></span> {{postdata.first_name}}!</h2>
+                                                <p tsp-i18n="pages.install.account_info"></p>
+                                                <p>&nbsp;</p>
+                                                <p><strong tsp-i18n="words.username"></strong>: {{postdata.username}}</p>
+                                                <p><strong tsp-i18n="words.password"></strong>: {{postdata.password}}</p>
+                                                <p>&nbsp;</p>
+                                                <p><strong tsp-i18n="words.login"></strong>: <a href="{{domain}}/#/login">{{domain}}/#/login</a></p>
+                                                <p><strong tsp-i18n="words.register"></strong>: <a href="{{domain}}/#/register">{{domain}}/#/register</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <input type="hidden" class="form-control" id="page" name="page" ng-model="postdata.page" ng-init="postdata.page=1" ng-value="1">
+                                                <input type="hidden" class="form-control" id="company_id" name="company_id" ng-model="postdata.company_id" ng-init="postdata.company_id=0" ng-value="0">
+                                                <input type="hidden" class="form-control" id="parent_id" name="parent_id" ng-model="postdata.parent_id" ng-init="postdata.parent_id=0" ng-value="0">
+                                                <ul class="pager wizard">
+                                                    <li class="previous">
+                                                        <button ng-click="previousPage()" class="btn btn-default btn-rounded pull-left">
+                                                            <i class="fa fa-caret-left"></i> &nbsp; <span tsp-i18n="words.previous"></span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="next">
+                                                        <button ng-click="nextPage()" class="btn btn-primary btn-rounded pull-right" >
+                                                            <span tsp-i18n="words.next"></span> &nbsp; <i class="fa fa-caret-right"></i></button>
+                                                    </li>
+                                                    <li class="finish" style="display: none">
+                                                        <button type="button" data-ng-click="location.href='{{domain}}/#/login';" class="btn btn-success btn-rounded pull-right" >
+                                                            <span tsp-i18n="words.finish"></span> &nbsp; <i class="glyphicon glyphicon-ok"></i>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #end auth-wrap -->
+</div>

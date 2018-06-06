@@ -1,0 +1,858 @@
+/* Custom proApp Changes */
+
+/* Bootstrap */
+//** Default label background color
+.default{ color: @gray-light; }
+//** Primary label background color
+.primary{ color: @brand-primary; }
+//** Success label background color
+.success{ color: @brand-success; }
+//** Info label background color
+.info{ color: @brand-info; }
+//** Warning label background color
+.warning{ color: @brand-warning; }
+//** Danger label background color
+.danger{ color: @brand-danger; }
+/* END Bootstrap */
+
+/* Draggable */
+#tsp-draggable-item.tsp-sortable-list{
+  padding: 10px 0;
+  border: 1px solid @input-border;
+  margin: 0 0 10px 0;
+  padding: 20px;
+  border-radius: 2px;
+  li.tsp-list-item {
+    border-left: 3px solid @brand-primary;
+    padding-left: 10px;
+    list-style: none;
+    .tsp-draggable {
+      cursor: move;
+      .tsp-order {
+        color: @text-color;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 5px;
+        border: none;
+        cursor: default;
+      }
+    }
+  }
+  li.tsp-sortable-placeholder {
+    border: 1px dashed #cecece !important;
+    visibility: visible !important;
+    background: @panel-default-heading-bg;
+    margin: 0 0 23px !important;
+    list-style: none;
+    height: initial;
+  }
+}
+/* END Draggable */
+
+/* Slider */
+/* END Slider */
+
+/* Email */
+.email-content {
+  background: @pagination-bg;
+  border: 1px solid @btn-default-border;
+  box-shadow: @ui-checkbox-border 1px 2px 3px;
+}
+.email-wizard .panel-body{
+  background-color: @btn-default-border;
+}
+.email-wizard .form-control{
+  background-color: @pagination-bg;
+}
+/* END Email */
+
+/* Profile */
+.page-profile, .page-form-details {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+  }
+  .ibox-content {
+    clear: both;
+  }
+  .ibox-content {
+    background-color: rgb(255, 255, 255);
+    color: inherit;
+    padding: 15px 20px 20px 20px;
+    border-color: rgb(231, 234, 236);
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+  }
+}
+h4.panel-title{
+  font-weight: 600;
+}
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  font-weight: 600;
+}
+.company-profile,
+.page-profile{
+  background: @body-bg;
+  .company-info, .profile-info {
+    margin-left: 120px;
+    .no-margins {
+      margin: 0 !important;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3, h4, h5 {
+      margin-top: 5px;
+      font-weight: 600;
+    }
+    h4 {
+      font-size: 14px;
+    }
+  }
+  .company-image, .profile-image {
+    width: 120px;
+    float: left;
+    img {
+      width: 96px;
+      height: 96px;
+    }
+    .circle-border img {
+      border: 6px solid rgb(255, 255, 255);
+      border-radius: 50%;
+    }
+  }
+}
+.no-margins {
+  margin: 0 !important;
+}
+/* END Profile */
+
+/* Tabs */
+.nav-tabs>li>a{
+  margin-right: -1px;
+  background-color: rgb(251, 251, 251);
+  border: 1px solid rgb(233, 233, 233);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: inset -11px 0px 22px -15px lighten(@gray-light, 40%);
+  -moz-box-shadow: inset -11px 0px 22px -15px lighten(@gray-light, 40%);
+  box-shadow: inset -11px 0px 22px -15px lighten(@gray-light, 40%);
+}
+.tab-custom .nav-tabs>li>a {
+  border: none;
+}
+.tab-custom .nav-tabs>li.active>a,
+.tab-custom .nav-tabs>li.active>a:focus,
+.tab-custom .nav-tabs>li.active>a:hover {
+  border: none;
+}
+.setting-body{
+  min-height: 500px;
+}
+.setting-body .tab-content{
+  min-height: 500px;
+  margin-bottom: 100px;
+}
+.short-tabs .nav-tabs {
+  width: 15%;
+}
+.short-tabs .tab-content {
+  width: 85%;
+}
+.child-container .panel-group {
+  margin-left: 20px;
+}
+.child-container .panel-group .panel-heading {
+  background-color: fade(@panel-default-heading-bg, 60%);
+}
+/* END Tabs */
+
+/* Tables */
+tbody tr:nth-of-type(odd) {
+  background: fade(@gray-lighter, 50%);
+}
+span.mobile-only{
+  display: none;
+  font-weight: bold;
+}
+.empty-table{
+  text-align: center;
+  padding: 20px;
+}
+.small-table > tbody > tr > td {
+  border-top: 1px solid rgb(231, 234, 236);
+  line-height: 1.42857;
+  padding: 8px;
+  vertical-align: top;
+}
+.focus-row{
+  padding: 10px 0px;
+  border-top: 1px solid @highlight;
+  border-bottom: 1px solid @highlight;
+}
+.double-border{
+  border-top: 4px double @gray;
+}
+td span, td strong, td p{
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/* END Tables */
+
+/* Activity stream */
+.stream {
+  position: relative;
+  padding: 10px 0;
+}
+.stream:first-child .stream-badge:before {
+  top: 20px;
+}
+.stream:last-child .stream-badge:before {
+  height: 30px;
+}
+.stream .stream-badge {
+  width: 50px;
+}
+.stream .stream-badge i {
+  border: 1px solid @gray-lighter;
+  border-radius: 50%;
+  padding: 6px;
+  color: @gray-light;
+  position: absolute;
+  background-color: #ffffff;
+  left: 8px;
+}
+.stream .stream-badge i.fa-circle {
+  color: @gray-lighter;
+}
+.stream .stream-badge i.bg-success {
+  color: @btn-success-color;
+  background-color: @brand-success;
+  border-color: @brand-success;
+}
+.stream .stream-badge i.bg-primary {
+  color: @btn-primary-color;
+  background-color: @brand-primary;
+  border-color: @brand-primary;
+}
+.stream .stream-badge i.bg-warning {
+  color: @btn-warning-color;
+  background-color: @brand-warning;
+  border-color: @brand-warning;
+}
+.stream .stream-badge i.bg-info {
+  color: @btn-info-color;
+  background-color: @brand-info;
+  border-color: @brand-info;
+}
+.stream .stream-badge i.bg-danger {
+  color: @btn-danger-color;
+  background-color: @brand-danger;
+  border-color: @brand-danger;
+}
+.stream .stream-badge:before {
+  content: '';
+  width: 1px;
+  background-color: @gray-lighter;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+}
+.stream .stream-info {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.stream .stream-info img {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+  margin-top: -4px;
+}
+.stream .stream-info .date {
+  color: @gray;
+  font-size: 80%;
+}
+.stream .stream-panel {
+  margin-left: 55px;
+}
+.stream-small {
+  margin: 10px 0;
+}
+.stream-small .label {
+  padding: 2px 6px;
+  margin-right: 2px;
+}
+/* END Activity Stream */
+
+/* Forms */
+.wizard-container {
+  .nav {
+    background: none transparent;
+    div {
+      a {
+        padding: 10px 4px;
+        span.icon,
+        span.wi,
+        span.glyphicon {
+          float: left;
+          color: @navbar-default-link-disabled-color;
+          margin-top: 5px;
+        }
+        span.main-text {
+          display: block;
+          margin-left: 42px;
+          .h2 {
+            display: block;
+            color: @navbar-default-link-disabled-color;
+            font-size: 20px;
+            text-transform: uppercase !important;
+          }
+          small {
+            color: @navbar-default-link-disabled-color;
+          }
+        }
+        span.icon {
+          font-size: 20px !important;
+          background: @navbar-default-link-disabled-color;
+          color: @panel-bg;
+          margin: 32px 10px 0px 0px;
+          border-radius: 50%;
+          border-radius: 0.8em;
+          -moz-border-radius: 0.8em;
+          -webkit-border-radius: 0.8em;
+          display: inline-block;
+          font-weight: bold;
+          line-height: 1.6em;
+          margin-right: 5px;
+          text-align: center;
+          width: 1.6em;
+        }
+      }
+    }
+    div.active{
+      a{
+        span.icon,
+        span.wi,
+        span.glyphicon {
+          color: @gray !important;
+        }
+        span.icon {
+          color: @panel-bg !important;
+          background: @brand-primary !important;
+        }
+        span.main-text {
+          .h2 {
+            display: block;
+            color: @gray !important;
+          }
+          small {
+            color: @gray !important;
+          }
+        }
+      }
+    }
+  }
+  .nav-pills{
+    li{
+      a,
+      a:hover,
+      a:focus{
+        background: none transparent;
+      }
+    }
+    li.active{
+      a,
+      a:hover,
+      a:focus{
+        background: none transparent;
+      }
+    }
+  }
+}
+
+.company-select {
+  color: @text-color;
+  background-color: rgba(0,0,0,0);
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  margin: 22px 20px;
+}
+.clickable {
+  cursor: pointer;
+}
+.parsley-pattern,
+.parsley-required,
+.required{
+  color: @brand-danger;
+  list-style: none;
+}
+.input-group{
+  margin-bottom: 0px;
+}
+.add-new{
+  color: @brand-primary;
+}
+.remove-new{
+  color: @state-danger-text;
+}
+.ui-select-container .btn-default,
+[datepicker], .datepicker {
+  background-color: @input-bg;
+}
+span.form-control {
+  height: auto;
+}
+.form-horizontal .form-group {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+legend {
+  font-size: 14px;
+}
+.tsp-help-block {
+  display: block;
+  margin: -10px 15px;
+  padding-bottom: 30px;
+  color: rgb(150, 150, 150);
+}
+.tsp-instruction-block {
+  display: block;
+  padding-bottom: 30px;
+  line-height: 18px;
+}
+.tsp-instruction-block,
+.tsp-help-block,
+.help-block {
+  font-size: 90%;
+}
+input[disabled] {
+  background: rgba(0, 0, 0, 0) !important;
+  border: none !important;
+  width: 100% !important;
+}
+.small .form-control {
+  height: 30px;
+  font-size: 11px;
+}
+input.text-primary {
+  color: @brand-primary !important;
+}
+input.text-success {
+  color: @state-success-text !important;
+}
+input.text-info {
+  color: @state-info-text !important;
+}
+input.text-warning {
+  color: @state-warning-text !important;
+}
+input.text-danger {
+  color: @state-danger-text !important;
+}
+input[disabled].form-control,
+input.border-only{
+  border: 1px solid fade(@pre-border-color, 50%) !important;
+  background: transparent;
+}
+label.bigcheck {
+  .h4{
+    font-weight: 400;
+  }
+  input[type=checkbox] {
+    ~ em {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid @pre-border-color;
+      padding: 0px 2px;
+      height: 20px;
+      width: 20px;
+      margin-top: -5px;
+      border-radius: 4px;
+    }
+    &:checked ~ em {
+      background-color: @brand-primary;
+      border: 1px solid @brand-primary;
+      margin-top: -5px;
+
+      &:before {
+        top: 1px;
+      }
+      &:after {
+        content: "✔";
+        font-size: 14px;
+        color: #FFF;
+      }
+    }
+  }
+
+}
+.ui-bigcheck{
+  margin-bottom: 0px;
+}
+.span{
+  display: inline;
+}
+label.div{
+  display: block !important;
+}
+.dropzone {
+  border: 1px dashed lighten(@brand-primary, 20%);
+  background-image: linear-gradient(135deg,rgba(0,0,0,.03)25%,rgba(0, 0, 0, 0) 25%,rgba(0, 0, 0, 0) 50%,rgba(0,0,0,.03)50%,rgba(0,0,0,.03)75%,rgba(0, 0, 0, 0) 75%,rgba(0, 0, 0, 0));
+  background-color: rgb(250, 252, 253);
+  background-size: 16px 16px;
+  .dz-message{
+    margin-top: 40px;
+    span {
+      color: @text-muted;
+      font-size: 17px;
+      &:before{
+        display: inline-block;
+        font-family: 'Glyphicons Regular';
+        margin: 5px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        vertical-align: top;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\E782"; // glyphicons-drop
+      }
+    }
+  }
+}
+#noChoiceTemplate {
+  padding: 20px;
+}
+.multi-select .btn-default {
+  background-color: rgb(255, 255, 255)!important;
+  padding: 5px 8px;
+  border-radius: 10px;
+  width: 100%;
+}
+.multi-select div {
+  overflow: hidden;
+}
+.close {
+  float: left;
+  margin-right: 5px;
+}
+/* END Forms */
+
+/* Images */
+.featured-image, .image-list, .item-progress {
+  > .title {
+    border-bottom: 1px solid @gray-lighter;
+    padding-bottom: 10px;
+  }
+}
+.image-list img {
+  .square(25px);
+  border-radius: 25px;
+  margin-right: 5px;
+}
+.featured-image img {
+  .square(50px);
+  border-radius: 50px;
+  margin-top: 5px;
+}
+.company-logo img{
+  width: 200px;
+  height: 200px;
+}
+.thumbnail img{
+  width: 100px;
+  height: 100px;
+}
+.profile-logo img {
+  .square(150px);
+  border-radius: 50px;
+  margin-top: 5px;
+}
+.icons{
+  padding: 10px 10px 10px 0px;
+}
+/* END Images */
+
+
+/* Panel */
+.panel-heading {
+  background-color: fade(@btn-primary-bg, 20%);
+  .btn-primary {
+    color: lighten(@text-color, 10%);;
+    background-color: #FFF;
+    border-color: fade(@btn-primary-bg, 20%);
+  }
+}
+.focus-panel .panel-default>.panel-heading {
+  background-color: fade(@btn-primary-bg, 20%);
+}
+.focus-panel .panel-default>.panel-heading+.panel-collapse>.panel-body {
+  border: 1px solid rgb(238, 238, 238);
+}
+.panel-group .panel-body {
+  padding: 20px 0px !important;
+}
+/* END Panel */
+
+
+/* Login and registration boxes */
+.default_bkg {
+  background: no-repeat url('@{image-path}/backgrounds/resort.jpg');
+  background-size: cover;
+}
+.default_box{
+  color: @gray-dark;
+  background: fade(@body-bg, 50%);
+  padding: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+
+  a {
+    color: darken(@link-color, 15%);
+  }
+}
+/* END Login and registration boxes */
+
+/* Busy indicator */
+.glyphicon.spinning {
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin2 1s infinite linear;
+}
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.preloader {
+  div, table{
+    display: none;
+  }
+}
+.preloading-data-logo,
+.preloading-app-logo{
+  background: url('@{image-path}/preloader.png') 50% 50% no-repeat;
+  width: 75px;
+  height: 75px;
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin2 1s infinite linear;
+}
+.preloading-app-logo-container,
+.preloading-data-logo-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.preloading-text {
+  margin-top: 15px;
+  font: 14px "Square Market", "helvetica neue", helvetica, arial, sans-serif;
+  color: @site-nav-color;
+}
+/* END Busy indicator */
+
+/* Badges & Icons */
+.badge{
+  padding: .5em .9em .6em !important;
+  border-radius: .25em !important;
+  font-size: 75% !important;
+  font-weight: bold !important;
+}
+.tsp-dynamic-table td .badge{
+  width: 100%;
+}
+.tsp-dynamic-table tr.highlighted{
+  color: inherit;
+  font-style: italic;
+  background: rgba(252, 255, 127, 0.2) !important;
+}
+.tag {
+  font-weight: 400;
+  padding: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  min-width: 10px;
+  color: #FFF;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: @brand-primary;
+  border-radius: 1px;
+  border: 1px solid @gray-lighter;
+}
+.category {
+  font-weight: 400;
+  padding: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  min-width: 10px;
+  color: #FFF;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: @btn-default-color;
+  border-radius: 1px;
+  border: 1px solid @gray-lighter;
+}
+.highlighted{
+  color: @brand-primary;
+}
+.circle{
+  border-radius: 10px;
+  padding: 0px 1px;
+  color: rgb(255, 255, 255);
+}
+.icon-round{
+  border-radius: 100%;
+  text-align: center;
+  padding: 1px 4px;
+  font-size: 13px !important;
+}
+.icon-no-pad{
+  border-radius: 100%;
+  text-align: center;
+  font-size: 13px !important;
+}
+/* END Badges & Icons */
+
+.auth-container .brand{
+  background: no-repeat url('@{image-path}/@{brand-logo-dark}');
+  width: 25px;
+  height: 25px;
+  border: none;
+  margin-top: -5px;
+}
+.full-width{
+  width: 100%;
+}
+.dropdown-menu{
+  border: 1px solid @btn-default-border;
+  box-shadow: @ui-checkbox-border 1px 2px 3px;
+}
+i.page_size{
+  font-size: 10px;
+  margin: 2px 0 0 5px;
+}
+.sub-header{
+  border-bottom: 1px dashed @gray-lighter;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.site-foot span {
+  font-weight: 800;
+}
+.text-line-through{
+  text-decoration: line-through;
+}
+p {
+  margin: 10px 0;
+}
+.wrap{
+  word-wrap: break-word;
+}
+.panel {
+  border: none;
+}
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5,
+.htext-6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.text-h1 small,
+.text-h2 small,
+.text-h3 small,
+.text-h4 small,
+.text-h5 small,
+.text-h6 small,
+.text-h1 .small,
+.text-h2 .small,
+.text-h3 .small,
+.text-h4 .small,
+.text-h5 .small,
+.text-h6 .small {
+    font-weight: normal;
+    line-height: 1;
+    color: #777777;
+}
+.text-h1 small,
+.text-h2 small,
+.text-h3 small,
+.text-h1 .small,
+.text-h2 .small,
+.text-h3 .small {
+    font-size: 65%;
+}
+.text-h4 small,
+.text-h5 small,
+.text-h6 small,
+.text-h4 .small,
+.text-h5 .small,
+.text-h6 .small {
+    font-size: 75%;
+}
+.text-h1 {
+    font-size: 36px;
+}
+.text-h2 {
+    font-size: 30px;
+}
+.text-h3 {
+    font-size: 24px;
+}
+.text-h4 {
+    font-size: 18px;
+}
+.text-h5 {
+    font-size: 14px;
+}
+.text-h6 {
+    font-size: 12px;
+}
+dt {
+  font-weight: normal;
+}
+.text-emphasis {
+  font-weight: 600;
+}

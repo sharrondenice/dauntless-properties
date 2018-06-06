@@ -1,0 +1,24 @@
+<div class="page page-err default_bkg clearfix">
+
+	<div class="err-container">
+
+		<h1 class="err-no text-center mb30" tsp-i18n="pages.error.title"></h1>
+
+		<h4 class="text-center text-light h2" tsp-i18n="pages.error.page_not_found"></h4>
+
+		<div class="form-container default_box">
+			<form class="form-horizontal">
+				<p class="small" tsp-i18n="pages.404.try_search"></p>
+				<div class="input-group input-group-lg">
+					<input class="form-control" type="text" placeholder="{{lang.pages.error.type_keywords}}">
+					<div class="input-group-btn">
+						<button type="submit" class="btn btn-default fa fa-search"></button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+</div>
+<div ng-include="'app/modules/core/templates/footer.html'"></div>

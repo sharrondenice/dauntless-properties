@@ -1,0 +1,940 @@
+
+// =====================
+//  THEME ZERO
+//  ====================
+
+body.theme-zero{
+	background: no-repeat url('@{image-path}/backgrounds/gradient1-min.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	color: @gray-dark;
+}
+.app.theme-zero {
+	.default_bkg, .light_bkg{
+		.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+			a{
+				color: @gray-dark !important;
+			}
+			color: @gray-dark !important;
+		}
+	}
+	.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+		color: @panel-bg;
+		.small,
+		a {
+			color: @panel-bg;
+		}
+	}
+	.text-muted{
+		color: @gray-dark;
+	}
+	.breadcrumb>li+li:before{
+		color: @gray-lighter;
+	}
+	.nav>li>a{
+		background-color: fade(@panel-bg, 30%);
+	}
+	.dropdown-menu {
+		background-color: fade(@panel-bg, 100%) !important;
+	}
+	.tab-content,
+	.panel{
+		background-color: fade(@panel-bg, 50%);
+	}
+	.page-dashboard-v1 .dash-head{
+		border: none;
+		border-bottom: none;
+		background: fade(darken(@body-bg, 1%), 25%);
+	}
+
+	@media (min-width: 992px){
+		.page-email {
+			.email-sidebar {
+				&:before {
+					top: 60px !important;
+					background: fade(@email-sidebar-bg, 60%) !important;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		.page-email {
+			.email-sidebar {
+				background: fade(@email-sidebar-bg, 60%) !important;
+			}
+		}
+	}
+
+	.wizard-container {
+		.nav {
+			div {
+				a {
+					span.icon,
+					span.wi,
+					span.glyphicon {
+						color: darken(@navbar-default-link-disabled-color, 30%);
+					}
+					span.main-text {
+						.h2 {
+							color: darken(@navbar-default-link-disabled-color, 30%);
+						}
+						small {
+							color: darken(@navbar-default-link-disabled-color, 30%);
+						}
+					}
+					span.icon {
+						background: darken(@navbar-default-link-disabled-color, 30%);
+						color: @panel-bg !important;
+					}
+				}
+			}
+		}
+	}
+
+	// Separator line
+	hr.thin-line {
+		border-color: @gray-lighter;
+	} // #end separator line
+
+	// drop shadow
+	aside#site-nav {
+		-webkit-box-shadow: 9px -10px 17px -10px @site-nav-bg;
+		-moz-box-shadow: 9px -10px 17px -10px @site-nav-bg;
+		box-shadow: 9px -10px 17px -10px @site-nav-bg;
+	}// #end drop shadow
+
+	@site-nav-bg: #464a51;
+	@site-nav-color: #FFF;
+	.site-head {
+
+		.company-select { color: @site-nav-color }
+		.nav-trigger {background: @site-nav-bg}
+
+        .site-nav-horizontal, .nav-head {
+			background: fade(@site-nav-bg, 50%);
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+
+		.head-wrap {
+			background: fade(@site-nav-bg, 50%);
+			border-bottom: 1px solid @gray-lighter;
+			ul > li.open , ul > li:hover { box-shadow: inset 0 2px @gray-lighter}
+			.logout, .back-to-main, ul > li > a { color: @site-nav-color; }
+		}
+	}
+	// #end site-head
+
+	// vertical nav
+	.main-container .nav-wrap {
+		background: fade(@panel-bg, 30%);
+		box-shadow: inset -1px 0 @gray-lighter;
+		.form-search input {
+			border-color: @gray-lightest;
+			&:focus {box-shadow: inset 0 0 10px rgba(0, 0, 0, .05)}
+		}
+		.site-nav {
+			.company-select,
+			.nav-title {
+				color: lighten(@gray-dark, 10%);
+				> i:before, > i:after {background: lighten(@text-color, 10%);}
+			}
+			> .nav-list > li:hover > a, > .nav-list > li.open > a { color: #3355a2 }
+			> .nav-list li.active > a { background: fade(@gray-lighter, 30%) }
+			> .nav-list > li > a { color: @gray-dark }
+			> .nav-list > li .inner-drop {
+				background: fade(@gray-lighter, 30%);
+				border-bottom-color: @gray-lighter;
+				a { color: lighten(@gray-dark, 10%) }
+				a:hover { color: darken(@gray-dark, 15%)}
+			}
+		}// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+
+	}
+	// #end nav-wrap
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: @site-nav-bg;
+	}
+
+	// panel heading
+	.panel-heading {
+		background-color: @panel-bg;
+		&.separator{
+			background-color: @btn-primary-bg;
+			color: @btn-primary-color;
+			border-color: @btn-primary-border;
+			i:after, i:before{
+				background: @btn-primary-color;
+			}
+		}
+		.btn-primary {
+			color: @btn-primary-color !important;
+			background-color: @btn-primary-bg !important;
+			border-color: @btn-primary-border !important;
+		}
+	}
+	// #end panel heading
+}
+// ##end theme-zero
+
+
+
+// =====================
+//  THEME ONE
+//  ====================
+
+.app.theme-one {
+	@site-nav-bg: #343848;
+	@nav-head-bg: #5974d9;
+	@site-nav-color: #FFF;
+	// header 
+	.site-head {
+        .site-nav-horizontal, .nav-head {
+			background: @nav-head-bg;
+			box-shadow: inset -1px 0 1px darken(@nav-head-bg, 3%);
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+		.site-logo { color: @site-nav-color }
+		.nav-trigger {
+			background: @nav-head-bg;
+			color: @site-nav-color;
+		}
+	}// #end site-head
+
+	// Separator line
+	hr.thin-line{
+		border-color: lighten(@site-nav-bg, 5%);
+	} // #end separator line
+
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+      //-moz-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+      //box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+    }// #end drop shadow
+
+	// vertical nav
+	.main-container .nav-wrap {
+		background: lighten(@site-nav-bg, 5%);
+		box-shadow:none ;
+		.site-nav {
+			> .nav-list li.active > a { background: darken(@site-nav-bg, 2.5%) }
+			> .nav-list > li .inner-drop {
+				background: darken(@site-nav-bg, 2.5%);
+				border-bottom-color: darken(@site-nav-bg,5%);
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+	}
+
+	// #end nav-wrap 
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: @nav-head-bg;
+	}
+}
+// ##end theme-one
+
+
+
+
+// =====================
+//  THEME TWO
+//  ====================
+
+.app.theme-two {
+	.site-head {
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+	}// #end site-head
+
+	// Separator line
+	hr.thin-line{
+		border-color: @gray-lighter;
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px -10px 17px -10px lighten(@brand-menu, 25%);
+      //-moz-box-shadow: 9px -10px 17px -10px lighten(@brand-menu, 25%);
+      //box-shadow: 9px -10px 17px -10px lighten(@brand-menu, 25%);
+    }// #end drop shadow
+
+	// vertical nav
+	.main-container .nav-wrap {
+		background: #fff;
+		box-shadow: inset -1px 0 @gray-lighter;
+		.form-search input {
+			border-color: @gray-lightest;
+			&:focus {box-shadow: inset 0 0 10px rgba(0, 0, 0, .05)}
+		}
+		.site-nav {
+			.company-select,
+			.nav-title {
+				color: lighten(@text-color, 10%);
+				> i:before, > i:after {background: lighten(@text-color, 10%);}
+			}
+			> .nav-list > li:hover > a, > .nav-list > li.open > a { color: @brand-info }
+			> .nav-list li.active > a { background: @gray-lighter }
+			> .nav-list > li > a { color: @text-color }
+			> .nav-list > li .inner-drop {
+				background: @gray-lighter;
+				border-bottom-color: @gray-lighter;
+				a { color: lighten(@text-color, 10%) }
+				a:hover { color: darken(@text-color, 15%)}
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+	}
+	// #end nav-wrap 
+	// 
+	
+}
+// ##end theme-two
+
+
+// =====================
+//  THEME THREE
+//  ====================
+
+.app.theme-three {
+	// Separator line
+	hr.thin-line {
+		border-color: @site-nav-bg;
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px 0px 17px -10px @gray;
+      //-moz-box-shadow: 9px 0px 17px -10px @gray;
+      //box-shadow: 9px 0px 17px -10px @gray;
+    }// #end drop shadow
+
+	// header
+	.site-head {
+        .site-nav-horizontal, .nav-head {
+			background: #fff;
+			box-shadow: inset -1px 0 1px rgba(100, 100, 100, .1);
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-dark}');
+		}
+		.company-select, .site-logo { color: @text-color }
+		.nav-trigger { 
+			background: #fff;
+			color: @text-color;
+			@media(min-width: @screen-sm-min) {
+				&:before { border-color: @gray-lighter }
+			}
+		}
+		.head-wrap {
+			background: #fff;
+			border-bottom: 1px solid @gray-lighter;
+			box-shadow: none;
+            .logout, .back-to-main, ul > li > a { color: @text-color }
+		}
+	}
+	// #end site-head
+
+	// vertical nav
+	.main-container .nav-wrap {
+		@site-nav-bg: #3b3435;
+		background: @site-nav-bg;
+		box-shadow:none ;
+		.site-nav {
+			> .nav-list li.active > a { background: darken(@site-nav-bg, 2.5%) }
+			> .nav-list > li .inner-drop {
+				background: darken(@site-nav-bg, 2.5%);
+				border-bottom-color: darken(@site-nav-bg,5%);
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+        } // #end company-blurb
+	}
+	
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: #fff;
+	}
+}
+// ##end theme-three
+
+
+
+
+// =====================
+//  THEME FOUR
+//  ====================
+
+.app.theme-four {
+	// Separator line
+	hr.thin-line {
+		border-color: @gray-lighter;
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px -10px 17px -10px @site-nav-bg;
+      //-moz-box-shadow: 9px -10px 17px -10px @site-nav-bg;
+      //box-shadow: 9px -10px 17px -10px @site-nav-bg;
+    }// #end drop shadow
+
+	@site-nav-bg: #464a51;
+	@site-nav-color: #FFF;
+	.site-head {
+		.company-select { color: @site-nav-color; }
+		.nav-trigger {background: @site-nav-bg}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+        .site-nav-horizontal, .nav-head {
+			background: @site-nav-bg;
+			box-shadow: inset -1px 0 1px darken(@site-nav-bg, 3%); 
+		}
+		
+		.head-wrap {
+			background: @site-nav-bg;
+			border-bottom: 1px solid @gray-lighter;
+			ul > li.open , ul > li:hover { box-shadow: inset 0 2px @gray-lighter}
+            .logout, .back-to-main, ul > li > a { color:@site-nav-color; }
+		}
+	}
+	// #end site-head
+
+	// vertical nav
+	.main-container .nav-wrap {
+		background: #fff;
+		box-shadow: inset -1px 0 @gray-lighter;
+		.form-search input {
+			border-color: @gray-lightest;
+			&:focus {box-shadow: inset 0 0 10px rgba(0, 0, 0, .05)}
+		}
+		.site-nav {
+			.nav-title {
+				color: lighten(@text-color, 10%);
+				> i:before, > i:after {background: lighten(@text-color, 10%);}
+			}
+			> .nav-list > li:hover > a, > .nav-list > li.open > a { color: @brand-info }
+			> .nav-list li.active > a { background: @gray-lighter }
+			> .nav-list > li > a { color: @text-color }
+			> .nav-list > li .inner-drop {
+				background: @gray-lighter;
+				border-bottom-color: @gray-lighter;
+				a { color: lighten(@text-color, 10%) }
+				a:hover { color: darken(@text-color, 15%)}
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+          .brand{
+            background: no-repeat url('@{image-path}/@{brand-logo-light}');
+          }
+        } // #end company-blurb
+	}
+	// #end nav-wrap 
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: @site-nav-bg;
+	}
+}
+// ##end theme-four
+
+
+
+// =====================
+//  THEME FIVE
+//  ====================
+.app.theme-five {
+	@site-nav-bg: #263238;
+	@nav-head-bg:  desaturate(#263238, 5%);
+	@site-nav-color: #FFF;
+	// header 
+	.site-head {
+        .site-nav-horizontal, .nav-head {
+			background: @nav-head-bg;
+			box-shadow: inset -1px 0 1px darken(@nav-head-bg, 3%); 
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+		.site-logo { color: @site-nav-color; }
+		.nav-trigger { 
+			background: @nav-head-bg;
+			color: @site-nav-color;
+		}
+	}
+	// #end site-head
+
+	// Separator line
+	hr.thin-line {
+		border-color: lighten(@site-nav-bg, 5%);
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+      //-moz-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+      //box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+    }// #end drop shadow
+
+	// vertical nav
+	.main-container .nav-wrap {
+		background: lighten(@site-nav-bg, 5%);
+		box-shadow:none ;
+		.site-nav {
+			> .nav-list li.active > a { background: darken(@site-nav-bg, 2.5%) }
+			> .nav-list > li .inner-drop {
+				background: darken(@site-nav-bg, 2.5%);
+				border-bottom-color: darken(@site-nav-bg,5%);
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+        } // #end company-blurb
+	}
+
+	// #end nav-wrap 
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: @nav-head-bg;
+	}
+}
+// #end theme-five
+
+
+
+// =====================
+//  THEME SIX
+//  ====================
+.app.theme-six {
+	@nav-head-bg: #1A237E;
+	@site-nav-color: #FFF;
+	// header
+	.site-head {
+        .site-nav-horizontal, .nav-head {
+			background: @nav-head-bg;
+			box-shadow: inset -1px 0 1px darken(@nav-head-bg, 3%); 
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+		.site-logo { color: @site-nav-color; }
+		.nav-trigger { 
+			background: @nav-head-bg;
+			color: @site-nav-color;
+		}
+	}
+	// #end site-head
+
+	// Separator line
+	hr.thin-line {
+		border-color: @gray-lighter;
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+      //-moz-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+      //box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+    }// #end drop shadow
+
+	.main-container .nav-wrap {
+		background: #fff;
+		box-shadow: inset -1px 0 @gray-lighter;
+		.form-search input {
+			border-color: @gray-lightest;
+			&:focus {box-shadow: inset 0 0 10px rgba(0, 0, 0, .05)}
+		}
+		.site-nav {
+			.nav-title {
+				color: lighten(@text-color, 10%);
+				> i:before, > i:after {background: lighten(@text-color, 10%);}
+			}
+			> .nav-list > li:hover > a, > .nav-list > li.open > a { color: @brand-info }
+			> .nav-list li.active > a { background: @gray-lighter }
+			> .nav-list > li > a { color: @text-color }
+			> .nav-list > li .inner-drop {
+				background: @gray-lighter;
+				border-bottom-color: @gray-lighter;
+				a { color: lighten(@text-color, 10%) }
+				a:hover { color: darken(@text-color, 15%)}
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+        } // #end company-blurb
+	}
+	// #end nav-wrap 
+}
+// #end theme-six
+
+
+
+// =====================
+//  THEME SEVEN
+//  ====================
+.app.theme-seven {
+	// header 
+	.site-head {
+        .site-nav-horizontal, .nav-head {
+			background: #fff;
+			box-shadow: inset -1px 0 1px rgba(100, 100, 100, .1);
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-dark}');
+		}
+		.site-logo { color: @text-color }
+		.nav-trigger { 
+			background: #fff;
+			color: @text-color;
+			@media(min-width: @screen-sm-min) {
+				&:before { border-color: @gray-lighter }
+			}
+		}
+		.head-wrap {
+			background: #fff;
+			border-bottom: 1px solid @gray-lighter;
+			box-shadow: none;
+            .logout, .back-to-main, ul > li > a { color: @text-color }
+		}
+	}
+	// #end site-head
+
+	// Separator line
+	hr.thin-line {
+		border-color: @site-nav-bg;
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px 0px 17px -10px @gray-dark;
+      //-moz-box-shadow: 9px 0px 17px -10px @gray-dark;
+      //box-shadow: 9px 0px 17px -10px @gray-dark;
+    }// #end drop shadow
+
+	// vertical nav
+	.main-container .nav-wrap {
+		@site-nav-bg: darken(#311B92, 5%);
+		background: @site-nav-bg;
+		box-shadow:none ;
+		.site-nav {
+			> .nav-list li.active > a { background: darken(@site-nav-bg, 2.5%) }
+			> .nav-list > li .inner-drop {
+				background: darken(@site-nav-bg, 2.5%);
+				border-bottom-color: darken(@site-nav-bg,5%);
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+	}
+	
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: #fff;
+	}
+}
+// #end theme-seven
+
+
+
+
+// =====================
+//  THEME EIGHT
+//  ====================
+.app.theme-eight {
+	@site-nav-bg: #3949AB;
+	@site-nav-color: #FFF;
+	.site-head {
+		.company-select { color: @site-nav-color }
+		.nav-trigger {background: @site-nav-bg}
+
+        .site-nav-horizontal, .nav-head {
+			background: @site-nav-bg;
+			box-shadow: inset -1px 0 1px darken(@site-nav-bg, 3%); 
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+
+		.head-wrap {
+			background: @site-nav-bg;
+			border-bottom: 1px solid @gray-lighter;
+			ul > li.open , ul > li:hover { box-shadow: inset 0 2px @gray-lighter}
+            .logout, .back-to-main, ul > li > a { color: @site-nav-color; }
+		}
+	}
+	// #end site-head
+
+	// Separator line
+	hr.thin-line {
+		border-color: @gray-lighter;
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px -10px 17px -10px @site-nav-bg;
+      //-moz-box-shadow: 9px -10px 17px -10px @site-nav-bg;
+      //box-shadow: 9px -10px 17px -10px @site-nav-bg;
+    }// #end drop shadow
+
+	// vertical nav
+	.main-container .nav-wrap {
+		background: #fff;
+		box-shadow: inset -1px 0 @gray-lighter;
+		.form-search input {
+			border-color: @gray-lightest;
+			&:focus {box-shadow: inset 0 0 10px rgba(0, 0, 0, .05)}
+		}
+		.site-nav {
+			.company-select,
+			.nav-title {
+				color: lighten(@text-color, 10%);
+				> i:before, > i:after {background: lighten(@text-color, 10%);}
+			}
+			> .nav-list > li:hover > a, > .nav-list > li.open > a { color: @brand-info }
+			> .nav-list li.active > a { background: @gray-lighter }
+			> .nav-list > li > a { color: @text-color }
+			> .nav-list > li .inner-drop {
+				background: @gray-lighter;
+				border-bottom-color: @gray-lighter;
+				a { color: lighten(@text-color, 10%) }
+				a:hover { color: darken(@text-color, 15%)}
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+	}
+	// #end nav-wrap 
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: @site-nav-bg;
+	}
+}
+
+
+
+
+// =====================
+//  THEME NINE
+//  ====================
+.app.theme-nine {
+	// header 
+	.site-head {
+        .site-nav-horizontal, .nav-head {
+			background: #fff;
+			box-shadow: inset -1px 0 1px rgba(100, 100, 100, .1);
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-dark}');
+		}
+		.site-logo { color: @text-color }
+		.nav-trigger { 
+			background: #fff;
+			color: @text-color;
+			@media(min-width: @screen-sm-min) {
+				&:before { border-color: @gray-lighter }
+			}
+		}
+		.head-wrap {
+			background: #fff;
+			border-bottom: 1px solid @gray-lighter;
+			box-shadow: none;
+            .logout, .back-to-main, ul > li > a { color: @text-color }
+		}
+	}
+	// #end site-head
+
+	// Separator line
+	hr.thin-line {
+		border-color: @site-nav-bg;
+	} // #end separator line
+
+    // drop shadow
+    aside#site-nav {
+      //-webkit-box-shadow: 9px 0px 17px -10px @gray-dark;
+      //-moz-box-shadow: 9px 0px 17px -10px @gray-dark;
+      //box-shadow: 9px 0px 17px -10px @gray-dark;
+    }// #end drop shadow
+
+	// vertical nav
+	.main-container .nav-wrap {
+		@site-nav-bg: darken(#263238, 5%);
+		background: @site-nav-bg;
+		box-shadow:none ;
+		.site-nav {
+			> .nav-list li.active > a { background: darken(@site-nav-bg, 2.5%) }
+			> .nav-list > li .inner-drop {
+				background: darken(@site-nav-bg, 2.5%);
+				border-bottom-color: darken(@site-nav-bg,5%);
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+	}
+	
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: #fff;
+	}
+}
+// #end theme-nine
+
+
+// =====================
+//  THEME TEN
+//  ====================
+
+.app.theme-ten {
+	// Separator line
+	hr.thin-line{
+		border-color: @site-nav-bg;
+	}// #end separator line
+
+	// drop shadow
+	aside#site-nav {
+		//-webkit-box-shadow: 9px -10px 17px -10px lighten(@brand-menu, 25%);
+		//-moz-box-shadow: 9px -10px 17px -10px lighten(@brand-menu, 25%);
+		//box-shadow: 9px -10px 17px -10px lighten(@brand-menu, 25%);
+	}// #end drop shadow
+
+	.site-head {
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+	}
+	// #end site-head
+
+	.main-container .nav-wrap {
+		.site-nav {
+			> .nav-list li.active > a { background: darken(@site-nav-bg, 2.5%) }
+			> .nav-list > li .inner-drop {
+				background: darken(@site-nav-bg, 2.5%);
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+	}
+}
+// ##end theme-ten
+
+// =====================
+//  THEME ELEVEN
+//  ====================
+
+.app.theme-eleven {
+	@site-nav-bg: #464a51;
+	@nav-head-bg: #464a51;
+	@site-nav-color: #FFF;
+	// header
+	.site-head {
+		.company-select { color: @site-nav-color }
+        .site-nav-horizontal, .nav-head {
+			background: @nav-head-bg;
+			box-shadow: inset -1px 0 1px darken(@nav-head-bg, 3%);
+		}
+		.head-wrap {
+			background: @site-nav-bg;
+			border-bottom: 1px solid @gray-lighter;
+			ul > li.open , ul > li:hover { box-shadow: inset 0 2px @gray-lighter}
+            .logout, .back-to-main, ul > li > a { color: @site-nav-color; }
+		}
+		.brand{
+			background: no-repeat url('@{image-path}/@{brand-logo-light}');
+		}
+		.site-logo { color: @site-nav-color }
+		.nav-trigger {
+			background: @nav-head-bg;
+			color: @site-nav-color;
+		}
+	}// #end site-head
+
+	// Separator line
+	hr.thin-line{
+		border-color: lighten(@site-nav-bg, 5%);
+	} // #end separator line
+
+
+	// drop shadow
+	aside#site-nav {
+		//-webkit-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+		//-moz-box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+		//box-shadow: 9px -10px 17px -10px lighten(@nav-head-bg, 25%);
+	}// #end drop shadow
+
+	// vertical nav
+	.main-container .nav-wrap {
+		background: lighten(@site-nav-bg, 5%);
+		box-shadow:none ;
+		.site-nav {
+			> .nav-list li.active > a { background: darken(@site-nav-bg, 2.5%) }
+			> .nav-list > li .inner-drop {
+				background: darken(@site-nav-bg, 2.5%);
+				border-bottom-color: darken(@site-nav-bg,5%);
+			}
+		}
+		// #end site-nav
+		.company-blurb {
+			background: fade(@brand-primary, 60%);
+            .brand{
+              background: no-repeat url('@{image-path}/@{brand-logo-light}');
+            }
+		} // #end company-blurb
+	}
+
+	// #end nav-wrap
+	&.nav-min .site-head .nav-head .nav-trigger {
+		background: @nav-head-bg;
+	}
+}
+// ##end theme-eleven

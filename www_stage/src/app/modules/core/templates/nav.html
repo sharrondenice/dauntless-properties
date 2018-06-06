@@ -1,0 +1,22 @@
+<!-- Site nav (vertical) -->
+
+<nav class="site-nav clearfix" role="navigation" collapse-nav-accordion highlight-active>
+	<div class="company-blurb">
+		<div align="center" class="text" ng-bind-html="app.settings.blurb"></div>
+	</div>
+    <div class="nav-title panel-heading"><i tsp-i18n="nav.property.management"></i></div>
+    <ul class="list-unstyled nav-list">
+        <li>
+            <a data-ui-sref="app.properties">
+                <i class="glyphicons glyphicons-home icon"></i>
+                <span class="text" tsp-i18n="nav.property.title"></span>
+            </a>
+        </li>
+        <li>
+            <a data-ui-sref="app.bookings">
+                <i class="glyphicons glyphicons-book-open icon"></i>
+                <span class="text" tsp-i18n="nav.property.reservations"></span>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,17 @@
+<div ng-controller="AlertCtrl">
+    <div class="toast toast-{{positionModel}}">
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert()" class="toast-{{alert.anim}}">
+            <div ng-bind-html="alert.msg"></div>
+        </alert>
+    </div>
+    <div class="toast toast-{{positionModel}}">
+        <alert ng-repeat="toast in toasts" type="{{toast.type}}" close="closeToast($index)" class="toast-{{toast.anim}}">
+            <div ng-bind-html="toast.msg"></div>
+        </alert>
+    </div>
+</div>
+<footer id="site-foot" class="site-foot clearfix row">
+    <p class="left" tsp-i18n="app.title_html"></p>
+    <p class="right" ng-bind-html="config.version"></p>
+</footer>
+

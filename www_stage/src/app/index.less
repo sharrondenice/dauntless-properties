@@ -1,0 +1,55 @@
+@import "theme/font-awesome/fontawesome.less"; //https://fontawesome.com/how-to-use/web-fonts-with-css#less-and-sass
+@import "theme/font-awesome/fa-solid.less";
+@import "theme/font-awesome/fa-brands.less";
+@import "../../bower_components/jasny-bootstrap/less/fileinput.less";
+
+// Don't edit bootstrap folder, instead override it in `ui` folder.
+/// Import UI Style, import first (override bootstrap)
+@import "theme/ui/ui.less";	 // include overridden variables, colors etc...
+
+/// Import Sections Style
+@import "theme/sections/header.less";
+@import "theme/sections/footer.less";
+@import "theme/sections/nav.less";
+@import "theme/sections/nav-min.less";
+@import "theme/sections/nav-off-canvas.less";
+@import "theme/sections/layout.less";
+@import "theme/sections/body-full.less";
+@import "theme/sections/page.less";
+@import "theme/sections/theme-settings.less";
+@import "theme/sections/nav-horizontal.less";
+
+
+// Import Pages
+@import "theme/pages/dashboard-v1.less";
+@import "theme/pages/dashboard-v2.less";
+@import "theme/pages/form-wizard.less";
+@import "theme/pages/auth.less";
+@import "theme/pages/lock-screen.less";
+@import "theme/pages/err.less";
+@import "theme/pages/invoice.less";
+@import "theme/pages/timeline.less";
+@import "theme/pages/profile.less";
+@import "theme/pages/search.less";
+@import "theme/pages/details-list.less";
+@import "theme/pages/details-form.less";
+
+
+// Import Email Style
+@import "theme/email/inbox.less";
+@import "theme/email/compose.less";
+
+
+/// Import Plugins styles
+@import "theme/plugins/select.less";
+@import "theme/plugins/bootstrap-slider.less";
+@import "theme/plugins/perfect-scrollbar.less";
+@import "theme/plugins/chartist/chartist.less";	
+@import "theme/plugins/loading-bar.less";
+
+
+/// Import Themes
+@import "theme/themes.less";
+@import "theme/custom.less";
+@import "theme/custom-media.less";
+@import "theme/fonts.less";

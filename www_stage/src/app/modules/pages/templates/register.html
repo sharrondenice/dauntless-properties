@@ -1,0 +1,58 @@
+<div class="page page-auth default_bkg clearfix">
+
+	<div class="auth-container">
+		<!-- site logo -->
+		<h1 class="site-logo h2 mb15">
+			<a href="/" tsp-i18n="app.title_html"></a>
+		</h1>
+
+		<div class="form-container default_box">
+			<p class="small">Already have an account. <a data-ui-sref="login" tsp-i18n="pages.register.sign_in"></a></p>
+			<form role="form" class="form-horizontal" action='' method="POST"
+				  data-parsley-priority-enabled="false"
+				  novalidate="novalidate">
+				<div class="row">
+					<div class="form-group form-group-lg col-lg-6">
+						<input class="form-control" type="text" placeholder="{{lang.words.first_name}}" ng-model="postdata.first_name">
+					</div>
+
+					<div class="form-group form-group-lg col-lg-6">
+						<input class="form-control" type="text" placeholder="{{lang.words.last_name}}" ng-model="postdata.last_name">
+					</div>
+				</div>
+
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="text" placeholder="{{lang.words.create_username}}" ng-model="postdata.username">
+				</div>
+
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="password" placeholder="{{lang.words.password}}" ng-model="postdata.password">
+				</div>
+
+                <div class="form-group form-group-lg">
+                    <input class="form-control" type="password" placeholder="{{lang.words.password_confirm}}" ng-model="postdata.password2">
+                </div>
+
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="email" placeholder="{{lang.words.email}}" ng-model="postdata.email">
+				</div>
+
+                <!--
+				<div class="ui-checkbox ui-checkbox-primary">
+					<label>
+						<input type="checkbox">
+                        <span tsp-i18n="pages.register.i_agree"></span><a href="j:;" tsp-i18n="pages.register.terms"></a>
+					</label>
+				</div>
+				//-->
+
+                <button type="button" class="btn btn-lg btn-w120 btn-primary text-uppercase" data-ng-click="registerUser()">
+                    <span ng-show="submitButtonText == lang.labels.buttons.delay"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+                    {{submitButtonText}}
+                </button>
+			</form>
+		</div>
+
+	</div>
+	<!-- #end auth-wrap -->
+</div>

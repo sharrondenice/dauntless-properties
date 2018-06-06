@@ -1,0 +1,236 @@
+<div class="page page-profile clearfix">
+    <div class="clearfix mb20 row">
+        <div class="col-md-12">
+            <div class="pull-right mt5">
+                <button class="btn btn-sm btn-primary right ml5" ng-click="formView(curRec, postdata._id, 2)"><span tsp-i18n="words.edit"></span> {{object}}</button>
+                <button ng-click="listView()" class="btn btn-sm btn-primary right"><i class="fa fa-arrow-left"></i></button>
+            </div>
+        </div>
+    </div>
+	<div class="page-wrap">
+        <div class="row m-b-lg m-t-lg">
+            <div class="col-sm-6">
+                <div class="profile-image">
+                    <tsp-table-widget
+                            type="avatar"
+                            is-photo="true"
+                            record-id="{{postdata._id}}"
+                            field-data="postdata">
+                    </tsp-table-widget>
+                </div>
+                <div class="profile-info">
+                    <div class="">
+                        <div>
+                            <h2 class="no-margins">
+                                {{postdata.first_name}} {{postdata.last_name}}
+                            </h2>
+                            <h4><span ng-if="!postdata.company_id && !postdata.responsible_company_id"><i class="no-margins glyphicons glyphicons-star"></i> <span class="ml5 mr5" tsp-i18n="words.professional"></span></span> {{postdata.profession.title}} <span ng-if="postdata.company_id">at {{postdata.company.title}}</span></h4>
+                            <div class="mb10 mt10">
+                                <span ng-if="postdata.metadata.social_accounts[0].username" ng-repeat="account in postdata.metadata.social_accounts" class="mr5">
+                                    <a target="_blank" href="{{account.link}}{{account.username}}">
+                                        <span class="small icon-round bg-{{account.title |lowercase}}">
+                                            <i class="{{account.icon}}"></i>
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                            <small>
+                                {{postdata.description | tspFilterTruncate:100}}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <table class="table small mb5">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <strong>142</strong> <span tsp-i18n="words.projects"></span>
+                        </td>
+                        <td>
+                            <strong>22</strong> <span tsp-i18n="words.tickets"></span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>61</strong> <span tsp-i18n="words.comments"></span>
+                        </td>
+                        <td>
+                            <strong>54</strong> <span tsp-i18n="words.invoices"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <small><span tsp-i18n="words.total_invoices"></span></small>
+                <h2 class="no-margins">$206,480</h2>
+                <div id="sparkline1"><canvas style="display: inline-block; width: 246px; height: 50px; vertical-align: top;" width="246" height="50"></canvas></div>
+            </div>
+        </div>
+        <div class="row mt30">
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content mb30">
+                        <h3><span tsp-i18n="words.about"></span> {{postdata.first_name}}</h3>
+                        <p class="small mb10" ng-bind-html="postdata.description">
+                        </p>
+                        <div class="row mb10">
+                            <div class="col-sm-12 small">
+                                <span class="text-emphasis" tsp-i18n="words.dob"></span>:<br>
+                                <div class="wrap ml10 mt5">
+                                    <tsp-table-widget  type="date"
+                                                       format="MM/DD/YYYY"
+                                                       field-data="postdata"
+                                                       field-key="dob">
+                                    </tsp-table-widget>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col-sm-12 small">
+                                <span class="text-emphasis" tsp-i18n="words.referred_by"></span>:<br>
+                                <div class="wrap ml10 mt5">{{postdata.referral.title}}</div>
+                            </div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col-sm-12 small">
+                                <span class="text-emphasis" tsp-i18n="words.email"></span>:<br>
+                                <div class="wrap ml10 mt5"><a href="javascript:;">{{postdata.metadata.email}}</a></div>
+                            </div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col-sm-12 small">
+                                <span class="text-emphasis" tsp-i18n="words.website"></span>:<br>
+                                <div class="wrap ml10 mt5"><a target="_blank" href="{{postdata.metadata.url}}">{{postdata.metadata.url}}</a></div>
+                            </div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col-sm-12 small">
+                                <span class="text-emphasis" tsp-i18n="words.phone_work"></span>:<br>
+                                <div class="wrap ml10 mt5">{{postdata.metadata.work_phone | tspFilterPhone}}</div>
+                            </div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col-sm-12 small">
+                                <span class="text-emphasis" tsp-i18n="words.phone_mobile"></span>:<br>
+                                <div class="wrap ml10 mt5">{{postdata.metadata.mobile_phone | tspFilterPhone}}</div>
+                            </div>
+                        </div>
+                        <h4 class="mt20"><span tsp-i18n="words.address"></span></h4>
+                        <div class="row mb10">
+                            <div class="col-sm-12 small">
+                                {{postdata.metadata.address1}} {{postdata.metadata.address2}}<br>
+                                {{postdata.metadata.city}} {{postdata.metadata.state.title}} {{postdata.metadata.zip_code}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <tabset>
+                    <tab heading="{{lang.objects.activities.object}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <div ng-controller="ActivitiesCtrl">
+                                <div ng-include="'app/modules/activities/templates/list.html'"></div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.companies.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <!-- latest activity -->
+                            <div class="clearfix latest-activity">
+                                <div ng-controller="CompaniesRecordsCtrl">
+                                    <div ng-include="'app/modules/companies/templates/list.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.contracts.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <!-- latest activity -->
+                            <div class="clearfix latest-activity">
+                                <div ng-controller="ContractsRecordsCtrl">
+                                    <div ng-include="'app/modules/contracts/templates/list.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.proposals.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <div ng-controller="ProposalsRecordsCtrl">
+                                <div ng-include="'app/modules/proposals/templates/list.html'"></div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.invoices.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <div ng-controller="InvoicesRecordsCtrl">
+                                <div ng-include="'app/modules/invoices/templates/list.html'"></div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.orders.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <div>
+                                <div ng-include="'app/modules/users/templates/empty.html'"></div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.work.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <!-- latest activity -->
+                            <div class="clearfix latest-activity">
+                                <div ng-controller="WorkRecordsCtrl">
+                                    <div ng-include="'app/modules/work/templates/list.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.projects.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <!-- latest activity -->
+                            <div class="clearfix latest-activity">
+                                <div ng-controller="ProjectsRecordsCtrl">
+                                    <div ng-include="'app/modules/projects/templates/list.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.work.tickets}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <!-- latest activity -->
+                            <div class="clearfix latest-activity">
+                                <div ng-controller="WorkRecordsCtrl">
+                                    <div ng-include="'app/modules/work/templates/list.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="{{lang.objects.comments.objects}}">
+                        <!-- latest activity -->
+                        <div class="clearfix latest-activity">
+                            <!-- latest activity -->
+                            <div class="clearfix latest-activity">
+                                <div ng-controller="CommentsCtrl">
+                                    <div ng-include="'app/modules/comments/templates/list.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+	</div>	<!-- #end page-wrap -->
+</div>

@@ -1,0 +1,128 @@
+<div class="panel-heading mb20">
+    <div class="row form-inline">
+        <div class="light_bkg" class="col-sm-12">
+            <div class="pull-left mt5 ml15" ng-class="{'hide': isModal}">
+                <button ng-click="listView()" class="btn btn-sm btn-primary right"><i class="fa fa-arrow-left"></i></button>
+            </div>
+            <h4 class="text-uppercase title text-normal pull-right mr15"><strong><span tsp-i18n="words.edit"></span> {{object}}</strong></h4>
+        </div>
+    </div>
+</div>
+<div class="page page-form-details clearfix">
+    <div class="page-wrap">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <tsp-form-widget
+                        btn-label="submitButtonText"
+                        busy-label="lang.labels.buttons['busy']"
+                        on-submit="update()">
+                    <tsp-panel-container>
+                        <span ng-bind-html="instructions"></span>
+                        <tsp-panel-widget title="{{lang.objects.properties.all.event_details}}" is-open="true">
+                            <fieldset class="col-md-12">
+                                <!-- Time/Date //-->
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <tsp-field-widget
+                                                type="date"
+                                                label="{{lang.objects.properties.all.start_time}}"
+                                                place-val="{{lang.words.enter_start_time}}"
+                                                field-data="postdata"
+                                                field-key="start_time"
+                                                format="MM/DD/YYYY"
+                                                is-required="true">
+                                        </tsp-field-widget>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <tsp-field-widget
+                                                type="date"
+                                                label="{{lang.objects.properties.all.end_time}}"
+                                                place-val="{{lang.words.enter_end_time}}"
+                                                field-data="postdata"
+                                                field-key="end_time"
+                                                format="MM/DD/YYYY"
+                                                is-required="true">
+                                        </tsp-field-widget>
+                                    </div>
+                                </div>
+                                <!-- Title //-->
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.title}}"
+                                        place-val=""
+                                        field-data="postdata"
+                                        field-key="title"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <!-- Image //-->
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.image}}"
+                                        place-val=""
+                                        field-data="postdata"
+                                        field-key="image"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <!-- Description //-->
+                                <tsp-field-widget
+                                        type="textarea"
+                                        label="{{lang.words.description}}"
+                                        place-val=""
+                                        field-data="postdata"
+                                        field-key="description"
+                                        num-rows="5"
+                                        is-required="true">
+                                </tsp-field-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                        <tsp-panel-widget title="{{lang.objects.properties.all.venue_address}}" is-open="true">
+                            <fieldset class="col-md-12">
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.address1}}"
+                                        field-data="postdata.metadata.location"
+                                        field-key="address1"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.address2}}"
+                                        field-data="postdata.metadata.location"
+                                        field-key="address2">
+                                </tsp-field-widget>
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.city}}"
+                                        field-data="postdata.metadata.location"
+                                        field-key="city"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <tsp-field-widget ng-if="app.settings.show_countries"
+                                                  type="select"
+                                                  label="{{lang.words.country}}"
+                                                  place-val="{{lang.words.select_country}}"
+                                                  field-data="postdata.metadata.location.country"
+                                                  field-key="_id"
+                                                  option-data="app.shared.countries"
+                                                  order-by="'title'"
+                                                  is-required="true">
+                                </tsp-field-widget>
+                                <tsp-field-widget
+                                        type="select"
+                                        label="{{lang.words.state}}"
+                                        place-val="{{lang.words.select_state}}"
+                                        field-data="postdata.metadata.location.state"
+                                        field-key="_id"
+                                        option-data="app.shared.states"
+                                        filter-by="{country_code:postdata.metadata.state.country_code}" order-by="'title'"
+                                        is-required="true">
+                                </tsp-field-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                    </tsp-panel-container>
+                </tsp-form-widget>
+            </div> <!-- #end col -->
+        </div> <!-- #end row -->
+    </div>    <!-- #end page-wrap -->
+</div>

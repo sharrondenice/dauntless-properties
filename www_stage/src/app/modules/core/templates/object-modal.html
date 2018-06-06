@@ -1,0 +1,12 @@
+<!-- modal, modal-dialog and modal-content divs are automatically wrapped by modal plugin -->
+<div class="email-compose">	<!-- wrapper for specific style -->
+    <div class="modal-header clearfix bg-dark">
+        <div class="small text-uppercase left title"><span ng-if="action=='add'">New</span><span ng-if="action=='edit'">Edit</span> {{object}}</div>
+        <button class="close right" ng-click="closeModal()">&times;</button>
+    </div>
+
+    <div class="modal-body">
+        <div ng-if="action=='add'" data-ng-include="'app/modules/' + routes + '/templates/new.html'"></div>
+        <div ng-if="action=='edit'" data-ng-include="'app/modules/' + routes + '/templates/form.html'"></div>
+    </div>
+</div>

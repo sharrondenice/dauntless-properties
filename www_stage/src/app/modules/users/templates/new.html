@@ -1,0 +1,277 @@
+<div class="panel-heading mb20">
+    <div class="row form-inline">
+        <div class="light_bkg" class="col-sm-12">
+            <div class="pull-left mt5 ml15" ng-class="{'hide': isModal}">
+                <button ng-click="listView()" class="btn btn-sm btn-primary right"><i class="fa fa-arrow-left"></i></button>
+            </div>
+            <h4 class="text-uppercase title text-normal pull-right mr15"><strong><span tsp-i18n="words.create"></span> {{object}}</strong></h4>
+        </div>
+    </div>
+</div>
+<div class="page page-form-details clearfix">
+    <div class="page-wrap">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <tsp-form-widget
+                        btn-label="submitButtonText"
+                        busy-label="lang.labels.buttons['busy']"
+                        on-submit="create()">
+                    <tsp-panel-container>
+                        <span ng-bind-html="instructions"></span>
+                        <tsp-panel-widget title="{{lang.objects.users.all.about_contact}}" is-open="true">
+                            <fieldset class="col-md-12">
+                                <!-- Responsible //-->
+                                <tsp-object-widget type="default"
+                                                   label="{{lang.words.responsible}} {{lang.words.professional}}"
+                                                   place-val="{{lang.words.select_professional}}"
+                                                   field-data="postdata"
+                                                   field-key="parent_id"
+                                                   option-data="app.session.professionals">
+                                </tsp-object-widget>
+                                <!-- Responsible Company //-->
+                                <tsp-object-widget type="default"
+                                                   label="{{lang.words.responsible}} {{lang.words.company}}"
+                                                   place-val="{{lang.words.select_responsible_company}}"
+                                                   field-data="postdata"
+                                                   field-key="responsible_company_id"
+                                                   option-data="optiondata.companies"
+                                                   filter-by="{_id:app.current_company_id}" order-by="'title'">
+                                </tsp-object-widget>
+                                <!-- Projects //-->
+                                <tsp-field-widget ng-if="route == 'resource'"
+                                                  type="select"
+                                                  label="{{lang.words.project}}"
+                                                  place-val="{{lang.words.not_selected}}"
+                                                  field-data="postdata"
+                                                  field-key="project_id"
+                                                  option-data="optiondata.projects"
+                                                  order-by="'title'"
+                                                  is-required="true">
+                                </tsp-field-widget>
+                                <!-- Resource Type //-->
+                                <tsp-field-widget ng-if="route == 'resource'"
+                                                  type="select"
+                                                  label="{{lang.objects.resources.all.resource_type}}"
+                                                  place-val="{{lang.words.not_selected}}"
+                                                  field-data="postdata"
+                                                  field-key="resource_type_id"
+                                                  option-data="app.shared.types"
+                                                  filter-by="{owner:'R'}" order-by="'title'"
+                                                  is-required="true">
+                                </tsp-field-widget>
+                                <!-- Contact Type //-->
+                                <tsp-field-widget
+                                        type="select"
+                                        label="{{lang.objects.users.all.contact_role}}"
+                                        place-val="{{lang.words.not_selected}}"
+                                        field-data="postdata"
+                                        field-key="type_id"
+                                        option-data="app.shared.types"
+                                        filter-by="{owner:'U'}" order-by="'title'"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <span class="tsp-help-block" ng-if="postdata.type_id !== undefined && postdata.type_id !== null" ng-repeat="type in app.shared.types |filter:{owner:'U'} |filter:{_id:postdata.type_id}"><i class="glyphicons glyphicons-question-sign mr5"></i>{{type.description}}</span>
+                                <!-- Salutation //-->
+                                <tsp-field-widget
+                                        type="select"
+                                        label="{{lang.words.salutation}}"
+                                        place-val="{{lang.words.not_selected}}"
+                                        field-data="postdata"
+                                        field-key="salutation_type_id"
+                                        option-data="app.shared.types"
+                                        filter-by="{owner:'AD'}" order-by="'title'"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <!-- First Name //-->
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.first_name}}"
+                                        place-val=""
+                                        field-data="postdata"
+                                        field-key="first_name"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <!-- Last Name //-->
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.last_name}}"
+                                        place-val=""
+                                        field-data="postdata"
+                                        field-key="last_name"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <!-- Middle Name //-->
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.middle_name}}"
+                                        place-val=""
+                                        field-data="postdata"
+                                        field-key="middle_name"
+                                        is-required="false">
+                                </tsp-field-widget>
+                                <!-- Email //-->
+                                <tsp-field-widget
+                                        type="email"
+                                        label="{{lang.words.email}}"
+                                        place-val=""
+                                        field-data="postdata.metadata"
+                                        field-key="email"
+                                        is-required="true">
+                                </tsp-field-widget>
+                                <!-- DOB //-->
+                                <tsp-field-widget
+                                        type="date"
+                                        label="{{lang.words.dob}}"
+                                        field-data="postdata"
+                                        field-key="dob">
+                                </tsp-field-widget>
+                                <span class="tsp-help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="objects.users.all.dob_info"></span></span></span>
+                                <!-- Phone //-->
+                                <tsp-field-widget
+                                        type="phone"
+                                        label="{{lang.words.phone_work}}"
+                                        place-val="xxx-xxx-xxxx"
+                                        field-data="postdata.metadata"
+                                        field-key="work_phone"
+                                        is-required="false">
+                                </tsp-field-widget>
+                                <!-- Phone //-->
+                                <tsp-field-widget
+                                        type="phone"
+                                        label="{{lang.words.phone_mobile}}"
+                                        place-val="xxx-xxx-xxxx"
+                                        field-data="postdata.metadata"
+                                        field-key="mobile_phone"
+                                        is-required="false">
+                                </tsp-field-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                        <tsp-panel-widget title="{{lang.objects.users.all.contact_address}}">
+                            <fieldset class="col-md-12">
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.address1}}"
+                                        field-data="postdata.metadata"
+                                        field-key="address1">
+                                </tsp-field-widget>
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.address2}}"
+                                        field-data="postdata.metadata"
+                                        field-key="address2">
+                                </tsp-field-widget>
+                                <tsp-field-widget
+                                        type="text"
+                                        label="{{lang.words.city}}"
+                                        field-data="postdata.metadata"
+                                        field-key="city">
+                                </tsp-field-widget>
+                                <tsp-field-widget ng-if="app.settings.show_countries"
+                                                  type="select"
+                                                  label="{{lang.words.country}}"
+                                                  place-val="{{lang.words.select_country}}"
+                                                  field-data="postdata.metadata.state"
+                                                  field-key="country_code"
+                                                  option-data="app.shared.countries"
+                                                  order-by="'title'">
+                                </tsp-field-widget>
+                                <tsp-field-widget
+                                        type="select"
+                                        label="{{lang.words.state}}"
+                                        place-val="{{lang.words.select_state}}"
+                                        field-data="postdata.metadata"
+                                        field-key="state_id"
+                                        option-data="app.shared.states"
+                                        filter-by="{country_code:postdata.metadata.state.country_code}" order-by="'title'">
+                                </tsp-field-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                        <tsp-panel-widget title="{{lang.objects.users.all.professional_details}}">
+                            <fieldset class="col-md-12">
+                                <!-- Company //-->
+                                <tsp-object-widget type="default"
+                                                   label="{{lang.words.company}}"
+                                                   place-val="{{lang.words.select_company}}"
+                                                   field-data="postdata"
+                                                   field-key="company_id"
+                                                   owner="C"
+                                                   show-add="true"
+                                                   option-data="optiondata.companies">
+                                </tsp-object-widget>
+                                <!-- Profession //-->
+                                <tsp-object-widget type="default"
+                                                   label="{{lang.words.profession}}"
+                                                   title-key="title"
+                                                   desc-key="description"
+                                                   place-val="{{lang.words.select_profession}}"
+                                                   field-data="postdata"
+                                                   field-key="profession_id"
+                                                   group-by="professionGroup"
+                                                   owner="AO"
+                                                   option-data="optiondata.professions">
+                                </tsp-object-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                        <tsp-panel-widget title="{{lang.objects.users.all.pay_rates}}">
+                            <fieldset class="col-md-12">
+                                <!-- Pay Rate //-->
+                                <tsp-object-widget type="rate"
+                                                   label="{{lang.words.pay_rate}}"
+                                                   place-val-data1="{{lang.words.enter_amount}}"
+                                                   place-val-data2="{{lang.words.select_type}}"
+                                                   place-val-data3="{{lang.words.select_rate}}"
+                                                   field-data="postdata.metadata"
+                                                   field-key="pay"
+                                                   option-data2="app.shared.types"
+                                                   option-data3="app.shared.types"
+                                                   filter-by-data2="{owner:'AL'}"
+                                                   filter-by-data3="{owner:'B'}" order-by="'title'">
+                                </tsp-object-widget>
+                                <span class="tsp-help-block"><i class="glyphicons glyphicons-question-sign mr5"></i><span tsp-i18n="objects.users.all.pay_rate_info"></span> </span>
+                            </fieldset>
+                        </tsp-panel-widget>
+                        <tsp-panel-widget title="{{lang.objects.users.all.social_accounts}}">
+                            <fieldset class="col-md-12">
+                                <!-- Social Media //-->
+                                <tsp-social-widget
+                                        label="{{lang.words.social_media_acct}}"
+                                        place-val="{{lang.words.social_media}}"
+                                        field-data="postdata.metadata"
+                                        field-key="social_accounts"
+                                        option-data="app.shared.types"
+                                        filter-by="{owner:'AF'}" order-by="'title'">
+                                </tsp-social-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                        <tsp-panel-widget title="{{lang.words.additional_info}}">
+                            <fieldset class="col-md-12">
+                                <!-- Referral //-->
+                                <tsp-field-widget
+                                        type="select"
+                                        label="{{lang.words.source}}"
+                                        place-val="{{lang.words.not_selected}}"
+                                        field-data="postdata"
+                                        field-key="referral_type_id"
+                                        option-data="app.shared.types"
+                                        filter-by="{owner:'AE'}" order-by="'title'"
+                                        is-required="false">
+                                </tsp-field-widget>
+                                <!-- Internal Comment //-->
+                                <tsp-field-widget
+                                        type="textarea"
+                                        label="{{lang.words.comment_internal}}"
+                                        place-val=""
+                                        field-data="postdata.metadata"
+                                        field-key="comment"
+                                        num-rows="5"
+                                        is-required="false">
+                                </tsp-field-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                    </tsp-panel-container>
+                </tsp-form-widget>
+            </div> <!-- #end col -->
+        </div> <!-- #end row -->
+    </div>    <!-- #end page-wrap -->
+</div>

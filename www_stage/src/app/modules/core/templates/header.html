@@ -1,0 +1,219 @@
+<div class="nav-head">
+	<!-- Site logo -->
+	<a ng-if="!isLayoutHorizontal" data-ui-sref="app.dashboard-v1" class="site-logo" tsp-i18n="app.title_html"></a>
+	<span class="nav-trigger fa" 
+		ng-class="{'fa-bars': isMobile, 'fa-outdent': !isMobile}"
+		toggle-nav-min toggle-off-canvas ng-click="toggleLeftMenuNav()">
+	</span>
+</div>
+
+
+<div class="head-wrap clearfix">
+
+	<div class="site-nav-horizontal-wrapper" collapse="!isLeftMenuCollapsed">
+		<!-- site nav (horizontal) -->
+		<!-- this nav is visible only with horizonal layout -->
+		<nav class="site-nav-horizontal" role="navigation">
+
+			<div class="clickable back-to-main text-bold" ng-click="changeLayout()">
+                <i class="glyphicons glyphicons-unshare"></i>
+			</div>
+
+			<ul class="list-unstyled clearfix menus">
+				<li class="dropdown" dropdown>
+					<a href="javascript:;" class="dropdown-toggle" dropdown-toggle>
+                        <span tsp-i18n="nav.dashboards.title"></span><span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a data-ui-sref="app.dashboard" tsp-i18n="nav.dashboards.my"></a></li>
+						<li><a data-ui-sref="app.dashboard-proj" tsp-i18n="nav.dashboards.project"></a></li>
+						<li><a data-ui-sref="app.dashboard-financial" tsp-i18n="nav.dashboards.financial"></a></li>
+						<li><a data-ui-sref="app.dashboard-social" tsp-i18n="nav.dashboards.social"></a></li>
+					</ul>
+				</li>
+                <li class="dropdown" dropdown>
+                    <a href="javascript:;" class="dropdown-toggle" dropdown-toggle>
+                        <span tsp-i18n="nav.account.title"></span><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a data-ui-sref="app.contacts">
+                                <i class="glyphicons glyphicons-group icon"></i>
+                                <span class="text" tsp-i18n="nav.account.contacts"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-ui-sref="app.timecards">
+                                <i class="glyphicons glyphicons-history icon"></i>
+                                <span class="text" tsp-i18n="nav.account.timecards"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+				<li class="dropdown" dropdown>
+					<a href="javascript:;" class="dropdown-toggle" dropdown-toggle>
+                        <span tsp-i18n="nav.company.title"></span><span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a data-ui-sref="app.companies">
+								<i class="glyphicons glyphicons-building icon"></i>
+								<span class="text" tsp-i18n="nav.company.companies"></span>
+							</a>
+						</li>
+                        <li>
+                            <a data-ui-sref="app.orders">
+                                <i class="glyphicons glyphicons-shopping-cart"></i>
+                                <span class="text" tsp-i18n="nav.company.orders"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-ui-sref="app.submissions">
+                                <i class="glyphicons glyphicons-inbox-in icon"></i>
+                                <span class="text" tsp-i18n="nav.company.submissions"></span>
+                            </a>
+                        </li>
+						<li>
+							<a data-ui-sref="app.email">
+								<i class="glyphicons glyphicons-send icon"></i>
+								<span class="text" tsp-i18n="nav.company.email.title"></span>
+							</a>
+						</li>
+						<li>
+							<a data-ui-sref="app.posts">
+								<i class="glyphicons glyphicons-bullhorn icon"></i>
+								<span class="text" tsp-i18n="nav.company.publishing"></span>
+							</a>
+						</li>
+						<li>
+                            <a data-ui-sref="app.invoices">
+								<i class="glyphicons glyphicons-money icon"></i>
+								<span class="text" tsp-i18n="nav.company.financials.invoices"></span>
+							</a>
+						</li>
+                        <li>
+                            <a data-ui-sref="app.proposals">
+                                <i class="glyphicons glyphicons-money icon"></i>
+                                <span class="text" tsp-i18n="nav.company.financials.proposals"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-ui-sref="app.proposals">
+                                <i class="glyphicons glyphicons-sampler icon"></i>
+                                <span class="text" tsp-i18n="nav.company.financials.discounts"></span>
+                            </a>
+                        </li>
+						<li>
+							<a data-ui-sref="app.deliverables">
+								<i class="fa fa-truck icon"></i>
+								<span class="text" tsp-i18n="nav.company.deliverables"></span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown" dropdown>
+					<a href="javascript:;" class="dropdown-toggle" dropdown-toggle>
+                        <span tsp-i18n="nav.crm.title"></span><span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a data-ui-sref="app.projects">
+								<i class="glyphicons glyphicons-briefcase icon"></i>
+								<span class="text" tsp-i18n="nav.crm.projects"></span>
+							</a>
+						</li>
+						<li>
+							<a data-ui-sref="app.missions">
+								<i class="glyphicons glyphicons-target"></i>
+								<span class="text" tsp-i18n="nav.crm.missions"></span>
+							</a>
+						</li>
+						<li>
+							<a data-ui-sref="app.work">
+								<i class="glyphicons glyphicons-settings icon"></i>
+								<span class="text" tsp-i18n="nav.crm.work"></span>
+							</a>
+						</li>
+                        <li>
+                            <a data-ui-sref="app.sprints">
+                                <i class="glyphicons glyphicons-person-running icon"></i>
+                                <span class="text" tsp-i18n="nav.crm.sprints"></span>
+                            </a>
+                        </li>
+						<li>
+							<a data-ui-sref="app.events">
+								<i class="glyphicons glyphicons-calendar icon"></i>
+								<span class="text" tsp-i18n="nav.crm.events"></span>
+							</a>
+						</li>
+						<li>
+							<a data-ui-sref="app.contracts">
+								<i class="glyphicons glyphicons-handshake icon"></i>
+								<span class="text" tsp-i18n="nav.crm.contracts"></span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown" dropdown>
+					<a href="javascript:;" class="dropdown-toggle" dropdown-toggle>
+                        <span tsp-i18n="nav.system.title"></span><span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a data-ui-sref="app.import" tsp-i18n="nav.system.transfer.import"></a></li>
+                        <li><a data-ui-sref="app.export" tsp-i18n="nav.system.transfer.export"></a></li>
+						<li><a href="#" tsp-i18n="nav.system.preferences"></a></li>
+						<li><a href="#" tsp-i18n="nav.system.integrations"></a></li>
+						<li><a href="#" tsp-i18n="nav.system.updates"></a></li>
+						<li><a href="#" tsp-i18n="nav.system.licensing"></a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<a data-ng-click="logoutUser()" class="clickable log-out">
+				<i class="glyphicons glyphicons-power"></i>
+			</a>
+
+		</nav>
+		<!-- #end site nav (horizontal) -->
+	</div> <!-- #end site-nav-horizontal wrapper -->
+
+
+	<!-- navbar right -->
+	<ul class="list-unstyled navbar-right">
+		<!-- fullscreen -->
+		<li ng-if="!isMobile" ng-click="fullScreen()">
+			<a href><i class="fa fa-expand"></i></a>
+		</li>
+		<!-- #end fullscreen -->
+
+		<!-- profile drop -->
+		<li class="dropdown" dropdown>
+			<a href class="user-profile dropdown-toggle" dropdown-toggle>
+				<tsp-table-widget
+						type="avatar"
+						field-data="app.current_user"
+						show-title="false"
+                        is-featured="true">
+				</tsp-table-widget>
+			</a>
+			<!-- Profile drop -->
+			<div class="panel panel-default dropdown-menu">
+				<div class="panel-body">
+					<figure class="photo left">
+                        <img class="clickable" border="0" ng-src="{{app.current_user.metadata.avatar.location}}">
+					</figure>
+					<div class="profile-info right">
+						<p class="user-name">{{app.current_user.first_name}} {{app.current_user.last_name}}</p>
+                        <p class="small">{{app.current_user.metadata.email | tspFilterTruncate:15}}</p>
+					</div>
+				</div>
+				<div class="panel-footer clearfix">
+					<a ng-click="logoutUser()" class="btn btn-primary btn-sm right" tsp-i18n="labels.buttons.sign_out"></a>
+				</div>
+			</div>
+		</li>
+		<!-- #end profile-drop -->
+	</ul>
+</div>
+
+

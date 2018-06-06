@@ -1,0 +1,137 @@
+<div class="form-group">
+    <label ng-if="!hideLabel && type != 'big-checkbox' && type != 'checkbox'" class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span></label>
+    <div ng-if="type=='big-checkbox'">
+        <div class="ui-bigcheck ui-checkbox ui-checkbox-primary">
+            <label class="bigcheck" ng-required="isRequired">
+                <input ng-model="fieldData[fieldKey]" ng-checked="fieldData[fieldKey]" type="checkbox"
+                       data-parsley-trigger="change"><em></em><div class="ml5 h4 span" ng-if="!hideLabel">{{label}} <div ng-if="isRequired" class="span" class="required"> *</div></div>
+            </label>
+         </div>
+    </div>
+    <div ng-if="type=='checkbox'">
+        <div class="ui-checkbox ui-checkbox-primary">
+            <label ng-required="isRequired">
+                <input ng-model="fieldData[fieldKey]" ng-checked="fieldData[fieldKey]" type="checkbox"
+                       data-parsley-trigger="change"><span></span><div class="text-uppercase small span" ng-if="!hideLabel">{{label}} <div ng-if="isRequired" class="span required">*</div></div>
+            </label>
+        </div>
+    </div>
+    <div ng-if="type=='checkboxes'">
+        <div class="ui-checkbox ui-checkbox-primary">
+            <label class="div mb5" ng-repeat="x in optionData | orderBy:orderBy | filter:filterBy:true">
+                <input ng-model="fieldData[fieldKey]" ng-checked="fieldData[fieldKey].indexOf(x._id) > -1" value="x._id" type="checkbox"
+                       data-parsley-trigger="change"><span></span>
+                <div class="text-uppercase small span" ng-if="!hideLabel"><i ng-if="x.icon" class="{{x.icon}}"></i> {{x.title}}</div>
+            </label>
+        </div>
+    </div>
+    <div ng-if="type=='company-select'">
+        <select class="company-select" class="form-control" ng-model="fieldData[fieldKey]" ng-change="update({id: fieldData[fieldKey]})"
+                data-parsley-trigger="change">
+            <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                    ng-repeat="x in optionData | orderBy:orderBy | filter:filterBy:true"
+                    value="{{x[idKey]}}">
+                {{x[titleKey]}}
+            </option>
+        </select>
+    </div>
+    <div ng-if="type=='date'">
+        <div ng-if="!isReadonly" class="input-group"
+             ng-init="fieldData[fieldKey] = dateToString(fieldData[fieldKey], format)"
+             moment-picker="fieldData[fieldKey]"
+             format="{{format}}">
+            <span class="input-group-addon">
+                <i class="glyphicons glyphicons-calendar"></i>
+            </span>
+            <input class="form-control"
+                   placeholder="{{placeVal}}"
+                   ng-model="fieldData[fieldKey]"
+                   ng-model-options="{ updateOn: 'blur' }">
+        </div>
+        <div ng-if="isReadonly" class="input-group"
+             ng-init="fieldData[fieldKey + '_str'] = dateToString(fieldData[fieldKey], format)"
+             moment-picker="fieldData[fieldKey + '_str']"
+             format="{{format}}"
+             disable="true">
+            <span ng-bind="fieldData[fieldKey + '_str']"></span>
+        </div>
+    </div>
+    <div ng-if="type=='dropzone'">
+        <ng-dropzone class="dropzone mb10" options="dzOptions" callbacks="dzCallbacks" methods="dzMethods">
+            <div class="dz-message"><span></span></div>
+        </ng-dropzone>
+    </div>
+    <div ng-if="type=='email'">
+        <input ng-required="isRequired" type="email" class="form-control" placeholder="{{placeVal}}" ng-model="fieldData[fieldKey]"
+               data-parsley-trigger="change">
+    </div>
+    <div ng-if="type=='phone'">
+        <input ng-required="isRequired" type="tel" class="form-control" placeholder="{{placeVal}}" ng-model="fieldData[fieldKey]"
+               ng-pattern="/^((\d{3}-\d{3}-\d{4})|(\d{7}))$/" data-parsley-trigger="change">
+    </div>
+    <div ng-if="type=='select'">
+        <select ng-required="isRequired" class="form-control" ng-model="fieldData[fieldKey]" ng-change="update()"
+                data-parsley-trigger="change">
+            <option ng-if="placeVal" value="" selected>{{placeVal}}</option>
+            <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                    ng-repeat="x in optionData | orderBy:orderBy | filter:filterBy:true"
+                    value="{{x[idKey]}}">
+                {{x[titleKey]}}
+            </option>
+        </select>
+    </div>
+    <div ng-if="type=='slider'">
+        <div class="row">
+            <div class="col-sm-10">
+                <div id="tsp-slider" ng-init="initSlider(sliderType, fieldData[fieldKey])"></div>
+            </div>
+            <div class="col-sm-2">
+                <h4 class="pull-right ml10 mt0">
+                    <input class="text-bold no-padding" id="tsp-slider-value" disabled ng-model="fieldData[fieldKey]">
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div ng-if="type=='status'">
+        <select ng-required="isRequired" class="form-control" ng-model="fieldData[fieldKey]" ng-change="update()"
+                style="background-color: {{fieldData[fieldKey].background}}; color: {{fieldData[fieldKey].foreground}};"
+                data-parsley-trigger="change">
+            <option ng-if="placeVal" value="" selected>{{placeVal}}</option>
+            <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                    ng-repeat="x in optionData | orderBy:orderBy | filter:filterBy:true"
+                    value="{{x[idKey]}}">
+                {{x[titleKey]}}
+            </option>
+        </select>
+    </div>
+    <div ng-if="type=='currency'">
+        <input ng-required="isRequired" type="text" class="form-control" placeholder="{{placeVal}}" ng-model="fieldData[fieldKey]"
+               tsp-format="currency" data-parsley-trigger="change">
+    </div>
+    <div ng-if="type=='number'">
+         <input ng-required="isRequired" type="text" class="form-control" placeholder="{{placeVal}}" ng-model="fieldData[fieldKey]"
+               tsp-format="number:{{decimalPlaces}}" data-parsley-trigger="change">
+    </div>
+    <div ng-if="type=='text'">
+        <input ng-required="isRequired" type="text" class="form-control" placeholder="{{placeVal}}" ng-model="fieldData[fieldKey]"
+               data-parsley-trigger="change">
+    </div>
+    <div ng-if="type=='sku'">
+        <div class="input-group">
+            <input ng-required="isRequired" type="text" class="form-control" ng-model="fieldData[fieldKey]"
+                   data-parsley-trigger="change">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-primary" data-ng-click="updateControlOnCallback(fieldData, fieldKey)"><i class="ml5 glyphicons glyphicons-refresh"></i></button>
+            </div>
+        </div>
+    </div>
+    <div ng-if="type=='textarea'">
+        <textarea ng-required="isRequired" rows="{{num-rows}}" class="form-control resize-v"
+                  ng-model="fieldData[fieldKey]" data-parsley-trigger="change"></textarea>
+    </div>
+    <div ng-if="type=='wysiwyg'">
+        <text-angular ng-required="isRequired" ng-model="fieldData[fieldKey]" class="text-angular-editor"
+             data-parsley-trigger="change">
+        </text-angular>
+    </div>
+</div>

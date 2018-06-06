@@ -1,0 +1,23 @@
+<div class="form-group"">
+    <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span>
+        <i data-ng-click="addSMAccount()" class="add-new clickable glyphicon glyphicon-plus-sign"></i>
+        <i data-ng-click="removeSMAccount()" class="remove-new clickable glyphicon glyphicon-minus-sign"></i>
+    </label>
+    <div class="input-group mb10"
+         ng-repeat="(pos, elem) in fieldData[fieldKey]">
+        <div class="input-group-btn">
+            <div class="dropdown" dropdown>
+                <button class="btn btn-primary dropdown-toggle" dropdown-toggle
+                        type="button" style="width: 120px">
+                    <span data-ng-bind="fieldData[fieldKey][pos].title">{{place-val}}</span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="x in optionData |filter:filterBy:true"">
+                        <a data-ng-click="setSMAccount(pos,x.title,x._id)">{{x.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="username" ng-model="fieldData[fieldKey][pos].username">
+    </div>
+</div>

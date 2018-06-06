@@ -1,0 +1,34 @@
+<div class="page page-lock default_bkg clearfix">
+
+	<div class="lock-container">
+
+		<div class="lock-box">
+			<div class="lock-info clearfix mb30">
+                <tsp-table-widget
+                        type="avatar"
+                        record-id="{{postdata._id}}"
+                        field-data="postdata">
+                </tsp-table-widget>
+				<header class="user-info">
+					<h3 class="text-uppercase username">{{postdata.first_name}}</h3>
+					<h4 class="desig h3 text-light">{{postdata.last_name}}</h4>
+				</header>
+			</div>
+
+			<div class="form-container default_box">
+				<form role="form" class="login-form mt-lg" action='' method="POST"
+					  data-parsley-priority-enabled="false"
+					  novalidate="novalidate">
+					<div class="input-group input-group-lg">
+						<input class="form-control" type="password" placeholder="{{lang.pages.lock_screen.enter_pass}}">
+						<div class="input-group-btn">
+							<button type="submit" class="btn btn-primary fa fa-long-arrow-right"></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #end form-container -->
+	</div>
+</div>
+<div ng-include="'app/modules/core/templates/footer.html'"></div>

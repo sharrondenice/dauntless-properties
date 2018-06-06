@@ -1,0 +1,30 @@
+{
+    "name": "The Professional",
+    "description": "The Professional required components",
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }
+    ],
+    "config": {
+        "secure-http": false
+    },
+    "require": {
+        "twig/twig": "~1.0",
+        "thesoftwarepeople/helpers" : "~1.1.0",
+        "smalot/pdfparser" : "~0.10.0",
+        "mpdf/mpdf": "~6.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.3.*",
+        "phpunit/dbunit": ">=1.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sharron Denice",
+            "email": "sharron@thesoftwarepeople.com"
+        }
+    ]
+}

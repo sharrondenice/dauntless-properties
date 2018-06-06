@@ -1,0 +1,95 @@
+<div ng-if="records.length == 0" data-ng-include="'app/modules/properties/templates/empty.html'"></div>
+
+<table ng-if="records.length > 0" class="table tsp-dynamic-table">
+    <thead ng-if="show_headers">
+        <tr>
+            <th ng-if="!header.skipped" width="{{header.width}}" ng-repeat="header in headers">
+                <div ng-if="header.type=='select'" class="ui-checkbox ui-checkbox-primary">
+                    <label><input type="checkbox" check-all=""><span></span>
+                    </label>
+                </div>
+                <div ng-if="header.type=='action'" class="fa fa-cog">
+
+                </div>
+                <span ng-if="header.type=='default'" ng-bind-html="header.title">
+
+                    </span>
+                <div ng-if="header.sort" class="th">
+                    <i class="fa fa-caret-up icon-up"
+                       ng-click=" order(header.key) "
+                       ng-class="{active: row == header.key}"></i>
+                    <i class="fa fa-caret-down icon-down"
+                       ng-click=" order('-' + header.key) "
+                       ng-class="{active: row == '-' + header.key}"></i>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="record in records track by $index">
+            <!-- Checkbox //-->
+            <td class="tsp-checkbox" ng-if="!headers[0].skipped">
+                <tsp-table-widget mobile-header="headers[0].title"
+                        type="checkbox"
+                        record-id="{{record._id}}"
+                        field-data="record"
+                        field-key="select">
+                </tsp-table-widget>
+            </td>
+            <!-- ActionBox //-->
+            <td class="tsp-actionbox" ng-if="!headers[1].skipped">
+                <tsp-table-widget mobile-header="headers[1].title"
+                                  type="actionbox"
+                                  label="{{record.title}}"
+                                  index="$index"
+                                  record-id="{{record._id}}"
+                                  on-toggle="toggleState(pos, id, title)"
+                                  on-edit="formView(pos, id)"
+                                  on-delete="deleteRecord(pos, id, title)">
+                </tsp-table-widget>
+            </td>
+            <!-- Avatar //-->
+            <td ng-if="!headers[2].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
+                <tsp-table-widget mobile-header="headers[2].title"
+                                  type="image-url"
+                                  index="$index"
+                                  record-id="{{record._id}}"
+                                  field-data="record"
+                                  field-key="image"
+                                  is-thumbnail="true">
+                </tsp-table-widget>
+            </td>
+            <!-- Title //-->
+            <td ng-if="!headers[3].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
+                <tsp-table-widget mobile-header="headers[3].title"
+                                  type="default"
+                                  index="$index"
+                                  record-id="{{record._id}}"
+                                  field-data="record"
+                                  field-key="title"
+                                  is-highlighted="true"
+                                  suffix="<br><br><small>{{record.description}}</small>">
+                </tsp-table-widget>
+            </td>
+            <td ng-if="!headers[4].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
+                <span class="mobile-only">{{headers[4].title}}:&nbsp;</span>
+                <p class="small">
+                    <tsp-table-widget  type="date"
+                                       prefix="<strong>{{lang.words.start}}: </strong>"
+                                       format="MM/DD/YYYY"
+                                       field-data="record"
+                                       field-key="start_time">
+                    </tsp-table-widget>
+                </p>
+                <p class="small">
+                    <tsp-table-widget  type="date"
+                                       prefix="<strong>{{lang.words.end}}: </strong>"
+                                       format="MM/DD/YYYY"
+                                       field-data="record"
+                                       field-key="end_time">
+                    </tsp-table-widget>
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>

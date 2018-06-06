@@ -1,0 +1,374 @@
+<span ng-if="type == 'default'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span> <i ng-if="showAdd" data-ng-click="loadObject(owner, 'add', null, lang)" class="add-new clickable glyphicon glyphicon-plus-sign"></i></label>
+        <ui-select ng-required="isRequired" ng-model="fieldData[fieldKey]" search-enabled="true" data-parsley-trigger="change">
+            <ui-select-match ng-attr-placeholder="{{placeVal}}">{{$select.selected[titleKey]}}</ui-select-match>
+            <ui-select-choices repeat="x._id as x in optionData |orderBy:orderBy |filter:filterBy:true |filter:$select.search" group-by="groupBy">
+                <div ng-bind-html="x[titleKey] | highlight: $select.search"></div>
+                <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</span>
+<span ng-if="type == 'multi-select'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span> <i ng-if="showAdd" data-ng-click="loadObject(owner, 'add', null, lang)" class="add-new clickable glyphicon glyphicon-plus-sign"></i></label>
+        <ui-select class="multi-select" ng-required="isRequired" multiple ng-model="fieldData[fieldKey]" search-enabled="true" data-parsley-trigger="change" ng-disabled="disabled">
+            <ui-select-match ng-attr-placeholder="{{placeVal}}">{{$item[titleKey]}}</ui-select-match>
+            <ui-select-choices repeat="x[idKey] as x in optionData |orderBy:orderBy |filter:filterBy:true |filter:$select.search" group-by="groupBy">
+                <div ng-bind-html="x[titleKey] | highlight: $select.search"></div>
+                <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+            </ui-select-choices>
+            <ui-select-no-choice>
+                <div id="noChoiceTemplate" ng-if="$select.search">
+                    <div>
+                        <span ng-bind-html="lang.fn_no_data_found([$select.search])"></span>
+                    </div>
+                    <br />
+                    <div class="clickable btn btn-xs btn-primary" data-ng-click="add({'parent_id': null, 'value': $select.search, 'options': optionData})">{{lang.words.add_new_item}}</div>
+                </div>
+                <div id="noChoiceTemplate" ng-if="!$select.search">
+                    <div>
+                        {{lang.words.no_data_found_add_new}}
+                    </div>
+                </div>
+            </ui-select-no-choice>
+        </ui-select>
+    </div>
+</span>
+<span ng-if="type == 'event'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span> <i ng-if="showAdd" data-ng-click="loadObject(owner, 'add', null, lang)" class="add-new clickable glyphicon glyphicon-plus-sign"></i></label>
+        <select ng-required="isRequired" class="form-control" ng-model="fieldData[fieldKey]"
+                data-parsley-trigger="change">
+            <option ng-if="placeVal" value="" selected>{{placeVal}}</option>
+            <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                    ng-repeat="x in optionData | orderBy:orderBy | filter:filterBy:true"
+                    value="{{x[idKey]}}">
+                {{x[titleKey]}}
+            </option>
+        </select>
+    </div>
+</span>
+<span ng-if="type == 'rate'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span>
+            <i data-ng-click="addObject()" class="add-new clickable glyphicon glyphicon-plus-sign"></i>
+            <i data-ng-click="removeObject()" class="remove-new clickable glyphicon glyphicon-minus-sign"></i>
+        </label>
+        <div class="row mb10" ng-repeat="(pos, elem) in fieldData[fieldKey]">
+            <div class="col-sm-4">
+                <select ng-required="isRequired" class="form-control" ng-model="fieldData[fieldKey][pos].type_id"
+                        data-parsley-trigger="change">
+                    <option ng-if="placeVal" value="" selected>{{placeVal}}</option>
+                    <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                            ng-repeat="x in optionData2 | orderBy:orderBy | filter:filterByData2:true"
+                            value="{{x[idKey]}}">
+                        {{x[titleKey]}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="{{placeValData1}}" ng-model="fieldData[fieldKey][pos].rate" tsp-format="currency">
+            </div>
+            <div class="col-sm-4">
+                <select ng-required="isRequired" class="form-control" ng-model="fieldData[fieldKey][pos].rate_type_id"
+                        data-parsley-trigger="change">
+                    <option ng-if="placeVal" value="" selected>{{placeVal}}</option>
+                    <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                            ng-repeat="x in optionData3 | orderBy:orderBy | filter:filterByData3:true"
+                            value="{{x[idKey]}}">
+                        {{x[titleKey]}}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+</span>
+<span ng-if="type == 'release'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span>
+            <i data-ng-click="addObject()" class="add-new clickable glyphicon glyphicon-plus-sign"></i>
+            <i data-ng-click="removeObject()" class="remove-new clickable glyphicon glyphicon-minus-sign"></i>
+        </label>
+        <div class="row mb10" ng-repeat="(pos, elem) in fieldData[fieldKey]">
+            <div class="col-sm-4">
+                <select ng-required="isRequired" class="form-control" ng-model="fieldData[fieldKey][pos].status_id"
+                        data-parsley-trigger="change">
+                    <option ng-if="placeVal" value="" selected>{{placeVal}}</option>
+                    <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                            ng-repeat="x in optionData1 | orderBy:orderBy | filter:filterByData1:true"
+                            value="{{x[idKey]}}">
+                        {{x[titleKey]}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <select ng-required="isRequired" class="form-control" ng-model="fieldData[fieldKey][pos].type_id"
+                        data-parsley-trigger="change">
+                    <option ng-if="placeVal" value="" selected>{{placeVal}}</option>
+                    <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey]}}'"
+                            ng-repeat="x in optionData2 | orderBy:orderBy | filter:filterByData2:true"
+                            value="{{x[idKey]}}">
+                        {{x[titleKey]}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="{{placeValData1}}" ng-model="fieldData[fieldKey][pos].title">
+            </div>
+        </div>
+    </div>
+</span>
+<span ng-if="type == 'multi-type'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span>
+            <i data-ng-click="addObject()" class="add-new clickable glyphicon glyphicon-plus-sign"></i>
+            <i data-ng-click="removeObject()" class="remove-new clickable glyphicon glyphicon-minus-sign"></i>
+        </label>
+        <div class="row mb10" ng-repeat="(pos, elem) in fieldData[fieldKey]">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" placeholder="{{placeVal}}" ng-model="fieldData[fieldKey][pos].title">
+            </div>
+        </div>
+    </div>
+</span>
+<span ng-if="type == 'attributes'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span>
+            <i data-ng-click="addObject()" class="add-new clickable glyphicon glyphicon-plus-sign"></i>
+            <i data-ng-click="removeObject()" class="remove-new clickable glyphicon glyphicon-minus-sign"></i>
+        </label>
+        <div class="row mb10" ng-repeat="(pos, elem) in fieldData[fieldKey]">
+            <div class="col-sm-12">
+                <input type="text" class="mb5 form-control" placeholder="{{placeVal}}" ng-model="fieldData[fieldKey][pos].title">
+                <ui-select class="multi-select" ng-required="isRequired" multiple ng-model="fieldData[fieldKey][pos].variations_ids" search-enabled="true" data-parsley-trigger="change" ng-disabled="disabled">
+                    <ui-select-match ng-attr-placeholder="{{placeValData1}}">{{$item[titleKey]}}</ui-select-match>
+                    <ui-select-choices repeat="x[idKey] as x in optionData |orderBy:orderBy |filter:{attribute_id:fieldData[fieldKey][pos]._aid}:true |filter:$select.search" group-by="groupBy">
+                        <div ng-bind-html="x[titleKey] | highlight: $select.search"></div>
+                        <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+                    </ui-select-choices>
+                    <ui-select-no-choice>
+                        <div id="noChoiceTemplate" ng-if="$select.search">
+                            <div>
+                                <span ng-bind-html="lang.fn_no_data_found([$select.search])"></span>
+                            </div>
+                            <br />
+                            <div class="clickable btn btn-xs btn-primary" data-ng-click="add({'parent_id': fieldData[fieldKey][pos]._aid, 'value': $select.search, 'options': optionData})">{{lang.words.add_new_item}}</div>
+                        </div>
+                        <div id="noChoiceTemplate" ng-if="!$select.search">
+                            <div>
+                                {{lang.words.no_data_found_add_new}}
+                            </div>
+                        </div>
+                    </ui-select-no-choice>
+                </ui-select>
+            </div>
+        </div>
+    </div>
+</span>
+<span ng-if="type == 'variations_pricing'">
+    <div class="form-group">
+        <tsp-panel-container>
+            <tsp-panel-widget title="{{elem.title}} {{lang.words.pricing}}" ng-repeat="(pos, elem) in fieldData[fieldKey]">
+                <tsp-panel-container class="child-container">
+                    <tsp-panel-widget ng-if="fieldData[fieldKey][pos].variations_ids.indexOf(variation[idKey]) > -1" title="<b>{{lang.words.option}}:</b> {{variation.title}}" ng-repeat="(vpos, variation) in fieldData[fieldKey][pos].variations">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <tsp-field-widget type="currency"
+                                                  label="{{lang.words.price}}"
+                                                  field-data="fieldData[fieldKey][pos].variations[vpos]"
+                                                  field-key="price"
+                                                  is-required="true">
+                                </tsp-field-widget>
+                                <tsp-field-widget type="currency"
+                                                  label="{{lang.words.cost}}"
+                                                  field-data="fieldData[fieldKey][pos].variations[vpos]"
+                                                  field-key="cost"
+                                                  is-required="true">
+                                </tsp-field-widget>
+                           </div>
+                            <div class="col-md-6">
+                                <tsp-field-widget type="currency"
+                                                   label="{{lang.words.sales_price}}"
+                                                   field-data="fieldData[fieldKey][pos].variations[vpos]"
+                                                   field-key="sale_price">
+                                </tsp-field-widget>
+                                <tsp-field-widget type="currency"
+                                                  label="{{lang.words.one_time_fee}}"
+                                                  field-data="fieldData[fieldKey][pos].variations[vpos]"
+                                                  field-key="one_time_fee">
+                                </tsp-field-widget>
+                            </div>
+                        </div>
+                    </tsp-panel-widget>
+                </tsp-panel-container>
+            </tsp-panel-widget>
+        </tsp-panel-container>
+    </div>
+</span>
+<span ng-if="type == 'variations_inventory'">
+    <div class="form-group">
+        <tsp-panel-container>
+            <tsp-panel-widget title="{{elem.title}} {{lang.words.inventory}}" ng-repeat="(pos, elem) in fieldData[fieldKey]">
+                <tsp-panel-container class="child-container">
+                    <tsp-panel-widget ng-if="fieldData[fieldKey][pos].variations_ids.indexOf(variation[idKey]) > -1" title="<b>{{lang.words.option}}:</b> {{variation.title}}" ng-repeat="(vpos, variation) in fieldData[fieldKey][pos].variations">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label ng-if="!hideLabel" class="text-uppercase small">{{lang.words.sku}}: <span ng-if="isRequired" class="required"> *</span></label>
+                                <div class="input-group">
+                                    <input ng-required="isRequired" type="text" class="form-control" ng-model="fieldData[fieldKey][pos].variations[vpos].sku"
+                                           data-parsley-trigger="change">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-primary" data-ng-click="updateControlOnCallback(fieldData[fieldKey][pos].variations[vpos], 'sku')"><i class="ml5 glyphicons glyphicons-refresh"></i></button>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-md-6">
+                                <tsp-field-widget
+                                        type="number"
+                                        label="{{lang.words.stock}}"
+                                        place-val=""
+                                        field-data="fieldData[fieldKey][pos].variations[vpos]"
+                                        field-key="stock">
+                                </tsp-field-widget>
+                            </div>
+                        </div>
+                    </tsp-panel-widget>
+                </tsp-panel-container>
+            </tsp-panel-widget>
+        </tsp-panel-container>
+    </div>
+</span>
+<span ng-if="type == 'tags'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span></label>
+        <div class="input-group">
+            <input id="tag_ids" name="tag_ids" type="text" class="form-control">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-primary" data-ng-click="addObject(null, 'tag_ids')">{{lang.words.add}}</button>
+            </div>
+        </div>
+        <div ng-if="prefix" ng-bind-html="prefix" class="mb20"></div>
+        <span class="small" ng-if="fieldKey" ng-repeat="item in fieldData[fieldKey] track by $index">
+            <span class="tag" ng-if="item.title !== undefined && item.title !== null"><i class="fa fa-tag mr5"></i>{{item.title}} <i data-ng-click="removeObject($index, true)" class="clickable glyphicons glyphicons-remove-sign"></i></span>
+        </span>
+        <span class="small" ng-if="!fieldKey" ng-repeat="item in fieldData track by $index">
+            <span class="tag" ng-if="item.title !== undefined && item.title !== null"><i class="fa fa-tag mr5"></i>{{item.title}} <i data-ng-click="removeObject($index, true)" class="clickable glyphicons glyphicons-remove-sign"></i></span>
+        </span>
+        <div ng-if="suffix" ng-bind-html="suffix"></div>
+    </div>
+</span>
+<span ng-if="type == 'line-item'">
+    <div class="dropdown mb20" dropdown>
+        <button class="btn btn-primary dropdown-toggle" dropdown-toggle
+                type="button" style="width: 120px">
+            <span>{{placeVal}}</span><span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li ng-repeat="x in optionData">
+                <a class="clickable" data-ng-click="addObject(x.obj)">{{x.title}}</a>
+            </li>
+        </ul>
+        <span class="ml20 small"><i class="mr5 fa fa-arrows-alt"></i>{{info}}</span>
+    </div>
+    <ul tsp-sortable-widget id="tsp-draggable-item" class="tsp-sortable-list tsp-connect-list">
+        <li class="mb20 tsp-list-item" ng-repeat="(pos, elem) in fieldData[fieldKey] | orderBy:orderBy">
+            <div class="row tsp-draggable">
+                <div class="col-sm-1">
+                    <input class="tsp-order" disabled type="text" ng-model="fieldData[fieldKey][pos].order">
+                    <i data-ng-click="removeObject(pos)" class="remove-new clickable glyphicons glyphicons-remove-sign"></i>
+                </div>
+                <div class="col-sm-4">
+                    <span ng-if="fieldData[fieldKey][pos].deliverable_id">
+                        <label class="x-small">{{lang.words.deliverable}} {{lang.words.title}}</label>
+                         <select class="form-control" ng-model="fieldData[fieldKey][pos].deliverable_id"
+                                 data-parsley-trigger="change" ng-change="update({item: fieldData[fieldKey][pos], parent: null, retrieve: true})">
+                            <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey][pos].deliverable_id}}'"
+                                    ng-repeat="x in optionData1 | orderBy:orderBy | filter:filterByData1:true"
+                                    value="{{x[idKey]}}">
+                                {{x[titleKey]}}
+                            </option>
+                        </select>
+                     </span>
+                    <span ng-if="fieldData[fieldKey][pos].mission_id">
+                        <label class="x-small">{{lang.words.mission}} {{lang.words.title}}</label>
+                         <select class="form-control" ng-model="fieldData[fieldKey][pos].mission_id"
+                                 data-parsley-trigger="change" ng-change="update({item: fieldData[fieldKey][pos], parent: null, retrieve: true})">
+                            <option ng-selected="'{{x[idKey]}}' == '{{fieldData[fieldKey][pos].mission_id}}'"
+                                    ng-repeat="x in optionData4 | orderBy:orderBy | filter:filterByData4:true"
+                                    value="{{x[idKey]}}">
+                                {{x[titleKey]}}
+                            </option>
+                        </select>
+                    </span>
+                    <span ng-if="!fieldData[fieldKey][pos].deliverable_id && !fieldData[fieldKey][pos].mission_id">
+                        <label class="x-small">{{lang.words.custom}} {{lang.words.title}}</label>
+                        <input type="text" class="form-control" ng-model="fieldData[fieldKey][pos].title">
+                    </span>
+                </div>
+                <tsp-line-item line="fieldData[fieldKey][pos]">
+                    <div class="col-sm-1">
+                        <label class="x-small">{{lang.words.qty}}</label>
+                        <input id="quantity" type="text" ng-change="toggle({retrieve: true})" class="no-padding form-control" ng-model="fieldData[fieldKey][pos].quantity">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="x-small">{{lang.words.price}}</label>
+                        <input id="price" ng-change="toggle({retrieve: true})" ng-disabled="fieldData[fieldKey][pos].deliverable_id && fieldData[fieldKey][pos].variations.length > 0" type="text" class="form-control" ng-model="fieldData[fieldKey][pos].price" tsp-format="currency::2">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="x-small">{{lang.words.price_sales}}</label>
+                        <input id="sale_price" ng-change="toggle({retrieve: true})" ng-disabled="fieldData[fieldKey][pos].deliverable_id && fieldData[fieldKey][pos].variations.length > 0" type="text" class="form-control" ng-model="fieldData[fieldKey][pos].sale_price" tsp-format="currency::2">
+                    </div>
+                    <div class="col-sm-2 mb5">
+                        <label class="x-small">{{lang.words.fee}}</label>
+                        <input id="one_time_fee" ng-change="toggle({retrieve: true})" ng-disabled="fieldData[fieldKey][pos].deliverable_id && fieldData[fieldKey][pos].variations.length > 0" type="text" class="form-control" ng-model="fieldData[fieldKey][pos].one_time_fee" tsp-format="currency::2">
+                    </div>
+                </tsp-line-item>
+                <div class="col-sm-12 small mb5 mt5" ng-if="fieldData[fieldKey][pos].variations.length > 0" ng-repeat="(vpos, variant) in optionData2">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="highlighted x-small">{{lang.words.attribute}}</label>
+                                <select class="form-control" ng-model="fieldData[fieldKey][pos].variations[vpos].attribute_id"
+                                        data-parsley-trigger="change" ng-change="update({item: fieldData[fieldKey][pos].variations[vpos], parent: fieldData[fieldKey][pos], retrieve: true})">
+                                    <option ng-selected="'{{x['_aid']}}' == '{{fieldData[fieldKey][pos].variations[vpos].attribute_id}}'"
+                                            ng-repeat="x in optionData2 | orderBy:orderBy | filter:filterByData2:true"
+                                            value="{{x['_aid']}}">
+                                        {{x[titleKey]}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="highlighted x-small">{{lang.words.variation}}</label>
+                                <select class="form-control" ng-model="fieldData[fieldKey][pos].variations[vpos].attribute_value_id"
+                                        data-parsley-trigger="change" ng-change="update({item: fieldData[fieldKey][pos].variations[vpos], parent: fieldData[fieldKey][pos], retrieve: true})">
+                                    <option ng-selected="'{{x['_avid']}}' == '{{fieldData[fieldKey][pos].variations[vpos].attribute_value_id}}'"
+                                            ng-repeat="x in optionData3 | orderBy:orderBy | filter:{attribute_id:fieldData[fieldKey][pos].variations[vpos].attribute_id}:true"
+                                            value="{{x['_avid']}}">
+                                        {{x[titleKey]}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <tsp-line-item line="fieldData[fieldKey][pos].variations[vpos]">
+                        <div class="col-sm-2">
+                            <label class="highlighted x-small">{{lang.words.price}}</label>
+                            <input id="price" ng-change="update({item: fieldData[fieldKey][pos].variations[vpos], parent: fieldData[fieldKey][pos], retrieve: false})" type="text" class="form-control" ng-model="fieldData[fieldKey][pos].variations[vpos].price" tsp-format="currency::2">
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="highlighted x-small">{{lang.words.price_sales}}</label>
+                            <input id="sale_price" ng-change="update({item: fieldData[fieldKey][pos].variations[vpos], parent: fieldData[fieldKey][pos], retrieve: false})" type="text" class="form-control" ng-model="fieldData[fieldKey][pos].variations[vpos].sale_price" tsp-format="currency::2">
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="highlighted x-small">{{lang.words.fee}}</label>
+                            <input id="one_time_fee" ng-change="update({item: fieldData[fieldKey][pos].variations[vpos], parent: fieldData[fieldKey][pos], retrieve: false})" type="text" class="form-control" ng-model="fieldData[fieldKey][pos].variations[vpos].one_time_fee" tsp-format="currency::2">
+                        </div>
+                    </tsp-line-item>
+                </div>
+            </div>
+        </li>
+    </ul>
+</span>

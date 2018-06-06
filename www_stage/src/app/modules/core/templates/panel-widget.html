@@ -1,0 +1,11 @@
+<accordion-group class="mb10" is-open="isOpen">
+    <accordion-heading>
+        <div class="row">
+            <div class="col-sm-8" ng-bind-html="title"></div>
+            <div class="col-sm-4 text-right"><i class="fa" ng-class="{'fa-caret-right':!isOpen, 'fa-caret-down':isOpen}"></i></div>
+        </div>
+    </accordion-heading>
+    <div class="mb30">
+        <div ng-transclude></div>
+    </div>
+</accordion-group>

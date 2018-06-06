@@ -1,0 +1,46 @@
+<div class="page page-auth default_bkg clearfix">
+
+	<div class="auth-container">
+		<!-- site logo -->
+		<h1 class="site-logo h2 mb15">
+			<a href="/" tsp-i18n="app.title_html"></a>
+		</h1>
+		<h3 class="text-normal h4 text-center" tsp-i18n="pages.login.sign_in"></h3>
+
+		<div class="form-container default_box">
+			<form role="form" class="login-form mt-lg" action='' method="POST"
+				  data-parsley-priority-enabled="false"
+				  novalidate="novalidate">
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="text" placeholder="Username" required="required" ng-model="postdata.username">
+				</div>
+
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="password" placeholder="Password" required="required" ng-model="postdata.password">
+				</div>
+
+				<!--
+                <div class="clearfix"><a data-ui-sref="forgot-pass" class="right small" tsp-i18n="pages.login.forget_pass"></a></div>
+				//-->
+				<div class="clearfix mb15">
+					<button type="button" class="btn btn-lg btn-w120 btn-primary text-uppercase" data-ng-click="loginUser()">
+						<span ng-show="submitButtonText == lang.labels.buttons.delay"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+						{{submitButtonText}}
+					</button>
+					<div class="ui-checkbox ui-checkbox-primary mt15 right">
+						<label>
+							<input type="checkbox" id="remember" name="remember" ng-model="postdata.remember" value="1">
+							<span tsp-i18n="pages.login.remember_me"></span>
+						</label>
+					</div>
+				</div>
+
+				<div class="clearfix text-center">
+                    <p><span tsp-i18n="pages.login.no_account"></span>&nbsp;<a data-ui-sref="register" tsp-i18n="pages.login.register"></a></p>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- #end auth-wrap -->
+</div>
