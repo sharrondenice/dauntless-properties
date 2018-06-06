@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed installation check&#10;- Removed footer from primary pages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/scripts/app-295902afcb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/scripts/vendor-3aa090e31b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/styles/app-f4032bcce6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/styles/vendor-9de4075ae1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/theme/custom.less" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/theme/custom.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/theme/themes.less" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/theme/themes.less" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,12 +24,29 @@
     <pharConfigPath>$PROJECT_DIR$/http/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="themes.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/themes.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" selection-end-line="185" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/custom.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="178" column="16" lean-forward="true" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>see pr</find>
-      <find>profile</find>
       <find>Validate &amp;</find>
       <find>createEmptyRecord</find>
       <find>setOwnerType</find>
@@ -50,6 +75,8 @@
       <find>is_array($this_state)</find>
       <find>'state</find>
       <find>theme-zero</find>
+      <find>nav-wrap</find>
+      <find>.panel</find>
     </findStrings>
     <replaceStrings>
       <replace>properties</replace>
@@ -58,11 +85,11 @@
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/www_stage/src/app/modules/properties</dir>
-      <dir>$PROJECT_DIR$/www_stage/src</dir>
       <dir>$PROJECT_DIR$/www_stage/src/app/modules</dir>
-      <dir>$PROJECT_DIR$/www_stage/src/app/theme</dir>
       <dir>$PROJECT_DIR$/http</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/www_stage/src</dir>
+      <dir>$PROJECT_DIR$/www_stage/src/app/theme</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -71,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/nav.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.directive.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/property-wizard-viewer.html" />
@@ -82,7 +108,6 @@
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/install/install.module.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/install/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/index.js" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/theme/custom.less" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" />
         <option value="$PROJECT_DIR$/http/models/EOwnerType.php" />
         <option value="$PROJECT_DIR$/http/models/Country.php" />
@@ -122,6 +147,8 @@
         <option value="&lt;2fb0ca51-bade-48c9-8974-4596c8bdee09&gt;/_hosted_domains/app.letaprodoit.com/dauntless/assets/env.js" />
         <option value="$PROJECT_DIR$/http/sql/database.sql" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/theme/themes.less" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/theme/custom.less" />
       </list>
     </option>
   </component>
@@ -291,6 +318,11 @@
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -304,7 +336,31 @@
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -333,11 +389,11 @@
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules/install/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/assets/images/backgrounds" />
       <recent name="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds" />
       <recent name="$PROJECT_DIR$/www/assets" />
       <recent name="$PROJECT_DIR$/http/controllers" />
       <recent name="$PROJECT_DIR$/http/models" />
-      <recent name="$PROJECT_DIR$/www_stage/src/app/modules" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -364,7 +420,7 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="57326000" />
+      <workItem from="1528258151063" duration="58378000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -408,11 +464,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528315010763</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Added missing background to www">
+      <created>1528316153624</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528316153624</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81766000" />
+    <option name="totallyTimeSpent" value="82818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,16 +488,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1344" height="778" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" weight="0.32892805" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.27753305" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.27753305" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32892805" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.19662058" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32892805" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
@@ -465,7 +529,8 @@
     <MESSAGE value="- Added README placeholder" />
     <MESSAGE value="- Fixed typo in read me" />
     <MESSAGE value="- Fixed demo in readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed demo in readme" />
+    <MESSAGE value="- Added missing background to www" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added missing background to www" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,43 +538,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/install/templates/install.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/install/index.module.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/install/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#353#554#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="12" selection-end-column="7" />
-          <folding>
-            <element signature="e#400#653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/custom.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -815,13 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="55" column="82" selection-start-line="55" selection-start-column="82" selection-end-line="55" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -934,6 +959,36 @@
             <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="55" column="82" selection-start-line="55" selection-start-column="82" selection-end-line="55" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/ui/ui.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/ui/theme.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/themes.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="185" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/custom.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="178" column="16" lean-forward="true" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
         </state>
       </provider>
     </entry>
