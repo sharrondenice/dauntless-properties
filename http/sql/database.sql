@@ -2469,7 +2469,7 @@ INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (7, 'Q', NULL, 1, 1, 'mins_interval', '30');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (20, 'AN', NULL, 1, 1, 'blurb', '<strong>Property</strong> Management System');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (21, 'AN', NULL, 1, 0, 'default_page_size', '25');
-INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (22, 'AN', NULL, 1, 0, 'theme', 'theme-eleven');
+INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (22, 'AN', NULL, 1, 0, 'theme', 'theme-zero');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (23, 'AN', NULL, 1, 0, 'left_menu_collapsed', 'false');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (24, 'AN', NULL, 1, 0, 'layout_horizontal', 'false');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (30, 'S', NULL, 1, 1, 'tax', '0.00');
@@ -2490,14 +2490,14 @@ INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (57, 'V', NULL, 1, 1, 'sku_company_max', '3');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (58, 'V', NULL, 1, 1, 'sku_product_max', '3');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (59, 'V', NULL, 1, 1, 'sku_category_max', '3');
-INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (100, 'AN', 1, NULL, 0, 'theme', 'theme-eleven');
+INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (100, 'AN', 1, NULL, 0, 'theme', 'theme-zero');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (101, 'AN', 1, NULL, 0, 'default_page_size', '50');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (102, 'AN', 1, NULL, 0, 'left_menu_collapsed', 'true');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (103, 'AN', 1, NULL, 0, 'layout_horizontal', 'false');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (104, 'C', 1, NULL, 0, 'current_company_id', '1');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (105, 'Q', 1, NULL, 0, 'lang_code', 'en');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (106, 'Q', 1, NULL, 0, 'default_country', 'US');
-INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (200, 'AN', 8, NULL, 0, 'theme', 'theme-eleven');
+INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (200, 'AN', 8, NULL, 0, 'theme', 'theme-zero');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (201, 'AN', 8, NULL, 0, 'default_page_size', '50');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (202, 'AN', 8, NULL, 0, 'left_menu_collapsed', 'true');
 INSERT INTO `DB_NAME`.`system_settings` (`_id`, `owner`, `user_id`, `responsible_company_id`, `is_global`, `setting_name`, `setting_value`) VALUES (203, 'AN', 8, NULL, 0, 'layout_horizontal', 'false');

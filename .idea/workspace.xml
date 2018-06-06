@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed installation check&#10;- Removed footer from primary pages">
-      <change afterPath="$PROJECT_DIR$/www_stage/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/models/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/Property.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/sql/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/http/sql/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/assets/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/assets/env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort.jpg" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="Property.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http/models/Property.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="142" column="37" lean-forward="true" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+            <state relative-caret-position="-1556">
+              <caret line="145" column="26" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -58,7 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app.das</find>
       <find>see pr</find>
       <find>profile</find>
       <find>Validate &amp;</find>
@@ -88,6 +86,7 @@
       <find>'location' =&gt;</find>
       <find>is_array($this_state)</find>
       <find>'state</find>
+      <find>theme-zero</find>
     </findStrings>
     <replaceStrings>
       <replace>properties</replace>
@@ -99,8 +98,8 @@
       <dir>$PROJECT_DIR$/www_stage/src</dir>
       <dir>$PROJECT_DIR$/www_stage/src/app/modules</dir>
       <dir>$PROJECT_DIR$/www_stage/src/app/theme</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/http</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -109,7 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www_stage/src/assets/env.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/templates/nav.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.directive.js" />
@@ -133,7 +131,6 @@
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/install.html" />
         <option value="$PROJECT_DIR$/http/routes.php" />
-        <option value="$PROJECT_DIR$/http/sql/database.sql" />
         <option value="$PROJECT_DIR$/http/models/ESharedType.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" />
@@ -146,8 +143,6 @@
         <option value="$PROJECT_DIR$/http/models/Type.php" />
         <option value="$PROJECT_DIR$/http/classes/System.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" />
-        <option value="$PROJECT_DIR$/www/assets/env.js" />
-        <option value="&lt;2fb0ca51-bade-48c9-8974-4596c8bdee09&gt;/_hosted_domains/app.letaprodoit.com/dauntless/assets/env.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" />
         <option value="$PROJECT_DIR$/http/controllers/CProperty.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" />
@@ -160,6 +155,10 @@
         <option value="$PROJECT_DIR$/http/models/Setting.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/view.html" />
         <option value="$PROJECT_DIR$/http/models/Property.php" />
+        <option value="$PROJECT_DIR$/www/assets/env.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/assets/env.js" />
+        <option value="&lt;2fb0ca51-bade-48c9-8974-4596c8bdee09&gt;/_hosted_domains/app.letaprodoit.com/dauntless/assets/env.js" />
+        <option value="$PROJECT_DIR$/http/sql/database.sql" />
       </list>
     </option>
   </component>
@@ -341,11 +340,38 @@
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="backgrounds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -366,27 +392,24 @@
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="properties" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="properties" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="backgrounds" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -415,10 +438,11 @@
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules/install/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds" />
+      <recent name="$PROJECT_DIR$/www/assets" />
       <recent name="$PROJECT_DIR$/http/controllers" />
       <recent name="$PROJECT_DIR$/http/models" />
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules" />
-      <recent name="$PROJECT_DIR$/www_stage/src/app/modules/core/templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -445,7 +469,7 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="52899000" />
+      <workItem from="1528258151063" duration="54925000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -454,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528309968400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- Fixed state bug&#10;- Fixed issue with property intervals to add no availability&#10;- Added blank favicon to stop annoying errors">
+      <created>1528311545912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528311545912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77339000" />
+    <option name="totallyTimeSpent" value="79365000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,17 +502,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1344" height="778" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" weight="0.32892805" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.27753305" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.27753305" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32892805" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32892805" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
@@ -504,8 +534,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout" />
+    <MESSAGE value="- Fixed state bug&#10;- Fixed issue with property intervals to add no availability&#10;- Added blank favicon to stop annoying errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed state bug&#10;- Fixed issue with property intervals to add no availability&#10;- Added blank favicon to stop annoying errors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -513,17 +546,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/property-wizard-viewer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="96" column="66" lean-forward="true" selection-start-line="96" selection-start-column="66" selection-end-line="96" selection-end-column="66" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/models/Profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -719,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/sql/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4988">
-          <caret line="2764" column="42" selection-start-line="2764" selection-start-column="42" selection-end-line="2764" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/vendor/thesoftwarepeople/helpers/src/TSP/Database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1017">
@@ -809,13 +824,6 @@
             <element signature="n#installDatabase#0;n#System#0;n#!!top" expanded="true" />
             <element signature="n#notifyCustomer#0;n#System#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/assets/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -976,10 +984,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/assets/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" lean-forward="true" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/assets/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/sql/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="2499" column="191" selection-start-line="2499" selection-start-column="191" selection-end-line="2499" selection-end-column="191" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/http/models/Property.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="142" column="37" lean-forward="true" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+        <state relative-caret-position="-1556">
+          <caret line="145" column="26" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
         </state>
       </provider>
     </entry>

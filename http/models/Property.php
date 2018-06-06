@@ -136,11 +136,14 @@ class Property extends BaseModel {
                 $this_state = $state->getStateByID($data[$index]['state_id']);
                 $this_country = $country->getCountryByID($this_state['country_code']);
 
+                $now = time();
                 $datetime1 = new DateTime($data[$index]['start_time']);
                 $datetime2 = new DateTime($data[$index]['end_time']);
                 $interval = $datetime1->diff($datetime2);
 
-                if ($interval->d > 0)
+                // If the interval window is zero or the date has passed set
+                // no availability
+                if ($now < strtotime($data[$index]['end_time']))
                     $data[$index]['interval'] = $interval->format('%R%a days');
                 else
                     $data[$index]['interval'] = 'No Availability';
