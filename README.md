@@ -23,6 +23,16 @@ Dauntless Properties is a demo LAMP stack project with AngularJS UI front-end to
 * LIVE demo can be found at [https://app.letaprodoit.com/dauntless](https://app.letaprodoit.com/dauntless)
 * API Code documentation can be found at [https://api.letaprodoit.com/dauntless/docs](https://api.letaprodoit.com/dauntless/docs)
 
+### To Build The Project From Scratch
+
+* Open a command prompt or user your IDE to run the command `npm install`. This will install all the required node_modules for debugging.
+* Next change directory to `http` and run the command `composer update` This will install the required modules for the API
+* Run `gulp build` to build the current workspace. All files will be outputted to the `www` directory.
+* If you wish to run the API on localhost
+** Update `www_stage/src/assets/env.js` to include `http://localhost:3000` as the API url
+** Inside the `http` directory run `php -S localhost:3000` (Ensure your php webserver is still running at `http://localhost:2000`)
+* Navigate to to `http://localhost:2000` to begin 
+
 
 ## KNOWN BUGS
 

@@ -34,7 +34,6 @@ _design/clients/sharrondenice/icon/OS X Icon Template \[*\]
 
 platforms/osx/www
 platforms/ios/www
-www
 *.bak*
 www_ios
 www_osx
@@ -44,3 +43,4 @@ _sandbox
 www_stage/apis
 *.csv
 *.zip
+http/docs
