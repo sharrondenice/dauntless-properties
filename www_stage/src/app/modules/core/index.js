@@ -77,8 +77,10 @@
             http.open('HEAD', '.installed', false);
             http.send();
 
+            var $state = $injector.get('$state');
+
             // if installed attempt to display the dashboard
-            if (ihttp.status!=404)
+            if (http.status!=404)
             {
                 $state.go('app.properties');
             }

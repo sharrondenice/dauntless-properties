@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed bugs with registration">
-      <change afterPath="$PROJECT_DIR$/www/install.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/scripts/app-c8de96033e.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/http/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/assets/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/env.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/app-94a1470580.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/scripts/app-2de76d5d96.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/scripts/vendor-3aa090e31b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/styles/app-9d35849cb3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/styles/vendor-9de4075ae1.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,32 +30,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.module.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+            <state relative-caret-position="135">
+              <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding>
-                <element signature="e#843#3085#0" expanded="true" />
-                <element signature="e#1120#2933#0" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/install.php">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="207">
+              <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/install.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3006" />
           </provider>
         </entry>
       </file>
@@ -66,8 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>localStorage.getItem</find>
-      <find>'state'</find>
       <find>localStorage.setItem(__env</find>
       <find>'state'</find>
       <find>'default'</find>
@@ -96,6 +83,8 @@
       <find>JSON.parse</find>
       <find>default_bkg</find>
       <find>installed =</find>
+      <find>ihttp</find>
+      <find>http.status</find>
     </findStrings>
     <replaceStrings>
       <replace>properties</replace>
@@ -114,8 +103,9 @@
       <dir>$PROJECT_DIR$/www_stage/src/app/theme</dir>
       <dir>$PROJECT_DIR$/www_stage/src/app/modules/reservations</dir>
       <dir>$PROJECT_DIR$/http</dir>
-      <dir>$PROJECT_DIR$/www_stage/src</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/www_stage</dir>
+      <dir>$PROJECT_DIR$/www_stage/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/install.html" />
         <option value="$PROJECT_DIR$/http/models/ESharedType.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less" />
         <option value="$PROJECT_DIR$/http/config.php" />
@@ -171,10 +160,11 @@
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" />
         <option value="$PROJECT_DIR$/http/classes/System.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" />
         <option value="$PROJECT_DIR$/http/driver.php" />
         <option value="$PROJECT_DIR$/www/install.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" />
       </list>
     </option>
   </component>
@@ -484,7 +474,7 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="85983000" />
+      <workItem from="1528258151063" duration="87098000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -577,11 +567,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528370745414</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="- Fixed installation issue which was causing install screen to be shown for new users&#10;- Fixed trailing slashes in login and register links on welcome install page">
+      <created>1528376358738</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1528376358738</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110423000" />
+    <option name="totallyTimeSpent" value="111538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,12 +598,12 @@
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" order="0" weight="0.32892805" />
-      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.2349486" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.38325992" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17767988" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4185022" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="3" />
@@ -643,7 +640,8 @@
     <MESSAGE value="- Fixed bugs with registration&#10;- Fixed bugs with minification and a misplaced comma" />
     <MESSAGE value="- Updated page background" />
     <MESSAGE value="- Get database preferences from the same user instead of creating new, fix if time allots" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Get database preferences from the same user instead of creating new, fix if time allots" />
+    <MESSAGE value="- Fixed installation issue which was causing install screen to be shown for new users&#10;- Fixed trailing slashes in login and register links on welcome install page" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed installation issue which was causing install screen to be shown for new users&#10;- Fixed trailing slashes in login and register links on welcome install page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -659,9 +657,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/ui/theme.less">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/themes.less">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1090,13 +1085,6 @@
     <entry file="file://$PROJECT_DIR$/www/.installed">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/config.db.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1124,11 +1112,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        <state relative-caret-position="233">
+          <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
           <folding>
             <element signature="e#843#3085#0" expanded="true" />
             <element signature="e#1120#2933#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
