@@ -53,8 +53,6 @@
                         if ((__env.debug && __env.verbose))
                             console.log('Token Valid...');
 
-                        localStorage.setItem(__env.cookie_prefix + '.installed', "true");
-
                         $rootScope.loadingAppText = $scope.lang.sentences.login;
                         $rootScope.loadingApp = tspAppPreloader.show();
                         $rootScope.first_run = true;
@@ -121,8 +119,8 @@
         $rootScope.loadingApp = tspAppPreloader.hide(true);
     }
 
-    InstallController.$inject = ['$scope', '$state', '$rootScope', '$timeout', '__env', '$injector', '$location', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
-    function InstallController ($scope, $state, $rootScope, $timeout, __env, $injector, $location, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
+    InstallController.$inject = ['$scope', '$state', '$rootScope', '$timeout', '$http', '__env', '$injector', '$location', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
+    function InstallController ($scope, $state, $rootScope, $timeout, $http, __env, $injector, $location, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
         // we will store all of our form data in this object
         $scope.postdata = {
             progress: {
@@ -136,6 +134,11 @@
         $scope.databaseDelay = 25;
         $scope.accountDelay = 25;
         $scope.domain = document.location.origin;
+        $scope.domain.replace(/\/$/, '');
+
+        $scope.domain_path = window.location.pathname;
+        $scope.domain += $scope.domain_path;
+        $scope.domain.replace(/\/$/, '');
 
         function setStatusBar(type, value)
         {
@@ -250,6 +253,17 @@
                     // DO NOT SHOW ALERT ON SUCCESS
                     // Start counter instead
                     //SweetAlert.success('Credentials accepted. ' + $scope.object + ' created.', {title: "Record Updated"});
+
+
+                    // Set the .installed file for the installation
+                    // If the user creation portion fails, the user can still register an account manually
+                    $http({
+                        method: 'POST',
+                        url: 'install.php',
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}
+                    })
+                    .success(function (result) { })
+                    .error(function (data, status) { });
                 },
                 function(){
                     $scope.finished = true;

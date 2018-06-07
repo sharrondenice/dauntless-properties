@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed bugs with registration">
+      <change afterPath="$PROJECT_DIR$/www/install.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/scripts/app-c8de96033e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/classes/System.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/classes/System.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/http/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/scripts/app-94a1470580.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,40 +33,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="System.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/http/classes/System.php">
+      <file leaf-file-name="index.module.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="256" column="65" lean-forward="true" selection-start-line="256" selection-start-column="65" selection-end-line="256" selection-end-column="65" />
+            <state relative-caret-position="290">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
               <folding>
-                <element signature="e#8#82#0#PHP" />
-                <element signature="e#160#270#0#PHP" />
-                <element signature="e#333#899#0#PHP" />
-                <element signature="e#478#899#0#PHP" />
-                <element signature="e#654#887#0#PHP" />
-                <element signature="e#911#1139#0#PHP" />
-                <element signature="e#1712#2443#0#PHP" />
-                <element signature="e#2053#2433#0#PHP" />
-                <element signature="e#2147#2339#0#PHP" />
-                <element signature="e#2532#2715#0#PHP" />
-                <element signature="e#2831#5817#0#PHP" />
-                <element signature="e#4207#5188#0#PHP" />
-                <element signature="e#4280#4557#0#PHP" />
-                <element signature="e#4642#5188#0#PHP" />
-                <element signature="e#4704#4972#0#PHP" />
-                <element signature="e#5200#5817#0#PHP" />
-                <element signature="e#5234#5430#0#PHP" />
-                <element signature="e#5602#5805#0#PHP" />
-                <element signature="e#5852#5999#0#PHP" />
-                <element signature="e#6524#6705#0#PHP" />
-                <element signature="e#6862#7013#0#PHP" />
-                <element signature="e#8720#8876#0#PHP" />
-                <element signature="e#8888#9336#0#PHP" />
-                <element signature="e#8922#9052#0#PHP" />
-                <element signature="e#9092#9325#0#PHP" />
-                <element signature="e#9371#9524#0#PHP" />
+                <element signature="e#843#3085#0" expanded="true" />
+                <element signature="e#1120#2933#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/install.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/install.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3006" />
           </provider>
         </entry>
       </file>
@@ -65,7 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>['preferences']</find>
       <find>localStorage.getItem</find>
       <find>'state'</find>
       <find>localStorage.setItem(__env</find>
@@ -95,6 +95,7 @@
       <find>ui-widget-overlay</find>
       <find>JSON.parse</find>
       <find>default_bkg</find>
+      <find>installed =</find>
     </findStrings>
     <replaceStrings>
       <replace>properties</replace>
@@ -113,8 +114,8 @@
       <dir>$PROJECT_DIR$/www_stage/src/app/theme</dir>
       <dir>$PROJECT_DIR$/www_stage/src/app/modules/reservations</dir>
       <dir>$PROJECT_DIR$/http</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/www_stage/src</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -123,13 +124,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/http/index.php" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/register.html" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/install.html" />
         <option value="$PROJECT_DIR$/http/models/ESharedType.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/theme/pages/auth.less" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" />
         <option value="$PROJECT_DIR$/http/config.php" />
         <option value="$PROJECT_DIR$/http/config.db.php" />
         <option value="$PROJECT_DIR$/http/vendor/thesoftwarepeople/helpers/src/TSP/Database.php" />
@@ -172,8 +169,12 @@
         <option value="$PROJECT_DIR$/www_stage/src/app/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/assets/env.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" />
         <option value="$PROJECT_DIR$/http/classes/System.php" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" />
+        <option value="$PROJECT_DIR$/http/driver.php" />
+        <option value="$PROJECT_DIR$/www/install.php" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" />
       </list>
     </option>
   </component>
@@ -343,24 +344,6 @@
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -406,6 +389,16 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
@@ -460,11 +453,11 @@
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules/install/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/http" />
       <recent name="$PROJECT_DIR$/http/controllers" />
       <recent name="$PROJECT_DIR$/http/models" />
       <recent name="$PROJECT_DIR$/www_stage/src/app/modules" />
       <recent name="$PROJECT_DIR$/www/assets/images/backgrounds" />
-      <recent name="$PROJECT_DIR$/www_stage/src/assets/images/backgrounds" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -491,7 +484,7 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="80449000" />
+      <workItem from="1528258151063" duration="85983000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -577,11 +570,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528370447563</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- Get database preferences from the same user instead of creating new, fix if time allots">
+      <created>1528370745414</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1528370745414</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104889000" />
+    <option name="totallyTimeSpent" value="110423000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -596,54 +596,30 @@
     <frame x="0" y="23" width="1344" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" weight="0.32892805" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.18355359" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.32892805" />
+      <window_info anchor="bottom" id="Messages" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.32892805" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.2349486" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.48751837" />
-      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.27753305" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17767988" />
       <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.32892805" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32892805" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32892805" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
-    </layout-to-restore>
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -666,7 +642,8 @@
     <MESSAGE value="- Fixed bugs throughout&#10;- Added reservation object" />
     <MESSAGE value="- Fixed bugs with registration&#10;- Fixed bugs with minification and a misplaced comma" />
     <MESSAGE value="- Updated page background" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Updated page background" />
+    <MESSAGE value="- Get database preferences from the same user instead of creating new, fix if time allots" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Get database preferences from the same user instead of creating new, fix if time allots" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -682,39 +659,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="38" column="98" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
-          <folding>
-            <element signature="e#2014#2020#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/assets/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="true" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="337">
-            <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/assets/images/backgrounds/resort1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/ui/ui.less">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/ui/theme.less">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1063,36 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#708#2889#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/assets/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="e#19#1055#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1869">
-          <folding>
-            <element signature="e#1815#9813#0" expanded="true" />
-            <element signature="e#18767#29595#0" expanded="true" />
-            <element signature="e#20604#21522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/manifest.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1110,16 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="106" column="8" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
-          <folding>
-            <element signature="e#6043#6145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/models/Setting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1132,10 +1036,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="178" lean-forward="true" selection-start-line="173" selection-end-line="178" />
+          <folding>
+            <element signature="e#18767#29595#0" expanded="true" />
+            <element signature="e#20604#21522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/http/classes/System.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="256" column="65" lean-forward="true" selection-start-line="256" selection-start-column="65" selection-end-line="256" selection-end-column="65" />
+        <state relative-caret-position="160">
+          <caret line="256" column="65" selection-start-line="256" selection-start-column="65" selection-end-line="256" selection-end-column="65" />
           <folding>
             <element signature="e#8#82#0#PHP" />
             <element signature="e#160#270#0#PHP" />
@@ -1158,11 +1073,62 @@
             <element signature="e#5852#5999#0#PHP" />
             <element signature="e#6524#6705#0#PHP" />
             <element signature="e#6862#7013#0#PHP" />
-            <element signature="e#8720#8876#0#PHP" />
-            <element signature="e#8888#9336#0#PHP" />
-            <element signature="e#8922#9052#0#PHP" />
-            <element signature="e#9092#9325#0#PHP" />
-            <element signature="e#9371#9524#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="e#823#3719#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/.installed">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/config.db.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/assets/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <element signature="e#19#1055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/install.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3006" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="e#843#3085#0" expanded="true" />
+            <element signature="e#1120#2933#0" expanded="true" />
           </folding>
         </state>
       </provider>

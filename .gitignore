@@ -44,3 +44,4 @@ www_stage/apis
 *.csv
 *.zip
 http/docs
+.installed

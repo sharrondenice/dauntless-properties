@@ -73,11 +73,12 @@
 
             // check to see if this is a new installation
             // if it is begin install process, if not go to the default page
-            var installed = localStorage.getItem(__env.cookie_prefix + '.installed');
-            var $state = $injector.get('$state');
+            var http = new XMLHttpRequest();
+            http.open('HEAD', '.installed', false);
+            http.send();
 
             // if installed attempt to display the dashboard
-            if (installed == "true" || installed == true)
+            if (ihttp.status!=404)
             {
                 $state.go('app.properties');
             }

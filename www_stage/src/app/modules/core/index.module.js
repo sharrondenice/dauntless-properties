@@ -173,11 +173,14 @@
 
             // check to see if this is a new installation
             // if it is begin install process, if not go to the default page
-            var installed = localStorage.getItem(__env.cookie_prefix + '.installed');
+            var http = new XMLHttpRequest();
+            http.open('HEAD', '.installed', false);
+            http.send();
+
             var $state = $injector.get('$state');
 
             // if installed attempt to display the dashboard
-            if (installed == "true" || installed == true)
+            if (http.status!=404)
             {
                 var result = tspRestService.query({object: 'user', action: 'auth', id: 0}, tspSerialize.data({
                     token: tspCookies.get('token')

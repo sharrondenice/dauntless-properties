@@ -2,7 +2,7 @@
     window.__env = window.__env || {};
 
     // API url
-    window.__env.api                = 'https://api.letaprodoit.com/dauntless';
+    window.__env.api              = 'https://api.letaprodoit.com/dauntless';
 
     window.__env.installed          = true; // @TODO Remove on go live
 
