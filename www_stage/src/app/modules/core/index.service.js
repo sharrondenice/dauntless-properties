@@ -242,7 +242,7 @@
                     break;
                 case 'preferences': case 'settings':
                     value = localStorage.getItem(prefix + '.' + key);
-                    value = JSON.parse(data);
+                    value = JSON.parse(value);
                     break;
                 default:
                     var kArr = key.split(".");

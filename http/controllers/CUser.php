@@ -472,9 +472,9 @@ class CUser extends BaseController {
 		                if ($object_type != ESharedType::Employee)
 		                {
 		                    $params['template'] = 'register';
-		                    $params['subject'] = 'Welcome to Dauntless Properites';
+		                    $params['subject'] = 'Welcome to Dauntless Properties';
 		    
-		                    System::notifyCustomer($params);
+		                    //System::notifyCustomer($params);
 		                }
 
                         $this->response['success'] = array(

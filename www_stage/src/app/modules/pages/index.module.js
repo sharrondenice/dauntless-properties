@@ -8,8 +8,8 @@
         .controller('RegisterCtrl', RegisterController)
 	;
 
-    LoginController.$inject = ['$scope', '$rootScope', '__env', '$injector', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
-    function LoginController ($scope, $rootScope, __env, $injector, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
+    LoginController.$inject = ['$scope', '$state', '$rootScope', '__env', '$injector', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
+    function LoginController ($scope, $state, $rootScope, __env, $injector, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
         // we will store all of our form data in this object
         $scope.postdata = null;
         $scope.submitButtonText = $scope.lang.labels.buttons.login;
@@ -79,8 +79,8 @@
         $rootScope.loadingApp = tspAppPreloader.hide(true);
     }
 
-    RegisterController.$inject = ['$scope', '$rootScope', '__env', '$injector', '$location', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
-    function RegisterController ($scope, $rootScope, __env, $injector, $location, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
+    RegisterController.$inject = ['$scope', '$state', '$rootScope', '__env', '$injector', '$location', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
+    function RegisterController ($scope, $state, $rootScope, __env, $injector, $location, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
         // we will store all of our form data in this object
         $scope.postdata = null;
         $scope.submitButtonText = $scope.lang.labels.buttons.register;
@@ -102,37 +102,13 @@
                         console.log(data);
                     }
 
-                    // Set local token if available, if not unset it and redirect to login
-                    if (data.token !== undefined && data.token !== null &&
-                        data.current_user !== undefined && data.current_user !== null)
-                    {
-                        // @TODO: Determine a way to expire localStorage tokens
-                        if (data.token_expires !== undefined && data.token_expires !== null)
-                        {
-                            tspCookies.set('token', data.token);
-                        }
-                        else
-                        {
-                            tspCookies.set('token', data.token);
-                        }
+                    $rootScope.loadingAppText = $scope.lang.sentences.register;
+                    $rootScope.loadingApp = tspAppPreloader.show();
+                    $rootScope.loadingApp = tspAppPreloader.hide(true);
 
-                        $scope.app.current_user = data.current_user;
+                    $scope.submitButtonText = $scope.lang.labels.buttons.register;
 
-                        tspCookies.set('user_id', $scope.app.current_user._id);
-                        tspCookies.set('preferences', $scope.app.current_user.preferences);
-
-                        if ((__env.debug && __env.verbose))
-                            console.log('Token Valid...');
-
-                        $rootScope.loadingAppText = $scope.lang.sentences.register;
-                        $rootScope.loadingApp = tspAppPreloader.show();
-                        $state.go('login');
-                    }
-                    else
-                    {
-                        tspCookies.clr();
-                        $state.go('register');
-                    }
+                    $state.go('login');
                 },
                 function(){
                     $scope.submitButtonText = $scope.lang.labels.buttons.register;
@@ -145,8 +121,8 @@
         $rootScope.loadingApp = tspAppPreloader.hide(true);
     }
 
-    InstallController.$inject = ['$scope', '$rootScope', '$timeout', '__env', '$injector', '$location', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
-    function InstallController ($scope, $rootScope, $timeout, __env, $injector, $location, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
+    InstallController.$inject = ['$scope', '$state', '$rootScope', '$timeout', '__env', '$injector', '$location', 'tspCookies', 'tspAppPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
+    function InstallController ($scope, $state, $rootScope, $timeout, __env, $injector, $location, tspCookies, tspAppPreloader, tspResourceHelper, tspRestService, tspSerialize) {
         // we will store all of our form data in this object
         $scope.postdata = {
             progress: {

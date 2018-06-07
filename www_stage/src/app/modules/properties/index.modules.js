@@ -23,7 +23,7 @@
             {skipped: false, title: '',                 key: '',                        type: 'default',    sort: false, width: '10%'},
             {skipped: false, title: '',                 key: 'image',                   type: 'default',    sort: false, width: '12%'},
             {skipped: false, title: 'Description',      key: 'title',                   type: 'default',    sort: true,  width: ''},
-            {skipped: false, title: 'Availability',     key: 'start_time',              type: 'default',    sort: true,  width: '20%'},
+            {skipped: false, title: 'Availability',     key: 'start_time',              type: 'default',    sort: true,  width: '20%'}
         ];
 
         // start state params
