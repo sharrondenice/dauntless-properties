@@ -239,10 +239,10 @@ define('DB_PASS', '".$dbpass."');
         $data = array();
 
         $user_id            = TSP_Helper::arrGetVal($_POST, 'user_id', null);
-        $show_countries     = TSP_Helper::arrGetVal($_POST, 'show_countries', null);
-        $country_code       = TSP_Helper::arrGetVal($_POST, 'country_code', null);
-        $lang_code          = TSP_Helper::arrGetVal($_POST, 'lang_code', null);
-        $current_company_id = TSP_Helper::arrGetVal($_POST, 'current_company_id', null);
+        $show_countries     = TSP_Helper::arrGetVal($_POST, 'show_countries', true);
+        $country_code       = TSP_Helper::arrGetVal($_POST, 'country_code', 'US');
+        $lang_code          = TSP_Helper::arrGetVal($_POST, 'lang_code', 'en');
+        $current_company_id = TSP_Helper::arrGetVal($_POST, 'current_company_id', 1);
 
         try{
             $setting = new Setting();

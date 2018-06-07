@@ -198,7 +198,7 @@ class Profile extends BaseModel {
 	 * @ReturnType array
 	 */
 	public function getDefaultProfile($owner_type, $owner_id) {
-		$sql = "SELECT * FROM `{$this->table}` WHERE `owner` = '{$owner_type}' AND `owner_id` = '{$owner_id}' AND `default` = 1";
+		$sql = "SELECT * FROM `{$this->table}` WHERE `owner` = '{$owner_type}' AND `owner_id` = '{$owner_id}' AND `is_default` = 1";
 		
 		if (TSP_Config::get('app.debug'))
 		    $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
@@ -360,7 +360,7 @@ class Profile extends BaseModel {
 		// Save Profile into the database
 		$sql = "UPDATE `{$this->table}` SET 
 		                            {$values}
-		                            `date_last_updated` = NOW() WHERE `default` = '1' AND `owner` = '{$owner_type}' AND `owner_id` = '{$owner_id}'";
+		                            `date_last_updated` = NOW() WHERE `is_default` = '1' AND `owner` = '{$owner_type}' AND `owner_id` = '{$owner_id}'";
 		
 		if (TSP_Config::get('app.debug'))
 		    $this->response['sql'][] = array('stmt' => $sql, 'params' => null);

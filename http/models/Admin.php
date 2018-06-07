@@ -15,8 +15,8 @@ class Admin extends User {
 	public function __construct($id = null) {
 		try{
 		    parent::__construct($id);
-		
-		    $type = new Type();
+
+            $type = new Type();
 		    $type->getByID(ESharedType::Admin);
 		    $this->setType($type);
 		

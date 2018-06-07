@@ -252,6 +252,7 @@
                 'parent': 'Parent',
                 'parent_project': 'Parent Project',
                 'parent_profession': 'Parent Profession',
+                'party': 'Party',
                 'password': 'Password',
                 'password_confirm': 'Confirm Password',
                 'pay_by': 'Pay By',
@@ -318,6 +319,7 @@
                 'salutation': 'Salutation',
                 'select': 'Select',
                 'select_assignee': 'Select Assignee',
+                'select_available_property': 'Select Available Property',
                 'select_categories': 'Select Categories',
                 'select_client': 'Select Client',
                 'select_company': 'Select Company',
@@ -339,6 +341,7 @@
                 'select_recurrence_type': 'Select Recurrence Type',
                 'select_reproducibility': 'Select Reproducibility',
                 'select_responsible_company': 'Select Responsible Company',
+                'select_responsible_party': 'Select Responsible Party',
                 'select_mission_type': 'Select Mission Type',
                 'select_severity': 'Select Severity',
                 'select_sprint': 'Select Sprint',
@@ -444,8 +447,10 @@
                 'please_provide': 'Please provide your ',
                 'register': 'Registering Account, Please Wait...',
                 'register_property': 'Creating Property, Please Wait...',
+                'register_reservation': 'Creating Reservation, Please Wait...',
                 'query': 'Enter your query...',
-                'update_property': 'Updating Property, Please Wait...'
+                'update_property': 'Updating Property, Please Wait...',
+                'update_reservation': 'Updating Reservation, Please Wait...'
             },
             'pages': {
                 'error': {
@@ -621,6 +626,13 @@
                         'create': 'Create Release',
                         'title': 'Adding New Releases',
                         'instructions': 'Releases are defined as revisions or project products. A product can have multiple releases. Releases for a product can be active or inactive.<p>Create releases manually or begin by importing releases from an existing database.</p>'
+                    },
+                    'reservations': {
+                        'icon': 'glyphicons glyphicons-book-open',
+                        'import': 'Import Reservations',
+                        'create': 'Create Reservation',
+                        'title': 'Adding New Reservations',
+                        'instructions': 'Reservations are defined as scheduled leasings in which individuals allocate time within property listings. Reservations can be externally created by clients or internally created by team or staff.<p>Reservations are currently integrated with the following calendars:</p><p class="h3 text-primary text-center"><i class="mr10 social social-google-plus"></i><i class="mr10 social social-apple"></i></p><p>Create reservations manually or begin by importing events from an existing database.</p>'
                     },
                     'resources': {
                         'icon': 'glyphicons glyphicons-mixed-buildings',
@@ -1044,6 +1056,26 @@
                     'type': 'releases',
                     'route': 'release',
                     'routes': 'releases',
+                    'instructions': '<strong class="text-h4 text-muted">Instructions:</strong> Complete all required fields denoted by <span class="required">*</span>. After required fields are completed, ensure all other pertinent information is included with the record.<br><i class="text-primary glyphicons glyphicons-question-sign mr5"></i><strong>Tip:</strong> When working within limited space, collapse panels to isolate desired sections.<br><br>'
+                },
+                'reservations': {
+                    'all': {
+                        'event_details': 'Reservation Details',
+                        'client_details': 'Client Details',
+                        'venue_address': 'Venue Address',
+                        'reservation_type': 'Reservation Type',
+                        'venue_type': 'Reservation Type',
+                        'start_time': 'Start Time',
+                        'end_time': 'End Time',
+                        'user_info': 'Select the attending client, if any. Updating a client\'s information here will update the client\'s information site-wide.'
+                    },
+                    'title': 'View Reservations',
+                    'object': 'Reservation',
+                    'objects': 'Reservations',
+                    'action': 'View',
+                    'type': 'reservations',
+                    'route': 'reservation',
+                    'routes': 'reservations',
                     'instructions': '<strong class="text-h4 text-muted">Instructions:</strong> Complete all required fields denoted by <span class="required">*</span>. After required fields are completed, ensure all other pertinent information is included with the record.<br><i class="text-primary glyphicons glyphicons-question-sign mr5"></i><strong>Tip:</strong> When working within limited space, collapse panels to isolate desired sections.<br><br>'
                 },
                 'resources': {

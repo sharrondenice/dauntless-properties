@@ -89,5 +89,9 @@ final class EOwnerType extends Enum {
      * @AttributeType char
      */
     const Setting = AV;
+    /**
+     * @AttributeType char
+     */
+    const Reservation = AW;
 }
 ?>

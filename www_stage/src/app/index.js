@@ -7,6 +7,7 @@
         'proApp.core.services',
         'proApp.core.directives',
         'proApp.core',
+        'proApp.reservations',
         'proApp.properties'
 	]);
 })();

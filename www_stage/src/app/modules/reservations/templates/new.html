@@ -1,0 +1,90 @@
+<div class="panel-heading mb20">
+    <div class="row form-inline">
+        <div class="light_bkg" class="col-sm-12">
+            <div class="pull-left mt5 ml15" ng-class="{'hide': isModal}">
+                <button ng-click="listView()" class="btn btn-sm btn-primary right"><i class="fa fa-arrow-left"></i></button>
+            </div>
+            <h4 class="text-uppercase title text-normal pull-right mr15"><strong><span tsp-i18n="words.create"></span> {{object}}</strong></h4>
+        </div>
+    </div>
+</div>
+<div class="page page-form-details clearfix">
+    <div class="page-wrap">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <tsp-form-widget
+                        btn-label="submitButtonText"
+                        busy-label="lang.labels.buttons['busy']"
+                        on-submit="create()">
+                    <tsp-panel-container>
+                        <span ng-bind-html="instructions"></span>
+                        <tsp-panel-widget title="{{lang.objects.reservations.all.reservation_details}}" is-open="true">
+                            <fieldset class="col-md-12">
+                                <!-- Responsible //-->
+                                <tsp-object-widget type="default"
+                                                   label="{{lang.words.responsible}} {{lang.words.party}}"
+                                                   place-val="{{lang.words.select_responsible_party}}"
+                                                   field-data="postdata"
+                                                   field-key="responsible_user_id"
+                                                   owner="U"
+                                                   option-data="optiondata.users"
+                                                   is-required="true">
+                                </tsp-object-widget>
+                                <!-- Time/Date //-->
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <tsp-field-widget
+                                                type="date"
+                                                label="{{lang.objects.reservations.all.start_time}}"
+                                                place-val="{{lang.words.enter_start_time}}"
+                                                field-data="postdata"
+                                                field-key="start_time"
+                                                format="MM/DD/YYYY"
+                                                is-required="true">
+                                        </tsp-field-widget>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <tsp-field-widget
+                                                type="date"
+                                                label="{{lang.objects.reservations.all.end_time}}"
+                                                place-val="{{lang.words.enter_end_time}}"
+                                                field-data="postdata"
+                                                field-key="end_time"
+                                                format="MM/DD/YYYY hh:mm A"
+                                                is-required="true">
+                                        </tsp-field-widget>
+                                    </div>
+                                </div>
+                                <!-- Properties //-->
+                                <tsp-object-widget type="default"
+                                                   label="{{lang.words.available}} {{lang.words.property}}"
+                                                   place-val="{{lang.words.select_available_property}}"
+                                                   field-data="postdata"
+                                                   field-key="property_id"
+                                                   owner="AU"
+                                                   option-data="optiondata.properties"
+                                                   is-required="true">
+                                </tsp-object-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                        <tsp-panel-widget title="{{lang.words.additional_info}}">
+                            <fieldset class="col-md-12">
+                                <!-- Internal Comment //-->
+                                <tsp-field-widget
+                                        type="textarea"
+                                        label="{{lang.words.comment_internal}}"
+                                        place-val=""
+                                        field-data="postdata"
+                                        field-key="description"
+                                        num-rows="5"
+                                        is-required="false">
+                                </tsp-field-widget>
+                            </fieldset>
+                        </tsp-panel-widget>
+                    </tsp-panel-container>
+                </tsp-form-widget>
+            </div> <!-- #end col -->
+        </div> <!-- #end row -->
+    </div>    <!-- #end page-wrap -->
+</div>

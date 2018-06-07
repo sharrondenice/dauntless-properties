@@ -157,7 +157,7 @@
 
         $scope.final_page = 2;
 
-        $scope.databaseDelay = 100;
+        $scope.databaseDelay = 25;
         $scope.accountDelay = 25;
         $scope.domain = document.location.origin;
 

@@ -1,0 +1,24 @@
+<!-- If we are told to display an empty set, if there was never data loaded then show the initial screen //-->
+<div ng-if="postdata === undefined || postdata === null" class="row">
+    <div class="col-sm-6 text-center mt30">
+        <div class="col-sm-9 col-sm-offset-2 mb20">
+            <i style="font-size: 60px;" class="{{lang.pages.empty.reservations.icon}} text-primary"></i>
+        </div>
+        <div class="col-sm-9 col-sm-offset-2 mb60">
+            <button class="btn btn-md btn-primary small mb20" tsp-i18n="pages.empty.reservations.import" data-ui-sref="app.import"></button>
+            <button class="btn btn-md btn-primary small mb20" tsp-i18n="pages.empty.reservations.create" ng-click="createView()"></button>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="text-brand-primary" tsp-i18n="pages.empty.reservations.title"></h3>
+        <p tsp-i18n="pages.empty.reservations.instructions"></p>
+    </div>
+</div>
+<!-- If we are told to display an empty set, if there was data loaded but its hidden due to search //-->
+<table ng-if="postdata !== undefined && postdata !== null" class="table">
+    <tr>
+        <td align='center' class="empty-table">
+            <em tsp-i18n="sentences.no_records"></em>
+        </td>
+    </tr>
+</table>

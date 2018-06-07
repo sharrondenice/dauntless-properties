@@ -28,6 +28,20 @@
          'property/page'                                          => 'Property@getAllWithOffset',
          'property/list'                                          => 'Property@getAll',
 
+         /* Reservation Controller */
+         'reservation/empty'                                         => 'CReservation@getEmptydata',
+         'reservation/metadata'                                      => 'CReservation@getMetadata',
+         'reservation/create'                                        => 'CReservation@createRecord',
+         'reservation/update'                                        => 'CReservation@updateRecord',
+         'reservation/delete'                                        => 'CReservation@deleteRecord',
+         'reservation/deactivate'                                    => 'CReservation@deactivateRecord',
+         'reservation/activate'                                      => 'CReservation@activateRecord',
+         'reservation/info/{ID}'                                     => 'CReservation@getReservationInfoByID',
+
+         /* Reservation Model */
+         'reservation/page'                                          => 'Reservation@getAllWithOffset',
+         'reservation/list'                                          => 'Reservation@getAll',
+
         /* System Class */
         'system/install'                                        => 'System@installDatabase',
          'system/init'                                          => 'System@init',

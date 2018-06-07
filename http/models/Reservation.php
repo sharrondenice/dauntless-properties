@@ -5,15 +5,7 @@
  * @author Sharron Denice
  * @package models
  */
-class Property extends BaseModel {
-	/**
-	 * @AttributeType models.Profile[]
-	 */
-	private $profile;
-	/**
-	 * @AttributeType string
-	 */
-	private $title;
+class Reservation extends BaseModel {
 	/**
 	 * @AttributeType string
 	 */
@@ -27,9 +19,21 @@ class Property extends BaseModel {
      */
     private $end_time;
     /**
-     * @AttributeType string
+     * @AttributeType int
      */
-    private $image;
+    private $property_id;
+    /**
+     * @AttributeType Property
+     */
+    private $property;
+    /**
+     * @AttributeType int
+     */
+    private $responsible_user_id;
+    /**
+     * @AttributeType User
+     */
+    private $user;
 
 	/**
 	 * @access public
@@ -40,17 +44,17 @@ class Property extends BaseModel {
 		try{
 		    parent::__construct($id);
 		
-		    $this->ownerType   = EOwnerType::Property;
-		    $this->name         = 'Property';
-		    $this->route        = 'property';
-		    $this->table        = 'properties';
+		    $this->ownerType   = EOwnerType::Reservation;
+		    $this->name         = 'Reservation';
+		    $this->route        = 'reservation';
+		    $this->table        = 'properties_reservations';
 		
 		    $this->dataFields  = array(
-		        'title',
+		        'responsible_user_id',
+		        'property_id',
 		        'description',
                 'start_time',
-                'end_time',
-                'image'
+                'end_time'
 		    );
 		} catch (Exception $e){
 		    if (TSP_Config::get('app.debug'))
@@ -74,14 +78,14 @@ class Property extends BaseModel {
 	 * @ReturnType void
 	 */
 	public function set(array &$data) {
-		if (isset($data['title']))
-		    $this->setTitle($data['title']);
+		if (isset($data['user_id']))
+		    $this->setUserID($data['user_id']);
         if (isset($data['start_time']))
             $this->setStartTime($data['start_time']);
         if (isset($data['end_time']))
             $this->setEndTime($data['end_time']);
-        if (isset($data['image']))
-            $this->setImage($data['image']);
+        if (isset($data['property_id']))
+            $this->setPropertyID($data['image']);
  		if (isset($data['description']))
 		    $this->setDescription($data['description']);
 		
@@ -112,57 +116,21 @@ class Property extends BaseModel {
 		    session_start();
 		
 		    if (empty($owner))
-		        $owner = EOwnerType::Property;
+		        $owner = EOwnerType::Reservation;
 		
-		    $sql = "SELECT `c`.*, `p`.`address1`, `p`.`address2`, `p`.`city`, `p`.`state_id`
-		            FROM `properties` as `c` 
-		            INNER JOIN `shared_profiles` as `p` ON `c`.`_id` = `p`.`owner_id` 
+		    $sql = "SELECT `c`.*, `p`.`title`, `p`.`description`
+		            FROM `{$this->table}` as `c` 
+		            INNER JOIN `properties` as `p` ON `c`.`property_id` = `p`.`_id` 
 		            WHERE `p`.`owner` = '{$owner}'
-		            ORDER BY `c`.`title`";
-
+		            ORDER BY `c`.`start_time`";
 
 		    if (TSP_Config::get('app.debug'))
 		        $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
 
-            $state = new State();
-            $country = new Country();
-
-            $index = 0;
-
 		    $result = $this->conn->RunQuery($sql);
 		    while( $row = $this->conn->FetchHash($result)){
-		        $data[$index] = array_map('utf8_encode', $row);
-
-                $this_state = $state->getStateByID($data[$index]['state_id']);
-                $this_country = $country->getCountryByID($this_state['country_code']);
-
-                $now = time();
-                $datetime1 = new DateTime($data[$index]['start_time']);
-                $datetime2 = new DateTime($data[$index]['end_time']);
-                $interval = $datetime1->diff($datetime2);
-
-                // If the interval window is zero or the date has passed set
-                // no availability
-                if ($now < strtotime($data[$index]['end_time']))
-                    $data[$index]['interval'] = $interval->format('%R%a days');
-                else
-                    $data[$index]['interval'] = 'No Availability';
-
-                $data[$index]['metadata'] = array(
-                    'location' => array(
-                        'address1'  => $data[$index]['address1'],
-                        'address2'  => $data[$index]['address2'],
-                        'city'      => $data[$index]['city'],
-                        'state_id'  => $data[$index]['state_id'],
-                        'state'     => is_array($this_state) ? array_map('utf8_encode', $this_state) : array(),
-                        'country'   => is_array($this_country) ? array_map('utf8_encode', $this_country) : array(),
-                    )
-                );
-
-                $index++;
+		        $data[] = array_map('utf8_encode', $row);
 		    }
-
-
 
 		    $this->response['success'] = array(
                 'title' => 'Success',
@@ -187,28 +155,48 @@ class Property extends BaseModel {
 
 	/**
 	 * @access public
-	 * @param models.Profile[] profile
-	 * @ParamType profile models.Profile[]
+	 * @param models.Property property
+	 * @ParamType profile models.Property
 	 */
-	public function setProfile(array $profile) {
-		$this->profile = $profile;
+	public function setProperty(array $property) {
+		$this->property = $property;
 	}
 
 	/**
 	 * @access public
-	 * @return models.Profile[]
-	 * @ReturnType models.Profile[]
+	 * @return models.Property
+	 * @ReturnType models.Property
 	 */
-	public function getProfile() {
-		return $this->profile;
+	public function getProperty() {
+		return $this->property;
 	}
+
+
+    /**
+     * @access public
+     * @param models.User user
+     * @ParamType profile models.User
+     */
+    public function setUser(array $user) {
+        $this->user = $user;
+    }
+
+    /**
+     * @access public
+     * @return models.User
+     * @ReturnType models.User
+     */
+    public function getUser() {
+        return $this->user;
+    }
+
 	/**
 	 * @access public
-	 * @param string title
-	 * @ParamType title string
+	 * @param int $user_id
+	 * @ParamType $user_id int
 	 */
-	public function setTitle($title) {
-		$this->title = $title;
+	public function setUserID($user_id) {
+		$this->responsible_user_id = $user_id;
 	}
 
 	/**
@@ -216,25 +204,25 @@ class Property extends BaseModel {
 	 * @return string
 	 * @ReturnType string
 	 */
-	public function getTitle() {
-		return $this->title;
+	public function getUserID() {
+		return $this->responsible_user_id;
 	}
     /**
      * @access public
-     * @param string image
-     * @ParamType image string
+     * @param int $property_id
+     * @ParamType $property_id int
      */
-    public function setImage($image) {
-        $this->image = $image;
+    public function setPropertyID($property_id) {
+        $this->property_id = $property_id;
     }
 
     /**
      * @access public
-     * @return string
-     * @ReturnType string
+     * @return int
+     * @ReturnType int
      */
-    public function getImage() {
-        return $this->image;
+    public function getPropertyID() {
+        return $this->property_id;
     }
     /**
      * @access public

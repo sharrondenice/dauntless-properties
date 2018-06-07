@@ -384,6 +384,37 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `DB_NAME`.`properties_reservations`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `DB_NAME`.`properties_reservations` ;
+
+CREATE TABLE IF NOT EXISTS `DB_NAME`.`properties_reservations` (
+  `_id` MEDIUMINT(8) NOT NULL AUTO_INCREMENT,
+  `responsible_user_id` MEDIUMINT(8) NULL,
+  `property_id` MEDIUMINT(8) NOT NULL,
+  `start_time` VARCHAR(50) NOT NULL,
+  `end_time` VARCHAR(50) NOT NULL,
+  `description` TEXT NOT NULL,
+  `date_last_updated` BIGINT(20) NULL,
+  `date_created` BIGINT(20) NULL,
+  PRIMARY KEY (`_id`),
+  UNIQUE INDEX `reservation_id_UNIQUE` (`_id` ASC),
+  INDEX `fk_properties_reservations_user_id_idx` (`responsible_user_id` ASC),
+  INDEX `fk_properties_reservations_property_id_idx` (`property_id` ASC),
+  CONSTRAINT `fk_properties_reservations_user_id`
+    FOREIGN KEY (`responsible_user_id`)
+    REFERENCES `DB_NAME`.`users` (`_id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_properties_reservations_property_id`
+    FOREIGN KEY (`property_id`)
+    REFERENCES `DB_NAME`.`properties` (`_id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Data for table `DB_NAME`.`locale_countries`
 -- -----------------------------------------------------
 START TRANSACTION;
@@ -1554,8 +1585,9 @@ INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VA
 INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('AR', NULL, 'post to', NULL);
 INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('AS', 'commerce_orders', 'orders', 'glyphicons glyphicons-shopping-cart');
 INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('AT', 'shared_discounts', 'discounts', 'glyphicons glyphicons-sampler');
-INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('AU', 'properties', 'property', NULL);
+INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('AU', 'properties', 'property', 'glyphicons glyphicons-home');
 INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('AV', 'system_settings', 'settings', NULL);
+INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('AW', 'properties_reservations', 'reservation', 'glyphicons glyphicons-book-open');
 INSERT INTO `DB_NAME`.`shared_owner_codes` (`owner`, `table`, `code`, `icon`) VALUES ('ZZ', NULL, 'All', NULL);
 
 COMMIT;

@@ -305,55 +305,24 @@ class User extends BaseModel {
 		    if (empty($owner))
 		        $owner = $this->ownerType;
 		    if (empty($type))
-		        $type = $this->type->getID();
-		
-		    // Admins can see all users on all levels
-		    if ($_SESSION['type_id'] == ESharedType::Admin)
-		    {
-		        $sql = "SELECT `u`.*, `p`.`email`, `t`.`title` as `type_description`, `s`.`background`, `s`.`foreground`, `s`.`description` as `status_description`
+		        $type = ESharedType::Admin;
+
+            $sql = "SELECT `u`.*, `p`.`email`, `t`.`title` as `type_description`, `s`.`background`, `s`.`foreground`
 		            FROM `users` as `u` 
 		            INNER JOIN `shared_profiles` as `p` ON `u`.`_id` = `p`.`owner_id` 
 		            INNER JOIN `shared_types` as `t` ON `u`.`type_id` = `t`.`_id` 
 		            INNER JOIN `shared_statuses` as `s` ON `u`.`status_id` = `s`.`_id` 
-		            WHERE `p`.`default` = 1 AND `p`.`owner` = '{$owner}' AND `u`.`status_id` != '{$this->statuses['deleted']}' 
+		            WHERE `p`.`is_default` = 1 AND `p`.`owner` = '{$owner}' AND `u`.`status_id` != '{$this->statuses['deleted']}' 
 		            AND `u`.`type_id` = '{$type}' ORDER BY `u`.`last_name`";
-		    }
-		    else
-		    {
-		        // Only allow users to view their descendants and nothing more
-		        $descendants = $this->getDescendants($_SESSION['_id']);
-		        $descendants = $this->parseDescendantsByType($descendants, $type);
-		        $descendants = implode(",", $descendants);
-		
-		        if (empty($descendants))
-		            $descendants = "''";
-		
-		        $sql = "SELECT `u`.*, `p`.`email`, `t`.`title` as `type_description`, `s`.`background`, `s`.`foreground`, `s`.`description` as `status_description`
-		            FROM `users` as `u` 
-		            INNER JOIN `shared_profiles` as `p` ON `u`.`_id` = `p`.`owner_id` 
-		            INNER JOIN `shared_types` as `t` ON `u`.`type_id` = `t`.`_id` 
-		            INNER JOIN `shared_statuses` as `s` ON `u`.`status_id` = `s`.`_id` 
-		            WHERE `p`.`default` = 1 AND `p`.`owner` = '{$owner}' AND `u`.`status_id` != '{$this->statuses['deleted']}' 
-		            AND `u`.`type_id` = '{$type}' AND `u`.`_id` IN ({$descendants}) ORDER BY `u`.`last_name`";
-		    }
-		
-		    $data['users'] = $this->getUsersBySQL($sql);
-		
-		    $upline_types = $this->getUplineTypes($type);
-		    $upline_types = implode(",", $upline_types);
-		
-		    if (empty(!$upline_types))
-		    {
-		        $sql = "SELECT `u`._id, `t`.title, `first_name`, `last_name` FROM `users` as `u`
-		            INNER JOIN `shared_types` as `t` ON `type_id` = `t`._id 
-		            WHERE `status_id` != '{$this->statuses['deleted']}' AND `type_id` IN ({$upline_types}) ORDER BY `t`.title";
-		
-		        $data['upline_users'] = $this->getUsersBySQL($sql);
-		
-		    }
-		    else
-		        $data['upline_users'] = array();
-		
+
+            if (TSP_Config::get('app.debug'))
+                $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
+
+            $result = $this->conn->RunQuery($sql);
+            while( $row = $this->conn->FetchHash($result)){
+                $data[] = array_map('utf8_encode', $row);
+            }
+
 		    $this->response['success'] = array(
                 'title' => 'Success',
                 'message' => 'Data successfully retrieved.',
