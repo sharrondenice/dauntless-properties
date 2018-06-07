@@ -47,6 +47,10 @@
             tspResourceHelper.process(result,  false,
                 function(data){
                     $scope.postdata = data;
+
+                    if (!jQuery.isEmptyObject($stateParams) && $stateParams.property_id !== undefined)
+                        $scope.postdata.property_id = $stateParams.property_id;
+
                     $rootScope.loadingData = tspDataPreloader.hide();
                 },
                 function(){

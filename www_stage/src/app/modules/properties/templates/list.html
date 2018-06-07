@@ -50,7 +50,7 @@
             </td>
             <!-- Book Now //-->
             <td ng-if="!headers[2].skipped" style="text-align: center;">
-                <button type="button" class="btn btn-primary">Book Now</button>
+                <button type="button" class="btn btn-primary" data-ui-sref="app.reservations-create({ property_id: record._id, view: 'create' })">Book Now</button>
             </td>
             <!-- Avatar //-->
             <td ng-if="!headers[3].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">

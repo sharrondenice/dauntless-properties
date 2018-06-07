@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed bugs with registration">
+      <change afterPath="$PROJECT_DIR$/www/scripts/app-c0bcacfd1a.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/app-2de76d5d96.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/vendor-3aa090e31b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/styles/app-9d35849cb3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/styles/vendor-9de4075ae1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/scripts/app-25f111628d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,23 +30,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html">
+      <file leaf-file-name="index.modules.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+            <state relative-caret-position="552">
+              <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
               <folding>
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#2821#2954#0" expanded="true" />
+                <element signature="e#3183#4729#0" expanded="true" />
+                <element signature="e#8353#8767#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
+      <file leaf-file-name="index.module.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+            <state relative-caret-position="133">
+              <caret line="745" column="8" selection-start-line="745" selection-start-column="8" selection-end-line="745" selection-end-column="8" />
+              <folding>
+                <element signature="e#1815#9826#0" expanded="true" />
+                <element signature="e#6734#9356#0" expanded="true" />
+                <element signature="e#29694#30333#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="52" column="141" selection-start-line="52" selection-start-column="141" selection-end-line="52" selection-end-column="141" />
+              <folding>
+                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
+                <element signature="n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
+                <element signature="n#td#5;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,20 +77,19 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>localStorage.setItem(__env</find>
       <find>'state'</find>
       <find>'default'</find>
-      <find>'location' =&gt;</find>
+      <find />
       <find>is_array($this_state)</find>
       <find>'state</find>
       <find>theme-zero</find>
       <find>nav-wrap</find>
       <find>.panel</find>
-      <find>tbody tr:nth-of-type(odd)</find>
+      <find />
       <find>events</find>
       <find>Events</find>
       <find>event</find>
-      <find>additional in</find>
+      <find />
       <find>dauntless_properties</find>
       <find>Property</find>
       <find>reservations</find>
@@ -82,9 +103,10 @@
       <find>ui-widget-overlay</find>
       <find>JSON.parse</find>
       <find>default_bkg</find>
-      <find>installed =</find>
+      <find />
       <find>ihttp</find>
       <find>http.status</find>
+      <find>initWizard</find>
     </findStrings>
     <replaceStrings>
       <replace>properties</replace>
@@ -133,8 +155,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/www_stage/src/app/theme/themes.less" />
         <option value="$PROJECT_DIR$/www_stage/src/app/theme/custom.less" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.js" />
         <option value="$PROJECT_DIR$/http/routes.php" />
         <option value="$PROJECT_DIR$/http/models/EOwnerType.php" />
         <option value="$PROJECT_DIR$/http/models/Property.php" />
@@ -154,17 +174,19 @@
         <option value="$PROJECT_DIR$/www_stage/gulp/build.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/assets/env.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" />
         <option value="$PROJECT_DIR$/http/classes/System.php" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" />
         <option value="$PROJECT_DIR$/http/driver.php" />
         <option value="$PROJECT_DIR$/www/install.php" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.js" />
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js" />
       </list>
     </option>
   </component>
@@ -318,7 +340,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,12 +350,13 @@
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
@@ -378,16 +400,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -406,7 +419,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="reservations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="reservations" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
@@ -419,6 +452,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -474,7 +508,8 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="87098000" />
+      <workItem from="1528258151063" duration="87837000" />
+      <workItem from="1528379233547" duration="5350000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -574,11 +609,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528376358738</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="- Fixed bug with http in core module&#10;- Fixed style in login&#10;@TODO Finish booking">
+      <created>1528377462357</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1528377462357</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111538000" />
+    <option name="totallyTimeSpent" value="117627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,22 +633,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1344" height="778" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32892805" />
-      <window_info anchor="bottom" id="Messages" order="1" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" order="0" weight="0.32892805" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.38325992" />
-      <window_info id="npm" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.38325992" />
       <window_info anchor="bottom" id="Run" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4185022" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4185022" />
       <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24807988" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -616,6 +655,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info anchor="bottom" id="Messages" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +682,8 @@
     <MESSAGE value="- Updated page background" />
     <MESSAGE value="- Get database preferences from the same user instead of creating new, fix if time allots" />
     <MESSAGE value="- Fixed installation issue which was causing install screen to be shown for new users&#10;- Fixed trailing slashes in login and register links on welcome install page" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed installation issue which was causing install screen to be shown for new users&#10;- Fixed trailing slashes in login and register links on welcome install page" />
+    <MESSAGE value="- Fixed bug with http in core module&#10;- Fixed style in login&#10;@TODO Finish booking" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed bug with http in core module&#10;- Fixed style in login&#10;@TODO Finish booking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -649,43 +691,19 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js</url>
           <line>39</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="28" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/themes.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="185" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/theme/custom.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="178" column="16" lean-forward="true" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#td#2;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
-            <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
-            <element signature="n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/empty.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/http/sql/index.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -718,27 +736,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="16" column="29" selection-end-line="90" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#fieldset#0;n#tsp-panel-widget#0;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#fieldset#0;n#tsp-panel-widget#0;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#tsp-panel-widget#1;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="65" column="85" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="85" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#fieldset#0;n#tsp-panel-widget#0;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#fieldset#0;n#tsp-panel-widget#0;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#tsp-panel-widget#1;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,12 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="857">
           <caret line="731" column="20" selection-start-line="731" selection-start-column="20" selection-end-line="731" selection-end-column="20" />
-          <folding>
-            <element signature="e#870#1434#0#PHP" expanded="true" />
-            <element signature="e#4683#5477#0#PHP" expanded="true" />
-            <element signature="e#5624#6540#0#PHP" expanded="true" />
-            <element signature="e#18513#18575#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,9 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
-          <folding>
-            <element signature="n#__construct#0;n#Type#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,11 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="306" column="29" lean-forward="true" selection-start-line="306" selection-start-column="29" selection-end-line="306" selection-end-column="29" />
-          <folding>
-            <element signature="e#1118#2727#0#PHP" expanded="true" />
-            <element signature="e#18150#19374#0#PHP" expanded="true" />
-            <element signature="e#25419#25471#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,9 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="163" lean-forward="true" selection-start-line="122" selection-end-line="163" />
-          <folding>
-            <element signature="e#3312#4819#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -805,13 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="61" lean-forward="true" selection-start-line="48" selection-end-line="61" />
-          <folding>
-            <element signature="n#getMetadata#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#getPropertyInfoByID#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#createRecord#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#updateRecord#0;n#CProperty#0;n#!!top" expanded="true" />
-            <element signature="n#deleteRecord#0;n#CProperty#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,10 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="124" column="47" lean-forward="true" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
-          <folding>
-            <element signature="n#__construct#0;n#Reservation#0;n#!!top" expanded="true" />
-            <element signature="n#getAllWithOffset#0;n#Reservation#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,9 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <element signature="n#__construct#0;n#TSP_Mail#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -861,13 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1211">
           <caret line="476" column="30" selection-start-line="476" selection-start-column="30" selection-end-line="476" selection-end-column="30" />
-          <folding>
-            <element signature="n#addRecord#0;n#CUser#0;n#!!top" expanded="true" />
-            <element signature="e#15539#16303#0#PHP" />
-            <element signature="e#15890#16303#0#PHP" />
-            <element signature="n#login#0;n#CUser#0;n#!!top" expanded="true" />
-            <element signature="n#register#0;n#CUser#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,9 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="n#updateRecord#0;n#CReservation#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -919,11 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
           <caret line="403" column="43" lean-forward="true" selection-start-line="403" selection-start-column="43" selection-end-line="403" selection-end-column="43" />
-          <folding>
-            <element signature="e#769#17123#0" expanded="true" />
-            <element signature="e#17635#18980#0" expanded="true" />
-            <element signature="e#19104#19719#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,9 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#400#653#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,9 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#395#4052#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -973,28 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="134" selection-start-line="24" selection-start-column="134" selection-end-line="24" selection-end-column="134" />
-          <folding>
-            <element signature="e#3361#3569#0" />
-            <element signature="e#3657#3798#0" expanded="true" />
-            <element signature="e#7762#9044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="52" />
-          <folding>
-            <element signature="e#402#657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1005,40 +932,10 @@
     <entry file="file://$PROJECT_DIR$/www/manifest.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="254" column="68" selection-start-line="254" selection-start-column="68" selection-end-line="254" selection-end-column="68" />
-          <folding>
-            <element signature="e#3556#3743#0" expanded="true" />
-            <element signature="e#3603#3678#0" expanded="true" />
-            <element signature="e#4892#6865#0" expanded="true" />
-            <element signature="e#8498#8901#0" expanded="true" />
-            <element signature="e#18135#20718#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/models/Setting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
-          <folding>
-            <element signature="n#__construct#0;n#Setting#0;n#!!top" expanded="true" />
-            <element signature="n#getAllByCompany#0;n#Setting#0;n#!!top" expanded="true" />
-            <element signature="n#getAllByUser#0;n#Setting#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="178" lean-forward="true" selection-start-line="173" selection-end-line="178" />
-          <folding>
-            <element signature="e#18767#29595#0" expanded="true" />
-            <element signature="e#20604#21522#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,29 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="256" column="65" selection-start-line="256" selection-start-column="65" selection-end-line="256" selection-end-column="65" />
-          <folding>
-            <element signature="e#8#82#0#PHP" />
-            <element signature="e#160#270#0#PHP" />
-            <element signature="e#333#899#0#PHP" />
-            <element signature="e#478#899#0#PHP" />
-            <element signature="e#654#887#0#PHP" />
-            <element signature="e#911#1139#0#PHP" />
-            <element signature="e#1712#2443#0#PHP" />
-            <element signature="e#2053#2433#0#PHP" />
-            <element signature="e#2147#2339#0#PHP" />
-            <element signature="e#2532#2715#0#PHP" />
-            <element signature="e#2831#5817#0#PHP" />
-            <element signature="e#4207#5188#0#PHP" />
-            <element signature="e#4280#4557#0#PHP" />
-            <element signature="e#4642#5188#0#PHP" />
-            <element signature="e#4704#4972#0#PHP" />
-            <element signature="e#5200#5817#0#PHP" />
-            <element signature="e#5234#5430#0#PHP" />
-            <element signature="e#5602#5805#0#PHP" />
-            <element signature="e#5852#5999#0#PHP" />
-            <element signature="e#6524#6705#0#PHP" />
-            <element signature="e#6862#7013#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,9 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <element signature="e#823#3719#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,9 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="e#19#1055#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1114,26 +982,109 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
-          <folding>
-            <element signature="e#843#3085#0" expanded="true" />
-            <element signature="e#1120#2933#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/pages/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1673#1679#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="16" column="29" selection-end-line="90" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#fieldset#0;n#tsp-panel-widget#0;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#fieldset#0;n#tsp-panel-widget#0;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
+            <element signature="n#tsp-panel-widget#1;n#tsp-panel-container#0;n#tsp-form-widget#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/empty.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="120" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="254" column="68" selection-start-line="254" selection-start-column="68" selection-end-line="254" selection-end-column="68" />
+          <folding>
+            <element signature="e#3556#3743#0" expanded="true" />
+            <element signature="e#3603#3678#0" expanded="true" />
+            <element signature="e#4892#6865#0" expanded="true" />
+            <element signature="e#8498#8901#0" expanded="true" />
+            <element signature="e#18135#20718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/templates/data-wizard-viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
+          <folding>
+            <element signature="e#2821#2954#0" expanded="true" />
+            <element signature="e#3183#4729#0" expanded="true" />
+            <element signature="e#8353#8767#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="52" column="141" selection-start-line="52" selection-start-column="141" selection-end-line="52" selection-end-column="141" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="n#td#5;n#tr#0;n#tbody#0;n#table#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="745" column="8" selection-start-line="745" selection-start-column="8" selection-end-line="745" selection-end-column="8" />
+          <folding>
+            <element signature="e#1815#9826#0" expanded="true" />
+            <element signature="e#6734#9356#0" expanded="true" />
+            <element signature="e#29694#30333#0" />
           </folding>
         </state>
       </provider>

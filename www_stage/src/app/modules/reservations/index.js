@@ -19,6 +19,11 @@
                 url: '/reservations',
                 templateUrl: 'app/modules/core/templates/data-wizard-viewer.html',
                 controller: 'ReservationsCtrl'
+            })
+            .state('app.reservations-create', {
+                url: '/reservations/:view/:property_id',
+                templateUrl: 'app/modules/core/templates/data-wizard-viewer.html',
+                controller: 'ReservationsCtrl'
             });
     }
 

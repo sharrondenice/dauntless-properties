@@ -451,8 +451,8 @@
 
     }
 
-    DataWizardController.$inject = ['$scope', '$state', '$rootScope', '__env', '$injector', '$filter', 'tspCookies', 'SweetAlert', 'tspDataPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
-    function DataWizardController ($scope, $state, $rootScope, __env, $injector, $filter, tspCookies, SweetAlert, tspDataPreloader, tspResourceHelper, tspRestService, tspSerialize) {
+    DataWizardController.$inject = ['$scope', '$state', '$rootScope', '__env', '$injector', '$filter', '$stateParams', 'tspCookies', 'SweetAlert', 'tspDataPreloader', 'tspResourceHelper', 'tspRestService', 'tspSerialize'];
+    function DataWizardController ($scope, $state, $rootScope, __env, $injector, $filter, $stateParams, tspCookies, SweetAlert, tspDataPreloader, tspResourceHelper, tspRestService, tspSerialize) {
         $scope.submitButtonText = $scope.lang.labels.buttons.validate_create;
 
         $scope.timerDelay = 5000;
@@ -543,6 +543,7 @@
         // Step 2: FormView
         // Step 3: CreateView
         // Step 4: IconView
+
         $scope.steps = [true, false, false, false, false]; // steps in this controller
 
         $scope.listView = function(){
@@ -728,7 +729,7 @@
             if ((__env.debug && __env.verbose))
                 console.log("Initializing Wizard...");
 
-            $scope.currentPageRecords = []
+            $scope.currentPageRecords = [];
 
             $scope.items = data;
 
@@ -739,6 +740,25 @@
             }
 
             $rootScope.loadingData = tspDataPreloader.hide();
+        }
+
+        if (!jQuery.isEmptyObject($stateParams))
+        {
+            if ($stateParams.view === 'create')
+            {
+                $scope.steps = [false, false, false, true, false]; // steps in this controller
+                $scope.createView();
+            }
+            else if ($stateParams.view === 'update')
+            {
+                $scope.steps = [false, false, true, false, false]; // steps in this controller
+                $scope.formView();
+            }
+            else if ($stateParams.view === 'icon')
+            {
+                $scope.steps = [false, false, false, false, true]; // steps in this controller
+                $scope.iconView();
+            }
         }
     }
 
