@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="- Fixed bugs with registration">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/SharronDenice.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/config.db.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/config.db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/controllers/CUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/controllers/CUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/assets/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/app-5fa99109f8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/vendor-3aa090e31b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/styles/app-0a1d18027c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/styles/vendor-9de4075ae1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/core/index.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/pages/index.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www_stage/src/assets/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/assets/env.js" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -472,7 +458,7 @@
       <updated>1528232930558</updated>
       <workItem from="1528232934027" duration="22242000" />
       <workItem from="1528255854822" duration="2198000" />
-      <workItem from="1528258151063" duration="79789000" />
+      <workItem from="1528258151063" duration="80054000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -544,11 +530,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528363617808</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- Fixed bugs with registration&#10;- Fixed bugs with minification and a misplaced comma">
+      <created>1528370195705</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1528370195705</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104229000" />
+    <option name="totallyTimeSpent" value="104494000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,12 +560,12 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" weight="0.32892805" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.51688695" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.51688695" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32892805" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.48751837" />
       <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24423963" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -630,7 +623,8 @@
     <MESSAGE value="- Changed theme styling for better readability" />
     <MESSAGE value="- Preparing to add booking" />
     <MESSAGE value="- Fixed bugs throughout&#10;- Added reservation object" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed bugs throughout&#10;- Added reservation object" />
+    <MESSAGE value="- Fixed bugs with registration&#10;- Fixed bugs with minification and a misplaced comma" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed bugs with registration&#10;- Fixed bugs with minification and a misplaced comma" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
