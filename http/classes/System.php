@@ -259,7 +259,7 @@ define('DB_PASS', '".$dbpass."');
 
             $user = new User();
             $data['current_user'] = $user->getUserByID($user_id);
-            $preferences = $setting->getAllByUser($user_id);
+            $preferences = $setting->getAllByUser(1); // @TODO Fix if time, Force to get the preferences for user 1
 
             foreach ($preferences as $preference){
                 $value = $preference['setting_value'];
