@@ -36,6 +36,27 @@
         $scope.instructions = $scope.lang.objects.reservations.instructions;
         // end state params
 
+        $scope.setProperty = function(id){
+
+            $scope.postdata.property_id = id;
+
+            var result = tspRestService.query({object: 'property', action: 'info', id: id}, tspSerialize.data({
+                user_id: tspCookies.get('user_id'),
+                lang_code: $scope.app.locale.lang_code,
+                current_company_id: tspCookies.get('preferences.current_company_id')
+            }));
+            tspResourceHelper.process(result,  false,
+                function(data){
+                    $scope.postdata.property = data;
+                    $rootScope.loadingData = tspDataPreloader.hide();
+                },
+                function(){
+                    $scope.postdata.property = null;
+                    $rootScope.loadingData = tspDataPreloader.hide();
+                }
+            );
+        }
+
         $scope.createEmptyRecord = function(){
             $rootScope.loadingData = tspDataPreloader.show();
 
@@ -47,10 +68,6 @@
             tspResourceHelper.process(result,  false,
                 function(data){
                     $scope.postdata = data;
-
-                    if (!jQuery.isEmptyObject($stateParams) && $stateParams.property_id !== undefined)
-                        $scope.postdata.property_id = $stateParams.property_id;
-
                     $rootScope.loadingData = tspDataPreloader.hide();
                 },
                 function(){
@@ -86,6 +103,12 @@
             tspResourceHelper.process(result,  false,
                 function(data){
                     $scope.optiondata.properties = data;
+
+                    if (!jQuery.isEmptyObject($stateParams) && $stateParams.property_id !== undefined)
+                    {
+                        $scope.setProperty($stateParams.property_id);
+                    }
+
                     $rootScope.loadingData = tspDataPreloader.hide();
                 },
                 function(){
@@ -143,6 +166,16 @@
                 console.log('Sending data...');
                 console.log($scope.postdata);
             }
+
+            // @TODO Fix this - Find out why this is getting reset and I need to reinitialize here
+            $scope.postdata = {
+                start_time: $scope.postdata.start_time,
+                end_time: $scope.postdata.end_time,
+                property: $scope.postdata.property,
+                property_id: $scope.postdata.property_id,
+                responsible_user_id: $scope.postdata.responsible_user_id,
+                description: $scope.postdata.description
+            };
 
             $scope.submitButtonText = $scope.lang.labels.buttons.delay;
 
@@ -210,18 +243,18 @@
         }
 
         // Required by All controllers that use DataWizardController
-        $rootScope.$on('load.' + $state.current.name, function(reservation, data){
+        $rootScope.$on('load.' + $state.current.name, function(event, data){
             $scope.load();
         });
-        $rootScope.$on('view.' + $state.current.name, function(reservation, data){
+        $rootScope.$on('view.' + $state.current.name, function(event, data){
             $scope.postdata = data;
             $scope.loadMetaData();
         });
-        $rootScope.$on('create.' + $state.current.name, function(reservation, data){
+        $rootScope.$on('create.' + $state.current.name, function(event, data){
             $scope.createEmptyRecord();
             $scope.loadOptionData();
         });
-        $rootScope.$on('records.' + $state.current.name, function(reservation, data){
+        $rootScope.$on('records.' + $state.current.name, function(event, data){
             if (data.length == 0)
                 $scope.postdata = {}; // Empty records for bad search
            $scope.records = data;

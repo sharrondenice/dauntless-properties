@@ -364,6 +364,9 @@
                 format:             '@', // for dates
                 formatHours:        '@', // for dates
                 intervalMins:       '@', // for dates
+                minDate:            '=',
+                maxDate:            '=',
+
                 owner:              '@', // used for module windows to determine the type of record to add
                 add:                '&onAdd',
                 edit:               '&onEdit',

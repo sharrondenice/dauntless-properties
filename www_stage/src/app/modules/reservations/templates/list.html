@@ -48,71 +48,33 @@
                                   on-delete="deleteRecord(pos, id, title)">
                 </tsp-table-widget>
             </td>
-            <!-- Status //-->
+            <!-- Avatar //-->
             <td ng-if="!headers[2].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
                 <tsp-table-widget mobile-header="headers[2].title"
-                        type="status"
-                        index="$index"
-                        field-data="record"
-                        field-key="status">
+                                  type="avatar"
+                                  index="$index"
+                                  record-id="{{record._id}}"
+                                  field-data="record"
+                                  field-key="responsible_user"
+                                  show-title="true">
                 </tsp-table-widget>
             </td>
-            <!-- Type with Icon //-->
+            <!-- Property //-->
             <td ng-if="!headers[3].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
                 <tsp-table-widget mobile-header="headers[3].title"
-                        type="typeicon"
+                        type="default"
                         index="$index"
-                        record-id="{{record._id}}"
-                        field-data="record"
-                        field-key="type"
-                        show-title="true">
+                        field-data="record.property"
+                        field-key="title">
                 </tsp-table-widget>
             </td>
-            <!-- Default //-->
+            <!-- Date //-->
             <td ng-if="!headers[4].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
-                <span ng-if='record.client_user_id'>
-                    <tsp-table-widget ng-if='record.order_id' mobile-header="headers[4].title"
-                                      type="default"
-                                      index="$index"
-                                      prefix="<i class='mr5 text-bold text-h5 glyphicons glyphicons-cart-in'></i>"
-                                      record-id="{{record._id}}"
-                                      suffix="<br><em>with</em> {{record.client_user.title}}"
-                                      field-data="record"
-                                      field-key="title">
-                    </tsp-table-widget>
-                    <tsp-table-widget ng-if='!record.order_id' mobile-header="headers[4].title"
-                                      type="default"
-                                      index="$index"
-                                      record-id="{{record._id}}"
-                                      suffix="<br><em>with</em> {{record.client_user.title}}"
-                                      field-data="record"
-                                      field-key="title">
-                    </tsp-table-widget>
-                </span>
-                <span ng-if='!record.client_user_id'>
-                    <tsp-table-widget ng-if='record.order_id' mobile-header="headers[4].title"
-                                      type="default"
-                                      index="$index"
-                                      prefix="<i class='mr5 text-bold text-h5 glyphicons glyphicons-cart-in'></i>"
-                                      record-id="{{record._id}}"
-                                      field-data="record"
-                                      field-key="title">
-                    </tsp-table-widget>
-                    <tsp-table-widget ng-if='!record.order_id' mobile-header="headers[4].title"
-                                      type="default"
-                                      index="$index"
-                                      record-id="{{record._id}}"
-                                      field-data="record"
-                                      field-key="title">
-                    </tsp-table-widget>
-                </span>
-            </td>
-            <td ng-if="!headers[5].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
-                <span class="mobile-only">{{headers[5].title}}:&nbsp;</span>
+                <span class="mobile-only">{{headers[4].title}}:&nbsp;</span>
                 <p class="small">
                     <tsp-table-widget  type="date"
                                        prefix="<strong>{{lang.words.start}}: </strong>"
-                                       format="MM/DD/YYYY hh:mm A"
+                                       format="MM/DD/YYYY"
                                        field-data="record"
                                        field-key="start_time">
                     </tsp-table-widget>
@@ -120,22 +82,19 @@
                 <p class="small">
                     <tsp-table-widget  type="date"
                                        prefix="<strong>{{lang.words.end}}: </strong>"
-                                       format="MM/DD/YYYY hh:mm A"
+                                       format="MM/DD/YYYY"
                                        field-data="record"
                                        field-key="end_time">
                     </tsp-table-widget>
                 </p>
-            </td>
-            <!-- Avatar //-->
-            <td ng-if="!headers[6].skipped" class="clickable" ng-click="quickView(type, $index, record._id)">
-                <tsp-table-widget mobile-header="headers[6].title"
-                        type="avatar"
-                        index="$index"
-                        record-id="{{record._id}}"
-                        field-data="record"
-                        field-key="responsible_user"
-                        show-title="true">
-                </tsp-table-widget>
+                <p class="small">
+                    <tsp-table-widget  type="default"
+                                       prefix="(<strong>{{lang.words.words.booked_for}}: </strong>"
+                                       field-data="record"
+                                       field-key="interval"
+                                       suffix=")">
+                    </tsp-table-widget>
+                </p>
             </td>
         </tr>
     </tbody>

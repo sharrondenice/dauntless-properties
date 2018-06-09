@@ -99,18 +99,19 @@ final class CReservation extends BaseController {
 	public function createRecord($status = null, $object_type = null, $profile_type = null, array $params = array()) {
 		session_start();
 
-		$property_id       = TSP_Helper::arrGetVal($_POST, 'property', $params['property']);
+        $property          = TSP_Helper::arrGetVal($_POST, 'property', $params['property']);
+		$property_id       = TSP_Helper::arrGetVal($_POST, 'property_id', $params['property_id']);
         $user_id           = TSP_Helper::arrGetVal($_POST, 'responsible_user_id', $params['responsible_user_id']);
 		$description       = TSP_Helper::arrGetVal($_POST, 'description', $params['description']);
         $start_time        = TSP_Helper::arrGetVal($_POST, 'start_time', $params['start_time']);
         $end_time          = TSP_Helper::arrGetVal($_POST, 'end_time', $params['end_time']);
 
 		$data = array(
-            'property_id'       => $property_id,
-            'user_id'           => $user_id,
-            'description'       => $description,
-            'start_time'        => $start_time,
-            'end_time'          => $end_time,
+            'property_id'           => $property_id,
+            'responsible_user_id'   => $user_id,
+            'description'           => $description,
+            'start_time'            => $start_time,
+            'end_time'              => $end_time,
 		);
 
 		$reservation = new Reservation();

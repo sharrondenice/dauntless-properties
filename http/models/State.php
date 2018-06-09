@@ -234,8 +234,8 @@ class State extends BaseModel {
 		                    ORDER BY `c`.`title` LIMIT $offset, $page_size";
 		
 		    // @TODO set sql_count for the number of all records
-		    $sql_count = "SELECT COUNT(*) as `count FROM {$this->table}
-		                    WHERE`status_id` != '{$this->statuses['deleted']}";
+		    $sql_count = "SELECT COUNT(*) as `count` FROM {$this->table}
+		                    WHERE `status_id` != '{$this->statuses['deleted']}'";
 		}
 		else
 		{
@@ -244,8 +244,8 @@ class State extends BaseModel {
 		                    WHERE`status_id` != '{$this->statuses['deleted']}'  
 		                    ORDER BY `c`.`title` LIMIT $offset, $page_size";
 		    // @TODO set sql_count for the number of all records that the user can see
-		    $sql_count = "SELECT COUNT(*) as `count FROM {$this->table}
-		                    WHERE`status_id` != '{$this->statuses['deleted']}";
+		    $sql_count = "SELECT COUNT(*) as `count` FROM {$this->table}
+		                    WHERE `status_id` != '{$this->statuses['deleted']}'";
 		}
 		
 		$data['records'] = $this->getBySQL($sql);

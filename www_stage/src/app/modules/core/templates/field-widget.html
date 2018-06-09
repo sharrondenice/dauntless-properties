@@ -39,6 +39,8 @@
         <div ng-if="!isReadonly" class="input-group"
              ng-init="fieldData[fieldKey] = dateToString(fieldData[fieldKey], format)"
              moment-picker="fieldData[fieldKey]"
+             min-date="minDate"
+             max-date="maxDate"
              format="{{format}}">
             <span class="input-group-addon">
                 <i class="glyphicons glyphicons-calendar"></i>

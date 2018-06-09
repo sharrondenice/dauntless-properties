@@ -351,7 +351,7 @@
 
             if (complex_obj)
             {
-                var jsonData = angular.toJson(obj);
+                var jsonData = JSON.stringify(obj);
                 var objectToSerialize = {'data': jsonData};
                 str = jQuery.param(objectToSerialize);
             }

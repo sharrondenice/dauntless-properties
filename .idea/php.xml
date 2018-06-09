@@ -4,10 +4,6 @@
     <include_path>
       <path value="$PROJECT_DIR$/http/vendor/composer" />
       <path value="$PROJECT_DIR$/http/vendor/mpdf/mpdf" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/dbunit" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/http/vendor/smalot/pdfparser" />
       <path value="$PROJECT_DIR$/http/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/http/vendor/phpspec/prophecy" />
@@ -16,10 +12,6 @@
       <path value="$PROJECT_DIR$/http/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/http/vendor/phpmailer/phpmailer" />
       <path value="$PROJECT_DIR$/http/vendor/setasign/fpdi" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/phpunit-mock-objects" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/http/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/http/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/http/vendor/sebastian/code-unit-reverse-lookup" />
@@ -84,6 +76,14 @@
       <path value="$PROJECT_DIR$/http/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/http/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/http/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/dbunit" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/http/vendor/phpunit/phpunit-mock-objects" />
     </include_path>
   </component>
   <component name="PhpUnit">

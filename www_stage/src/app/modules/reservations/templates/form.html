@@ -21,14 +21,15 @@
                         <span ng-bind-html="instructions"></span>
                         <tsp-panel-widget title="{{lang.objects.reservations.all.reservation_details}}" is-open="true">
                             <fieldset class="col-md-12">
-                                <!-- Responsible //-->
-                                <tsp-object-widget type="default"
-                                                   label="{{lang.words.responsible}} {{lang.words.party}}"
-                                                   place-val="{{lang.words.select_responsible_party}}"
+                                <!-- Properties //-->
+                                <tsp-object-widget type="default-event"
+                                                   label="{{lang.words.available}} {{lang.words.properties}}"
+                                                   place-val="{{lang.words.select_available_property}}"
                                                    field-data="postdata"
-                                                   field-key="responsible_user_id"
-                                                   owner="U"
-                                                   option-data="optiondata.users"
+                                                   field-key="property_id"
+                                                   on-change="setProperty(id)"
+                                                   owner="AU"
+                                                   option-data="optiondata.properties"
                                                    is-required="true">
                                 </tsp-object-widget>
                                 <!-- Time/Date //-->
@@ -40,6 +41,8 @@
                                                 place-val="{{lang.words.enter_start_time}}"
                                                 field-data="postdata"
                                                 field-key="start_time"
+                                                min-date="postdata.property.start_time"
+                                                max-date="postdata.property.end_time"
                                                 format="MM/DD/YYYY"
                                                 is-required="true">
                                         </tsp-field-widget>
@@ -51,19 +54,21 @@
                                                 place-val="{{lang.words.enter_end_time}}"
                                                 field-data="postdata"
                                                 field-key="end_time"
-                                                format="MM/DD/YYYY hh:mm A"
+                                                min-date="postdata.property.start_time"
+                                                max-date="postdata.property.end_time"
+                                                format="MM/DD/YYYY"
                                                 is-required="true">
                                         </tsp-field-widget>
                                     </div>
                                 </div>
-                                <!-- Properties //-->
+                                <!-- Responsible //-->
                                 <tsp-object-widget type="default"
-                                                   label="{{lang.words.properties}}"
-                                                   place-val="{{lang.words.select_available_property}}"
+                                                   label="{{lang.words.responsible}} {{lang.words.party}}"
+                                                   place-val="{{lang.words.select_responsible_party}}"
                                                    field-data="postdata"
-                                                   field-key="property_id"
-                                                   owner="AU"
-                                                   option-data="optiondata.properties"
+                                                   field-key="responsible_user_id"
+                                                   owner="U"
+                                                   option-data="optiondata.users"
                                                    is-required="true">
                                 </tsp-object-widget>
                             </fieldset>

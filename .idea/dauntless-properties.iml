@@ -2,6 +2,8 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/http/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/http/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/cilex/cilex" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/cilex/console-service-provider" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/composer" />
@@ -30,14 +32,6 @@
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpmailer/phpmailer" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpoption/phpoption" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpspec/prophecy" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/dbunit" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/php-code-coverage" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/php-file-iterator" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/php-text-template" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/php-timer" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/php-token-stream" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/phpunit" />
-      <excludeFolder url="file://$MODULE_DIR$/http/vendor/phpunit/phpunit-mock-objects" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/pimple/pimple" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/http/vendor/psr/container" />

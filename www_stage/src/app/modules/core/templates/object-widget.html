@@ -10,6 +10,18 @@
         </ui-select>
     </div>
 </span>
+<span ng-if="type == 'default-event'">
+    <div class="form-group">
+        <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span> <i ng-if="showAdd" data-ng-click="loadObject(owner, 'add', null, lang)" class="add-new clickable glyphicon glyphicon-plus-sign"></i></label>
+        <ui-select ng-required="isRequired" ng-model="fieldData[fieldKey]" search-enabled="true" data-parsley-trigger="change" ng-change="update({id: fieldData[fieldKey]})">
+            <ui-select-match ng-attr-placeholder="{{placeVal}}">{{$select.selected[titleKey]}}</ui-select-match>
+            <ui-select-choices repeat="x._id as x in optionData |orderBy:orderBy |filter:filterBy:true |filter:$select.search" group-by="groupBy">
+                <div ng-bind-html="x[titleKey] | highlight: $select.search"></div>
+                <p ng-if="suffix" class="small" ng-bind-html="suffix"></p>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</span>
 <span ng-if="type == 'multi-select'">
     <div class="form-group">
         <label class="text-uppercase small">{{label}}: <span ng-if="isRequired" class="required"> *</span> <i ng-if="showAdd" data-ng-click="loadObject(owner, 'add', null, lang)" class="add-new clickable glyphicon glyphicon-plus-sign"></i></label>

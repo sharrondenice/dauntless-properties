@@ -45,3 +45,4 @@ www_stage/apis
 *.zip
 http/docs
 .installed
+phpunit

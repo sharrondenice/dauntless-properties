@@ -36,8 +36,7 @@ Dauntless Properties is a demo LAMP stack project with AngularJS UI front-end to
 
 ## KNOWN BUGS
 
-* During installation the process may time out at the 50% mark. You will need to update you php.ini to allow for longer timeout execution if this happens
-* The reservation portion is currently still in work
+* No known bugs
 
 ## REPORTING ISSUES
 

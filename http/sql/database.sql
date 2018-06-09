@@ -394,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `DB_NAME`.`properties_reservations` (
   `property_id` MEDIUMINT(8) NOT NULL,
   `start_time` VARCHAR(50) NOT NULL,
   `end_time` VARCHAR(50) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` TEXT NULL,
   `date_last_updated` BIGINT(20) NULL,
   `date_created` BIGINT(20) NULL,
   PRIMARY KEY (`_id`),

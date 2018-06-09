@@ -185,6 +185,73 @@ class Property extends BaseModel {
 		return $data;
 	}
 
+    /**
+     * @access public
+     * @param int ID
+     * @return array
+     * @ParamType ID int
+     * @ReturnType array
+     */
+    public function getByID($ID) {
+        $data = array();
+
+        try{
+            $owner = EOwnerType::Property;
+
+            $sql = "SELECT `c`.*, `p`.`address1`, `p`.`address2`, `p`.`city`, `p`.`state_id`
+		            FROM `properties` as `c` 
+		            INNER JOIN `shared_profiles` as `p` ON `c`.`_id` = `p`.`owner_id` 
+		            WHERE `p`.`owner` = '{$owner}' AND `c`.`_id` = '{$ID}'
+		            ORDER BY `c`.`title`";
+
+            if (TSP_Config::get('app.debug'))
+                $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
+
+            $result = $this->conn->RunQuery($sql);
+            $data = $this->conn->FetchHash($result);
+
+            if (!empty($data))
+                $this->set($data);
+
+            $state = new State();
+            $country = new Country();
+
+            $this_state = $state->getStateByID($data['state_id']);
+            $this_country = $country->getCountryByID($this_state['country_code']);
+
+            $datetime1 = new DateTime($data['start_time']);
+            $datetime2 = new DateTime($data['end_time']);
+            $interval = $datetime1->diff($datetime2);
+
+            $data['interval'] = $interval->format('%R%a days');
+
+            $data['metadata'] = array(
+                'location' => array(
+                    'address1'  => $data['address1'],
+                    'address2'  => $data['address2'],
+                    'city'      => $data['city'],
+                    'state_id'  => $data['state_id'],
+                    'state'     => is_array($this_state) ? array_map('utf8_encode', $this_state) : array(),
+                    'country'   => is_array($this_country) ? array_map('utf8_encode', $this_country) : array(),
+                )
+            );
+
+        } catch (Exception $e){
+            if (TSP_Config::get('app.debug'))
+            {
+                $this->response['admin_error'][] = $e->getMessage();
+            }
+            $this->response['error'] = array(
+                'title' => 'Error Occurred',
+                'message' => 'Unknown error (301) occurred. Please contact your system administrator or try again at a later time.',
+                'type' => 'error',
+            );
+
+        }
+
+        return $data;
+    }
+
 	/**
 	 * @access public
 	 * @param models.Profile[] profile

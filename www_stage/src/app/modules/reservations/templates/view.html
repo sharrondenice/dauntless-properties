@@ -22,22 +22,12 @@
                             <div class="row mb10" class="text-light project-title">
                                 <div class="col-sm-8">
                                     <div class="row">
-                                        <div class="col-sm-2">
-                                            <!-- Resizes better than widget - DO NOT REMOVE //-->
-                                            <span class="badge" style="background-color: {{postdata.status.background}}; color: {{postdata.status.foreground}};">{{postdata.status.title}}</span>
-                                        </div>
-                                        <div class="col-sm-10 text-h4">
-                                            <strong><span tsp-i18n="words.reservation"></span></strong>: {{postdata.title}}
+                                        <div class="col-sm-12 text-h4">
+                                            <strong><span tsp-i18n="words.property"></span></strong>: {{postdata.property.title}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4"></div>
-                            </div>
-                            <div class="row mb30">
-                                <div class="col-sm-6 small">
-                                    <strong><span tsp-i18n="words.reservation_type"></span>:&nbsp;&nbsp;</strong>{{postdata.type.title}}<br>
-                                </div>
-                                <div class="col-sm-6"></div>
                             </div>
                         </div>
 
@@ -46,7 +36,7 @@
                             <div class="col-sm-5">
                                 <div class="mb40">
                                     <div class="sub-header mb20">
-                                        <h4><strong>{{postdata.type.title}} <span tsp-i18n="words.details"></span></strong></h4>
+                                        <h4><strong><span tsp-i18n="words.booked_for"></span>&nbsp;{{postdata.interval}}</strong></h4>
                                     </div>
                                     <div class="row mb20">
                                         <div class="col-sm-6">
@@ -55,7 +45,7 @@
                                         <div class="col-sm-6">
                                             <tsp-table-widget
                                                     type="date"
-                                                    format="MM/DD/YYYY hh:mm A"
+                                                    format="MM/DD/YYYY"
                                                     field-data="postdata"
                                                     field-key="start_time">
                                             </tsp-table-widget>
@@ -68,79 +58,24 @@
                                         <div class="col-sm-6">
                                             <tsp-table-widget
                                                     type="date"
-                                                    format="MM/DD/YYYY hh:mm A"
+                                                    format="MM/DD/YYYY"
                                                     field-data="postdata"
                                                     field-key="end_time">
                                             </tsp-table-widget>
                                         </div>
                                     </div>
-                                    <div class="row mb20">
-                                        <div class="col-sm-6">
-                                            <span tsp-i18n="words.venue"></span>:
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <tsp-table-widget
-                                                    type="typeicon"
-                                                    show-title="true"
-                                                    field-data="postdata"
-                                                    field-key="venue">
-                                            </tsp-table-widget>
-                                        </div>
-                                    </div>
-                                    <div class="row mb20">
-                                        <div class="col-sm-6">
-                                            <span tsp-i18n="words.occurs"></span>:
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <tsp-table-widget
-                                                    type="typeicon"
-                                                    show-title="true"
-                                                    field-data="postdata"
-                                                    field-key="reoccur">
-                                            </tsp-table-widget>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="mb40" ng-if="postdata.client_user_id">
-                                    <div class="sub-header mb20">
-                                        <h4><strong tsp-i18n="words.client"></strong></h4>
-                                    </div>
-                                    <div class="row mb10">
-                                        <div class="col-sm-6"><span tsp-i18n="words.name"></span>:</div>
-                                        <div class="col-sm-6 wrap"><tsp-table-widget type="avatar"
-                                                                                     field-data="postdata"
-                                                                                     field-key="client_user">
-                                        </tsp-table-widget>{{postdata.client_user.title}}</div>
-                                    </div>
-                                    <div class="row mb10">
-                                        <div class="col-sm-6"><span tsp-i18n="words.email"></span>:</div>
-                                        <div class="col-sm-6 wrap"><a href="javascript:;">{{postdata.client_user.metadata.email}}</a></div>
-                                    </div>
-                                    <div class="row mb10">
-                                        <div class="col-sm-6"><span tsp-i18n="words.website"></span>:</div>
-                                        <div class="col-sm-6 wrap"><a target="_blank" href="{{postdata.client_user.metadata.url}}">{{postdata.client_user.metadata.url}}</a></div>
-                                    </div>
-                                    <div class="row mb10">
-                                        <div class="col-sm-6"><span tsp-i18n="words.phone_work"></span>:</div>
-                                        <div class="col-sm-6">{{postdata.client_user.metadata.work_phone | tspFilterPhone}}</div>
-                                    </div>
-                                    <div class="row mb10">
-                                        <div class="col-sm-6"><span tsp-i18n="words.phone_mobile"></span>:</div>
-                                        <div class="col-sm-6">{{postdata.client_user.metadata.mobile_phone | tspFilterPhone}}</div>
-                                    </div>
-                                </div>
-                                <div class="mb40" ng-if="postdata.metadata.location">
+                                <div class="mb40" ng-if="postdata.property.metadata.location">
                                     <div class="sub-header mb20">
                                         <h4><strong tsp-i18n="words.location"></strong></h4>
                                     </div>
                                     <div class="row mb200">
-                                        <div class="col-sm-6 text-center">
+                                        <div class="col-sm-3 text-center">
                                             <i class="h1 glyphicons glyphicons-map-marker text-danger"></i>
                                         </div>
-                                        <div class="col-sm-6">
-                                            {{postdata.metadata.location.address1}} {{postdata.metadata.location.address2}}<br>
-                                            {{postdata.metadata.location.city}}, {{postdata.metadata.location.state.state_code}} {{postdata.metadata.location.zip_code}}<br>
-                                            {{postdata.metadata.location.country.title}}
+                                        <div class="col-sm-9">
+                                            {{postdata.property.metadata.location.address1}} {{postdata.property.metadata.location.address2}}<br>
+                                            {{postdata.property.metadata.location.city}}, {{postdata.property.metadata.location.state.state_code}} {{postdata.property.metadata.location.country.title}}
                                         </div>
                                     </div>
                                 </div>
@@ -154,27 +89,6 @@
                             </div>
                         </div>
                         <!-- #end inner row -->
-
-                        <!-- info tabs -->
-                        <tabset class="mt40">
-                            <tab heading="{{lang.objects.activities.object}}">
-                                <div class="clearfix latest-activity">
-                                    <div ng-controller="ActivitiesCtrl">
-                                        <div ng-include="'app/modules/activities/templates/list.html'"></div>
-                                    </div>
-                                </div>
-                            </tab>
-                            <tab heading="{{lang.objects.comments.objects}}">
-                                <div class="clearfix latest-activity">
-                                        <div class="clearfix latest-activity">
-                                        <div ng-controller="CommentsCtrl">
-                                            <div ng-include="'app/modules/comments/templates/list.html'"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </tab>
-                        </tabset>
-                        <!-- #end info tabs -->
                     </div>
                     <!-- #end panel -->
                 </div> <!-- #end col -->

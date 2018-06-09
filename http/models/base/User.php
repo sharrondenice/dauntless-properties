@@ -301,19 +301,19 @@ class User extends BaseModel {
 		
 		try{
 		    session_start();
-		
-		    if (empty($owner))
+
+            if (empty($owner))
 		        $owner = $this->ownerType;
 		    if (empty($type))
 		        $type = ESharedType::Admin;
 
-            $sql = "SELECT `u`.*, `p`.`email`, `t`.`title` as `type_description`, `s`.`background`, `s`.`foreground`
+            $sql = "SELECT `u`.*, CONCAT_WS(' ', `first_name`, `last_name`) AS `title`, `p`.`email`, `t`.`title` as `type_description`, `s`.`background`, `s`.`foreground`
 		            FROM `users` as `u` 
 		            INNER JOIN `shared_profiles` as `p` ON `u`.`_id` = `p`.`owner_id` 
 		            INNER JOIN `shared_types` as `t` ON `u`.`type_id` = `t`.`_id` 
 		            INNER JOIN `shared_statuses` as `s` ON `u`.`status_id` = `s`.`_id` 
 		            WHERE `p`.`is_default` = 1 AND `p`.`owner` = '{$owner}' AND `u`.`status_id` != '{$this->statuses['deleted']}' 
-		            AND `u`.`type_id` = '{$type}' ORDER BY `u`.`last_name`";
+		            AND `u`.`type_id` = 20 ORDER BY `u`.`last_name`";
 
             if (TSP_Config::get('app.debug'))
                 $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
@@ -736,8 +736,8 @@ class User extends BaseModel {
 		                    ORDER BY `c`.`title` LIMIT $offset, $page_size";
 		
 		    // @TODO set sql_count for the number of all records
-		    $sql_count = "SELECT COUNT(*) as `count FROM {$this->table}
-		                    WHERE`status_id` != '{$this->statuses['deleted']}";
+		    $sql_count = "SELECT COUNT(*) as `count` FROM {$this->table}
+		                    WHERE `status_id` != '{$this->statuses['deleted']}'";
 		}
 		else
 		{
@@ -746,8 +746,8 @@ class User extends BaseModel {
 		                    WHERE`status_id` != '{$this->statuses['deleted']}'  
 		                    ORDER BY `c`.`title` LIMIT $offset, $page_size";
 		    // @TODO set sql_count for the number of all records that the user can see
-		    $sql_count = "SELECT COUNT(*) as `count FROM {$this->table}
-		                    WHERE`status_id` != '{$this->statuses['deleted']}";
+		    $sql_count = "SELECT COUNT(*) as `count` FROM {$this->table}
+		                    WHERE `status_id` != '{$this->statuses['deleted']}'";
 		}
 		
 		$data['records'] = $this->getBySQL($sql);
@@ -764,6 +764,44 @@ class User extends BaseModel {
 		if ($data['item_size'] > $page_size)
 		    $data['number_pages'] = ceil($data['item_size'] / $page_size);
 	}
+
+    /**
+     * @access public
+     * @param int ID
+     * @return array
+     * @ParamType ID int
+     * @ReturnType array
+     */
+    public function getByID($ID) {
+        $data = array();
+
+        try{
+            $sql = "SELECT *, CONCAT_WS(' ', `first_name`, `last_name`) AS `title` FROM `{$this->table}` WHERE `_id` = '{$ID}'";
+
+            if (TSP_Config::get('app.debug'))
+                $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
+
+            $result = $this->conn->RunQuery($sql);
+            $data = $this->conn->FetchHash($result);
+
+            if (!empty($data))
+                $this->set($data);
+
+        } catch (Exception $e){
+            if (TSP_Config::get('app.debug'))
+            {
+                $this->response['admin_error'][] = $e->getMessage();
+            }
+            $this->response['error'] = array(
+                'title' => 'Error Occurred',
+                'message' => 'Unknown error (301) occurred. Please contact your system administrator or try again at a later time.',
+                'type' => 'error',
+            );
+
+        }
+
+        return $data;
+    }
 
 	/**
 	 * @access public

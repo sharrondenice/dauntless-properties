@@ -93,8 +93,8 @@ final class CProperty extends BaseController {
 		$data = array_merge($property_data, $profile_data);
 		$data['_id'] = $ID; // restore company ID
 
-        $property_response = $property->getResponse();
-		$profile_response = $profile->getResponse();
+        $property_response = (array)$property->getResponse();
+		$profile_response = (array)$profile->getResponse();
 		
 		$this->response['sql'][] = array_merge($property_response['sql'], $profile_response['sql']);
 		

@@ -115,21 +115,37 @@ class Reservation extends BaseModel {
 		try{
 		    session_start();
 		
-		    if (empty($owner))
-		        $owner = EOwnerType::Reservation;
-		
 		    $sql = "SELECT `c`.*, `p`.`title`, `p`.`description`
 		            FROM `{$this->table}` as `c` 
 		            INNER JOIN `properties` as `p` ON `c`.`property_id` = `p`.`_id` 
-		            WHERE `p`.`owner` = '{$owner}'
 		            ORDER BY `c`.`start_time`";
 
 		    if (TSP_Config::get('app.debug'))
 		        $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
 
+		    $index = 0;
+
 		    $result = $this->conn->RunQuery($sql);
 		    while( $row = $this->conn->FetchHash($result)){
-		        $data[] = array_map('utf8_encode', $row);
+		        $data[$index] = array_map('utf8_encode', $row);
+
+		        $user = new User();
+		        $user_data = $user->getByID($row['responsible_user_id']);
+
+		        $data[$index]['responsible_user'] = $user_data;
+
+                $property = new Property();
+                $property_data = $property->getByID($row['property_id']);
+
+                $data[$index]['property'] = $property_data;
+
+                $datetime1 = new DateTime($row['start_time']);
+                $datetime2 = new DateTime($row['end_time']);
+                $interval = $datetime1->diff($datetime2);
+
+                $data[$index]['interval'] = $interval->format('%R%a days');
+
+		        $index++;
 		    }
 
 		    $this->response['success'] = array(
