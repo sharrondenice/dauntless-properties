@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa3995a-46a4-4475-b5e4-6b33f0d2fcc7" name="Default" comment="Database&#10;- Updated properties_reservations table to make description default NULL&#10;&#10;BackEnd&#10;- Fixed bugs in Property and Reservation controllers&#10;- Fixed SQL bugs in models&#10;- Added property, user objects to the reservation model&#10;- Added override to BaseModel-&gt;getByID for Property model&#10;&#10;UI&#10;- Added min and max dates to moment-picker&#10;-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/driver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/models/base/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/models/base/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/http/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/app-1527d59d1b.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/scripts/app-a35d1c8db8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/scripts/app-a35d1c8db8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/list.html" afterDir="false" />
     </list>
     <ignored path="http/docs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,23 +26,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/http/models/base/User.php">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="318" column="70" lean-forward="true" selection-start-line="318" selection-start-column="70" selection-end-line="318" selection-end-column="70" />
-              <folding>
-                <element signature="e#1118#2727#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="735">
+              <caret line="91" column="68" selection-start-line="91" selection-start-column="68" selection-end-line="91" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/routes.php">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+            <state relative-caret-position="223">
+              <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.modules.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -155,16 +160,16 @@
         <option value="$PROJECT_DIR$/www_stage/src/app/modules/core/index.lang.js" />
         <option value="$PROJECT_DIR$/http/models/Property.php" />
         <option value="$PROJECT_DIR$/http/models/Reservation.php" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/list.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/http/composer.json" />
-        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" />
         <option value="$PROJECT_DIR$/http/models/base/User.test.php" />
         <option value="$PROJECT_DIR$/http/tests/UserTest.php" />
         <option value="$PROJECT_DIR$/http/models/Admin.php" />
         <option value="$PROJECT_DIR$/http/driver.php" />
         <option value="$PROJECT_DIR$/http/models/base/User.php" />
         <option value="$PROJECT_DIR$/http/routes.php" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/list.html" />
+        <option value="$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js" />
       </list>
     </option>
   </component>
@@ -329,11 +334,6 @@
             <path>
               <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
               <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -353,6 +353,33 @@
               <item name="www_stage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="reservations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dauntless-properties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dauntless-properties" type="462c0819:PsiDirectoryNode" />
+              <item name="www_stage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="reservations" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -417,7 +444,7 @@
       <workItem from="1528258151063" duration="87837000" />
       <workItem from="1528379233547" duration="40717000" />
       <workItem from="1528503713120" duration="6387000" />
-      <workItem from="1528546200734" duration="5558000" />
+      <workItem from="1528546200734" duration="6740000" />
     </task>
     <task id="LOCAL-00001" summary="- Fixed installation check&#10;- Removed footer from primary pages&#10;- Added php documentation&#10;- Import SQL file line by line to support windows machines&#10;- Fixed bugs with the renaming of `default` to `is_default` for boolean type&#10;- Added interval label to list and read view&#10;- Updated email to send user login details&#10;- Fixed bugs throughout">
       <created>1528309968400</created>
@@ -535,7 +562,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164939000" />
+    <option name="totallyTimeSpent" value="166121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,6 +575,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1344" height="778" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32892805" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -557,8 +585,8 @@
       <window_info anchor="bottom" id="Run" order="4" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.34361234" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19815668" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19662058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19815668" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="3" />
@@ -816,13 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="105" selection-start-line="77" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/core/index.lang.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -847,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/scripts/app-0fcfe998e7.js" />
     <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/index.modules.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -866,13 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="163" column="16" selection-start-line="163" selection-start-column="16" selection-end-line="163" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -966,6 +973,27 @@
           <folding>
             <element signature="e#1118#2727#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="91" column="68" selection-start-line="91" selection-start-column="68" selection-end-line="91" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/properties/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www_stage/src/app/modules/reservations/index.modules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
         </state>
       </provider>
     </entry>
