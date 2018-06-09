@@ -74,13 +74,13 @@
         'user/page/clients'                                     => 'Client@getAllWithOffset',
         'user/page/employees'                                   => 'Employee@getAllWithOffset',
 
-        'user/list/{type}'                                      => 'User@getAllWithUserType',
         'user/list/users'                                       => 'User@getAll',
         'user/list/admins'                                      => 'Admin@getAll',
         'user/list/agents'                                      => 'Agent@getAll',
         'user/list/general_agents'                              => 'GeneralAgent@getAll',
         'user/list/clients'                                     => 'Client@getAll',
         'user/list/employees'                                   => 'Employee@getAll',
+        'user/list/{type}'                                      => 'User@getAllWithUserType',
 
         'user/count/users'                                      => 'User@getUserCount',
         'user/count/admins'                                     => 'Admin@getUserCount',

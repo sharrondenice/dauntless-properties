@@ -79,6 +79,15 @@
         if ($action == 'genpass')
             generateHashPassword($_REQUEST['password']);
 
+        if ($action == 'user_test')
+            testUserClass();
+    }
+
+    function testUserClass(){
+        $user = new Admin();
+        $user_data = $user->getAll();
+
+        var_dump($user->getResponse());
     }
 
     function convertToInt($val){

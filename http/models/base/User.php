@@ -303,9 +303,9 @@ class User extends BaseModel {
 		    session_start();
 
             if (empty($owner))
-		        $owner = $this->ownerType;
-		    if (empty($type))
-		        $type = ESharedType::Admin;
+		        $owner = $this->getOwnerType();
+		    if (empty($type) || is_string($type))
+		        $type = $this->getType()->getID();
 
             $sql = "SELECT `u`.*, CONCAT_WS(' ', `first_name`, `last_name`) AS `title`, `p`.`email`, `t`.`title` as `type_description`, `s`.`background`, `s`.`foreground`
 		            FROM `users` as `u` 
@@ -313,7 +313,7 @@ class User extends BaseModel {
 		            INNER JOIN `shared_types` as `t` ON `u`.`type_id` = `t`.`_id` 
 		            INNER JOIN `shared_statuses` as `s` ON `u`.`status_id` = `s`.`_id` 
 		            WHERE `p`.`is_default` = 1 AND `p`.`owner` = '{$owner}' AND `u`.`status_id` != '{$this->statuses['deleted']}' 
-		            AND `u`.`type_id` = 20 ORDER BY `u`.`last_name`";
+		            AND `u`.`type_id` = '{$type}' ORDER BY `u`.`last_name`";
 
             if (TSP_Config::get('app.debug'))
                 $this->response['sql'][] = array('stmt' => $sql, 'params' => null);
@@ -563,8 +563,8 @@ class User extends BaseModel {
 		$count = 0;
 		
 		try{
-		    if (empty($type))
-		        $type = $this->type->getID();
+		    if (empty($type) || is_string($type))
+                $type = $this->getType()->getID();
 		
 		    $sql = "SELECT COUNT(*) as count FROM `{$this->table}` WHERE `type_id` = '{$type}' AND `status_id` != '{$this->statuses['deleted']}' ";
 		    
